@@ -98,35 +98,81 @@
         </section>
 
         <section class="panel-section">
-          <h2>Legend</h2>
+          <h3>Movement overview</h3>
 
-          <div class="circle-legend">
-            <div class="circle-legend-item">
-              <span class="circle-example circle-small">1</span>
-              <span>1 protest</span>
+          <div class="stats-list">
+            <div class="stat-row">
+              <span class="stat-label">Cities</span>
+              <strong id="visible-count" class="stat-value">0</strong>
             </div>
 
-            <div class="circle-legend-item">
-              <span class="circle-example circle-medium">5</span>
-              <span>Several protests</span>
+            <div class="stat-row">
+              <span class="stat-label">Protests</span>
+              <strong id="protest-count" class="stat-value">0</strong>
             </div>
 
-            <div class="circle-legend-item">
-              <span class="circle-example circle-large">15</span>
-              <span>Many protests</span>
+            <div class="stat-row">
+              <span class="stat-label">Confirmed upcoming</span>
+              <strong id="confirmed-count" class="stat-value stat-confirmed">
+                0
+              </strong>
             </div>
 
-            <div class="circle-legend-item">
-              <span class="circle-example circle-medium upcoming">5</span>
-              <span>Upcoming protest</span>
+            <div class="stat-row">
+              <span class="stat-label">Not confirmed</span>
+              <strong id="tentative-count" class="stat-value stat-tentative">
+                0
+              </strong>
+            </div>
+
+            <div class="stat-row">
+              <span class="stat-label">Major gatherings</span>
+              <strong id="major-count" class="stat-value stat-major">
+                0
+              </strong>
+            </div>
+
+            <div class="stat-row">
+              <span class="stat-label">Completed</span>
+              <strong id="completed-count" class="stat-value stat-completed">
+                0
+              </strong>
             </div>
           </div>
         </section>
 
-        <section class="panel-section panel-summary" aria-live="polite">
-          <strong id="visible-count">0</strong>
-          <span>cities visible</span>
+
+        <section class="panel-section">
+          <h2>Legend</h2>
+
+          <div class="circle-legend">
+            <div class="circle-legend-item">
+              <span class="circle-example circle-medium confirmed">5</span>
+              <span>Confirmed upcoming</span>
+            </div>
+
+            <div class="circle-legend-item">
+              <span class="circle-example circle-medium tentative">5</span>
+              <span>Not yet confirmed</span>
+            </div>
+
+            <div class="circle-legend-item">
+              <span class="circle-example circle-medium">5</span>
+              <span>Completed protests</span>
+            </div>
+
+            <div class="circle-legend-item">
+              <span class="circle-example circle-medium major">5</span>
+              <span>Major gathering</span>
+            </div>
+
+            <div class="circle-legend-item">
+              <span class="circle-example circle-small">1</span>
+              <span>Circle size shows protest count</span>
+            </div>
+          </div>
         </section>
+
       </aside>
 
       <button

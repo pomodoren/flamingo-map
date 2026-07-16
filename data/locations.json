@@ -13,7 +13,7 @@
       {
         "id": "1",
         "title": "Flamingo Protest - Athens",
-        "date": "",
+        "date": "2026-08-22",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Athens.",
         "url": "",
@@ -36,7 +36,7 @@
       {
         "id": "2",
         "title": "Flamingo Protest - Amsterdam",
-        "date": "",
+        "date": "2026-09-05",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Amsterdam.",
         "url": "",
@@ -59,7 +59,7 @@
       {
         "id": "3",
         "title": "Flamingo Protest - Bari",
-        "date": "",
+        "date": "2026-09-12",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Bari.",
         "url": "",
@@ -82,7 +82,7 @@
       {
         "id": "4",
         "title": "Flamingo Protest - Barcelona",
-        "date": "",
+        "date": "2026-08-29",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Barcelona.",
         "url": "",
@@ -105,7 +105,7 @@
       {
         "id": "5",
         "title": "Flamingo Protest - Berlin",
-        "date": "",
+        "date": "2026-08-22",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Berlin.",
         "url": "",
@@ -128,7 +128,7 @@
       {
         "id": "6",
         "title": "Flamingo Protest - Bologna",
-        "date": "",
+        "date": "2026-09-05",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Bologna.",
         "url": "",
@@ -151,7 +151,7 @@
       {
         "id": "7",
         "title": "Flamingo Protest - Bordeaux",
-        "date": "",
+        "date": "2026-09-12",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Bordeaux.",
         "url": "",
@@ -174,7 +174,7 @@
       {
         "id": "8",
         "title": "Flamingo Protest - Boston",
-        "date": "",
+        "date": "2026-08-29",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Boston.",
         "url": "",
@@ -197,7 +197,7 @@
       {
         "id": "9",
         "title": "Flamingo Protest - Brussels",
-        "date": "",
+        "date": "2026-08-22",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Brussels.",
         "url": "",
@@ -220,7 +220,7 @@
       {
         "id": "10",
         "title": "Flamingo Protest - Cardiff",
-        "date": "",
+        "date": "2026-09-05",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Cardiff.",
         "url": "",
@@ -243,7 +243,7 @@
       {
         "id": "11",
         "title": "Flamingo Protest - Chicago",
-        "date": "",
+        "date": "2026-09-12",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Chicago.",
         "url": "",
@@ -266,7 +266,7 @@
       {
         "id": "12",
         "title": "Flamingo Protest - Cologne",
-        "date": "",
+        "date": "2026-08-29",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Cologne.",
         "url": "",
@@ -289,7 +289,7 @@
       {
         "id": "13",
         "title": "Flamingo Protest - Copenhagen",
-        "date": "",
+        "date": "2026-08-22",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Copenhagen.",
         "url": "",
@@ -312,7 +312,7 @@
       {
         "id": "14",
         "title": "Flamingo Protest - Detroit",
-        "date": "",
+        "date": "2026-09-05",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Detroit.",
         "url": "",
@@ -335,7 +335,7 @@
       {
         "id": "15",
         "title": "Flamingo Protest - Dublin",
-        "date": "",
+        "date": "2026-09-12",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Dublin.",
         "url": "",
@@ -358,7 +358,7 @@
       {
         "id": "16",
         "title": "Flamingo Protest - Frankfurt am Main",
-        "date": "",
+        "date": "2026-08-29",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Frankfurt am Main.",
         "url": "",
@@ -381,7 +381,7 @@
       {
         "id": "17",
         "title": "Flamingo Protest - Genoa",
-        "date": "",
+        "date": "2026-08-22",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Genoa.",
         "url": "",
@@ -404,7 +404,7 @@
       {
         "id": "18",
         "title": "Flamingo Protest - Hamburg",
-        "date": "",
+        "date": "2026-09-05",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Hamburg.",
         "url": "",
@@ -427,7 +427,7 @@
       {
         "id": "19",
         "title": "Flamingo Protest - Lisbon",
-        "date": "",
+        "date": "2026-09-12",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Lisbon.",
         "url": "",
@@ -450,7 +450,7 @@
       {
         "id": "20",
         "title": "Flamingo Protest - London",
-        "date": "",
+        "date": "2026-08-29",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for London.",
         "url": "",
@@ -473,7 +473,7 @@
       {
         "id": "21",
         "title": "Flamingo Protest - Lyon",
-        "date": "",
+        "date": "2026-08-22",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Lyon.",
         "url": "",
@@ -496,7 +496,7 @@
       {
         "id": "22",
         "title": "Flamingo Protest - Madrid",
-        "date": "",
+        "date": "2026-09-05",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Madrid.",
         "url": "",
@@ -519,7 +519,7 @@
       {
         "id": "23",
         "title": "Flamingo Protest - Manchester",
-        "date": "",
+        "date": "2026-09-12",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Manchester.",
         "url": "",
@@ -542,7 +542,7 @@
       {
         "id": "24",
         "title": "Flamingo Protest - Milan",
-        "date": "",
+        "date": "2026-08-29",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Milan.",
         "url": "",
@@ -565,7 +565,7 @@
       {
         "id": "25",
         "title": "Flamingo Protest - Munich",
-        "date": "",
+        "date": "2026-08-22",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Munich.",
         "url": "",
@@ -588,7 +588,7 @@
       {
         "id": "26",
         "title": "Flamingo Protest - New York",
-        "date": "",
+        "date": "2026-09-05",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for New York.",
         "url": "",
@@ -611,7 +611,7 @@
       {
         "id": "27",
         "title": "Flamingo Protest - Oslo",
-        "date": "",
+        "date": "2026-09-12",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Oslo.",
         "url": "",
@@ -634,7 +634,7 @@
       {
         "id": "28",
         "title": "Flamingo Protest - Paris",
-        "date": "",
+        "date": "2026-08-29",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Paris.",
         "url": "",
@@ -657,7 +657,7 @@
       {
         "id": "29",
         "title": "Flamingo Protest - Philadelphia",
-        "date": "",
+        "date": "2026-08-22",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Philadelphia.",
         "url": "",
@@ -680,7 +680,7 @@
       {
         "id": "30",
         "title": "Flamingo Protest - Rome",
-        "date": "",
+        "date": "2026-09-05",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Rome.",
         "url": "",
@@ -703,7 +703,7 @@
       {
         "id": "31",
         "title": "Flamingo Protest - San Jose",
-        "date": "",
+        "date": "2026-09-12",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for San Jose.",
         "url": "",
@@ -726,7 +726,7 @@
       {
         "id": "32",
         "title": "Flamingo Protest - Stockholm",
-        "date": "",
+        "date": "2026-08-29",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Stockholm.",
         "url": "",
@@ -749,7 +749,7 @@
       {
         "id": "33",
         "title": "Flamingo Protest - Stuttgart",
-        "date": "",
+        "date": "2026-08-22",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Stuttgart.",
         "url": "",
@@ -767,12 +767,12 @@
     "longitude": 19.8187,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "url": "https://...",
     "protests": [
       {
         "id": "34",
         "title": "Flamingo Protest - Tiranë",
-        "date": "",
+        "date": "2026-09-05",
         "status": "planned",
         "description": "Placeholder protest extracted from the public map for Tiranë.",
         "url": "",
@@ -795,9 +795,19 @@
       {
         "id": "35",
         "title": "Flamingo Protest - Toronto",
-        "date": "",
+        "date": "2026-09-12",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Toronto.",
+        "url": "",
+        "location": "Toronto",
+        "participants": null
+      },
+      {
+        "id": "40",
+        "title": "Flamingo Community Gathering Toronto",
+        "date": "2026-08-22",
+        "status": "planned",
+        "description": "Upcoming community protest supporting environmental protection and accountability.",
         "url": "",
         "location": "Toronto",
         "participants": null
@@ -818,9 +828,19 @@
       {
         "id": "36",
         "title": "Flamingo Protest - Toulouse",
-        "date": "",
+        "date": "2026-08-29",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Toulouse.",
+        "url": "",
+        "location": "Toulouse",
+        "participants": null
+      },
+      {
+        "id": "43",
+        "title": "Flamingo Gathering Toulouse",
+        "date": "2026-08-29",
+        "status": "active",
+        "description": "Community action and information event for the Albanian diaspora.",
         "url": "",
         "location": "Toulouse",
         "participants": null
@@ -839,9 +859,19 @@
     "url": "",
     "protests": [
       {
+        "id": "44",
+        "title": "Protect Albania's Natural Heritage Turin",
+        "date": "2026-09-19",
+        "status": "planned",
+        "description": "Upcoming protest supporting protected areas and environmental accountability.",
+        "url": "",
+        "location": "Turin",
+        "participants": null
+      },
+      {
         "id": "37",
         "title": "Flamingo Protest - Turin",
-        "date": "",
+        "date": "2026-08-22",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Turin.",
         "url": "",
@@ -864,9 +894,19 @@
       {
         "id": "38",
         "title": "Flamingo Protest - Vancouver",
-        "date": "",
+        "date": "2026-09-05",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Vancouver.",
+        "url": "",
+        "location": "Vancouver",
+        "participants": null
+      },
+      {
+        "id": "41",
+        "title": "Protect Vjosa-Narta Vancouver",
+        "date": "2026-09-05",
+        "status": "planned",
+        "description": "Public gathering in support of Vjosa-Narta and protected areas in Albania.",
         "url": "",
         "location": "Vancouver",
         "participants": null
@@ -887,9 +927,109 @@
       {
         "id": "39",
         "title": "Flamingo Protest - Washington",
-        "date": "",
+        "date": "2026-09-12",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Washington.",
+        "url": "",
+        "location": "Washington",
+        "participants": null
+      },
+      {
+        "id": "42",
+        "title": "Flamingo Protest Washington DC",
+        "date": "2026-09-12",
+        "status": "planned",
+        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
+        "url": "",
+        "location": "Washington",
+        "participants": null
+      },
+      {
+        "id": "42",
+        "title": "Flamingo Protest Washington DC",
+        "date": "2026-09-12",
+        "status": "planned",
+        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
+        "url": "",
+        "location": "Washington",
+        "participants": null
+      },
+      {
+        "id": "42",
+        "title": "Flamingo Protest Washington DC",
+        "date": "2026-09-12",
+        "status": "planned",
+        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
+        "url": "",
+        "location": "Washington",
+        "participants": null
+      },
+      {
+        "id": "42",
+        "title": "Flamingo Protest Washington DC",
+        "date": "2026-09-12",
+        "status": "planned",
+        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
+        "url": "",
+        "location": "Washington",
+        "participants": null
+      },
+      {
+        "id": "42",
+        "title": "Flamingo Protest Washington DC",
+        "date": "2026-09-12",
+        "status": "planned",
+        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
+        "url": "",
+        "location": "Washington",
+        "participants": null
+      },
+      {
+        "id": "42",
+        "title": "Flamingo Protest Washington DC",
+        "date": "2026-09-12",
+        "status": "planned",
+        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
+        "url": "",
+        "location": "Washington",
+        "participants": null
+      },
+      {
+        "id": "42",
+        "title": "Flamingo Protest Washington DC",
+        "date": "2026-09-12",
+        "status": "planned",
+        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
+        "url": "",
+        "location": "Washington",
+        "participants": null
+      },
+      {
+        "id": "42",
+        "title": "Flamingo Protest Washington DC",
+        "date": "2026-09-12",
+        "status": "planned",
+        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
+        "url": "",
+        "location": "Washington",
+        "participants": null
+      },
+      {
+        "id": "42",
+        "title": "Flamingo Protest Washington DC",
+        "date": "2026-09-12",
+        "status": "planned",
+        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
+        "url": "",
+        "location": "Washington",
+        "participants": null
+      },
+      {
+        "id": "42",
+        "title": "Flamingo Protest Washington DC",
+        "date": "2026-09-12",
+        "status": "planned",
+        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
         "url": "",
         "location": "Washington",
         "participants": null

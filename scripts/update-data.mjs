@@ -7,7 +7,7 @@ const citiesUrl =
 
 const protestsUrl =
   `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=1671770781`;
-  
+
 
 if (!citiesUrl) {
   throw new Error(
@@ -32,14 +32,16 @@ const protestRows = csvToObjects(protestsCsv);
 validateHeaders(
   cityRows.headers,
   [
-    "city_id",
-    "city",
-    "country",
-    "latitude",
-    "longitude",
-    "chapter_active",
-    "city_url",
-  ],
+  "city_id",
+  "city",
+  "country",
+  "latitude",
+  "longitude",
+  "chapter_active",
+  "city_url",
+  "instagram_url",
+  "facebook_url",
+],
   "cities"
 );
 
@@ -182,7 +184,11 @@ function normalizeCity(row, spreadsheetRow) {
     longitude,
     type: "protest-city",
     chapterActive: parseBoolean(row.chapter_active),
-    url: String(row.city_url || "").trim(),
+
+    cityUrl: String(row.city_url || "").trim(),
+    instagramUrl: String(row.instagram_url || "").trim(),
+    facebookUrl: String(row.facebook_url || "").trim(),
+
     protests: [],
   };
 }

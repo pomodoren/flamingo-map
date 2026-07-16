@@ -208,8 +208,81 @@ function openPopup(feature) {
   const country = escapeHtml(feature.get("country"));
   const protests = feature.get("protests") || [];
 
-  const instagramUrl = safeUrl(feature.get("instagram"));
-  const facebookUrl = safeUrl(feature.get("facebook"));
+  const cityUrl = safeUrl(feature.get("cityUrl"));
+  const instagramUrl = safeUrl(feature.get("instagramUrl"));
+  const facebookUrl = safeUrl(feature.get("facebookUrl"));
+
+  const cityLinks = `
+    <div class="community-socials">
+      ${
+        cityUrl
+          ? `
+            <a
+              class="social-link social-city"
+              href="${cityUrl}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open ${city} community page"
+              title="Community page"
+            >
+              <span aria-hidden="true">↗</span>
+              <span>Community</span>
+            </a>
+          `
+          : ""
+      }
+
+      ${
+        instagramUrl
+          ? `
+            <a
+              class="social-link social-instagram"
+              href="${instagramUrl}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="${city} on Instagram"
+              title="Instagram"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <rect x="3" y="3" width="18" height="18" rx="5"></rect>
+                <circle cx="12" cy="12" r="4"></circle>
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1"
+                  class="social-icon-fill"
+                ></circle>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          `
+          : ""
+      }
+
+      ${
+        facebookUrl
+          ? `
+            <a
+              class="social-link social-facebook"
+              href="${facebookUrl}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="${city} on Facebook"
+              title="Facebook"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path
+                  d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.7.3-1 1-1z"
+                  class="social-icon-fill"
+                ></path>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          `
+          : ""
+      }
+    </div>
+  `;
 
   const protestItems = protests
     .slice()
@@ -405,14 +478,10 @@ function openPopup(feature) {
     <div class="popup-city-header">
       <div>
         <h3>${city || "Unknown city"}</h3>
-        ${
-          country
-            ? `<p class="popup-meta">${country}</p>`
-            : ""
-        }
+        ${country ? `<p class="popup-meta">${country}</p>` : ""}
       </div>
 
-      ${socialLinks}
+      ${cityLinks}
     </div>
 
     <p class="popup-count">
@@ -490,9 +559,36 @@ function normalizeLocation(location, index) {
     country: String(location.country || ""),
     latitude,
     longitude,
+
+    cityUrl: String(
+      location.cityUrl ||
+      location.city_url ||
+      location.url ||
+      ""
+    ),
+
+    instagramUrl: String(
+      location.instagramUrl ||
+      location.instagram_url ||
+      location.instagram ||
+      ""
+    ),
+
+    facebookUrl: String(
+      location.facebookUrl ||
+      location.facebook_url ||
+      location.facebook ||
+      ""
+    ),
+
     protests,
     protestCount: protests.length,
-    hasUpcoming: protests.some(protest => ["planned", "active"].includes(protest.status)),
+
+    hasUpcoming: protests.some(protest =>
+      ["confirmed", "planned", "active", "tentative"].includes(
+        protest.status
+      )
+    ),
   };
 }
 
@@ -777,6 +873,7 @@ async function loadLocations() {
 
   source.clear();
   source.addFeatures(features);
+  updateStatistics(features);
 
   applyFilters();
   fitToVisibleFeatures();
@@ -832,3 +929,70 @@ upcomingNextElement?.addEventListener(
     });
   }
 );
+
+
+function updateStatistics(features) {
+
+    const visibleCities = features.length;
+
+    let totalProtests = 0;
+    let confirmed = 0;
+    let tentative = 0;
+    let completed = 0;
+    let major = 0;
+
+    features.forEach(feature => {
+
+        const protests = feature.get("protests") || [];
+
+        totalProtests += protests.length;
+
+        protests.forEach(protest => {
+
+            switch ((protest.status || "").toLowerCase()) {
+
+                case "confirmed":
+                case "planned":
+                case "active":
+                    confirmed++;
+                    break;
+
+                case "tentative":
+                    tentative++;
+                    break;
+
+                case "completed":
+                    completed++;
+                    break;
+
+            }
+
+            if (
+                protest.importance === "major" ||
+                protest.major === true
+            ) {
+                major++;
+            }
+
+        });
+
+    });
+
+    visibleCountElement.textContent = visibleCities;
+
+    document.getElementById("protest-count").textContent =
+        totalProtests;
+
+    document.getElementById("confirmed-count").textContent =
+        confirmed;
+
+    document.getElementById("tentative-count").textContent =
+        tentative;
+
+    document.getElementById("completed-count").textContent =
+        completed;
+
+    document.getElementById("major-count").textContent =
+        major;
+
+}
