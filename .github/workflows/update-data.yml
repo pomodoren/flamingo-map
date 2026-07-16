@@ -15,17 +15,16 @@ jobs:
 
     steps:
       - name: Check out repository
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v5
         with:
-          node-version: 22
+          node-version: 24
 
       - name: Download and validate spreadsheets
-        env:
-          CITIES_CSV_URL: ${{ secrets.CITIES_CSV_URL }}
-          PROTESTS_CSV_URL: ${{ secrets.PROTESTS_CSV_URL }}
+        #env:
+        #  CITIES_CSV_URL: ${{ secrets.CITIES_CSV_URL }}
+        #  PROTESTS_CSV_URL: ${{ secrets.PROTESTS_CSV_URL }}
         run: node scripts/update-data.mjs
 
       - name: Commit updated map data
