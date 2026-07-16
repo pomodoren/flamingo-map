@@ -212,6 +212,22 @@ function openPopup(feature) {
   const instagramUrl = safeUrl(feature.get("instagramUrl"));
   const facebookUrl = safeUrl(feature.get("facebookUrl"));
 
+  const isMobile = window.matchMedia("(max-width: 700px)").matches;
+
+  if (isMobile) {
+    popupOverlay.setPositioning("center-center");
+    popupOverlay.setOffset([0, 0]);
+  } else {
+    popupOverlay.setPositioning("bottom-center");
+    popupOverlay.setOffset([0, -12]);
+  }
+
+  popupElement.hidden = false;
+
+  popupOverlay.setPosition(
+    feature.getGeometry().getCoordinates()
+  );
+
   const cityLinks = `
     <div class="community-socials">
       ${

@@ -8,7 +8,9 @@
     "longitude": 23.7275,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "1",
@@ -31,7 +33,9 @@
     "longitude": 4.9041,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "2",
@@ -54,7 +58,9 @@
     "longitude": 16.8719,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "3",
@@ -77,7 +83,9 @@
     "longitude": 2.1686,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "4",
@@ -100,7 +108,9 @@
     "longitude": 13.405,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "https://asdasda.ds",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "5",
@@ -123,7 +133,9 @@
     "longitude": 11.3426,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "6",
@@ -146,7 +158,9 @@
     "longitude": -0.5792,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "7",
@@ -169,7 +183,9 @@
     "longitude": -71.0589,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "8",
@@ -192,7 +208,9 @@
     "longitude": 4.3517,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "9",
@@ -215,7 +233,9 @@
     "longitude": -3.1791,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "10",
@@ -238,7 +258,9 @@
     "longitude": -87.6298,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "11",
@@ -261,7 +283,9 @@
     "longitude": 6.9603,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "12",
@@ -284,7 +308,9 @@
     "longitude": 12.5683,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "13",
@@ -307,7 +333,9 @@
     "longitude": -83.0458,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "14",
@@ -330,7 +358,9 @@
     "longitude": -6.2603,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "15",
@@ -353,7 +383,9 @@
     "longitude": 8.6821,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "16",
@@ -376,7 +408,9 @@
     "longitude": 8.9463,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "17",
@@ -399,7 +433,9 @@
     "longitude": 9.9937,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "18",
@@ -422,7 +458,9 @@
     "longitude": -9.1393,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "19",
@@ -445,7 +483,9 @@
     "longitude": -0.1276,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "20",
@@ -468,7 +508,9 @@
     "longitude": 4.8357,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "21",
@@ -491,7 +533,9 @@
     "longitude": -3.7038,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "22",
@@ -514,7 +558,9 @@
     "longitude": -2.2426,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "23",
@@ -537,7 +583,9 @@
     "longitude": 9.19,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "24",
@@ -560,7 +608,9 @@
     "longitude": 11.5755,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "25",
@@ -583,7 +633,9 @@
     "longitude": -74.006,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "26",
@@ -606,7 +658,9 @@
     "longitude": 10.7522,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "27",
@@ -629,7 +683,9 @@
     "longitude": 2.3522,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "28",
@@ -652,7 +708,9 @@
     "longitude": -75.1652,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "29",
@@ -675,7 +733,9 @@
     "longitude": 12.4964,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "30",
@@ -698,7 +758,9 @@
     "longitude": -121.8863,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "31",
@@ -721,7 +783,9 @@
     "longitude": 18.0686,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "32",
@@ -744,7 +808,9 @@
     "longitude": 9.1829,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "33",
@@ -767,7 +833,9 @@
     "longitude": 19.8187,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "https://...",
+    "cityUrl": "https://asdasda.das",
+    "instagramUrl": "https://ancsa.ds",
+    "facebookUrl": "https://basdasdas.sds",
     "protests": [
       {
         "id": "34",
@@ -790,7 +858,9 @@
     "longitude": -79.3832,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "35",
@@ -823,7 +893,9 @@
     "longitude": 1.4442,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "36",
@@ -856,7 +928,9 @@
     "longitude": 7.6869,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "44",
@@ -889,7 +963,9 @@
     "longitude": -123.1207,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "38",
@@ -922,7 +998,9 @@
     "longitude": -77.0369,
     "type": "protest-city",
     "chapterActive": true,
-    "url": "",
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
     "protests": [
       {
         "id": "39",
@@ -930,96 +1008,6 @@
         "date": "2026-09-12",
         "status": "completed",
         "description": "Placeholder protest extracted from the public map for Washington.",
-        "url": "",
-        "location": "Washington",
-        "participants": null
-      },
-      {
-        "id": "42",
-        "title": "Flamingo Protest Washington DC",
-        "date": "2026-09-12",
-        "status": "planned",
-        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
-        "url": "",
-        "location": "Washington",
-        "participants": null
-      },
-      {
-        "id": "42",
-        "title": "Flamingo Protest Washington DC",
-        "date": "2026-09-12",
-        "status": "planned",
-        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
-        "url": "",
-        "location": "Washington",
-        "participants": null
-      },
-      {
-        "id": "42",
-        "title": "Flamingo Protest Washington DC",
-        "date": "2026-09-12",
-        "status": "planned",
-        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
-        "url": "",
-        "location": "Washington",
-        "participants": null
-      },
-      {
-        "id": "42",
-        "title": "Flamingo Protest Washington DC",
-        "date": "2026-09-12",
-        "status": "planned",
-        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
-        "url": "",
-        "location": "Washington",
-        "participants": null
-      },
-      {
-        "id": "42",
-        "title": "Flamingo Protest Washington DC",
-        "date": "2026-09-12",
-        "status": "planned",
-        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
-        "url": "",
-        "location": "Washington",
-        "participants": null
-      },
-      {
-        "id": "42",
-        "title": "Flamingo Protest Washington DC",
-        "date": "2026-09-12",
-        "status": "planned",
-        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
-        "url": "",
-        "location": "Washington",
-        "participants": null
-      },
-      {
-        "id": "42",
-        "title": "Flamingo Protest Washington DC",
-        "date": "2026-09-12",
-        "status": "planned",
-        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
-        "url": "",
-        "location": "Washington",
-        "participants": null
-      },
-      {
-        "id": "42",
-        "title": "Flamingo Protest Washington DC",
-        "date": "2026-09-12",
-        "status": "planned",
-        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
-        "url": "",
-        "location": "Washington",
-        "participants": null
-      },
-      {
-        "id": "42",
-        "title": "Flamingo Protest Washington DC",
-        "date": "2026-09-12",
-        "status": "planned",
-        "description": "Peaceful demonstration calling for transparency and protection of public natural assets.",
         "url": "",
         "location": "Washington",
         "participants": null

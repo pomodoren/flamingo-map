@@ -1030,6 +1030,161 @@ button {
    ========================= */
 
 @media (max-width: 700px) {
+  .ol-popup {
+    position: fixed !important;
+    z-index: 1000 !important;
+
+    top: max(8px, env(safe-area-inset-top)) !important;
+    right: 8px !important;
+    bottom: max(8px, env(safe-area-inset-bottom)) !important;
+    left: 8px !important;
+
+    display: flex;
+    width: auto !important;
+    height: auto !important;
+    max-width: none !important;
+    max-height: none !important;
+
+    padding: 18px;
+    overflow: hidden;
+    flex-direction: column;
+
+    background: rgba(255, 255, 255, 0.99);
+    border: 1px solid rgba(20, 20, 20, 0.12);
+    border-radius: 22px;
+    box-shadow: 0 22px 80px rgba(0, 0, 0, 0.32);
+
+    transform: none !important;
+  }
+
+  .ol-popup::after {
+    display: none;
+  }
+
+  #popup-content {
+    display: flex;
+    min-width: 0;
+    min-height: 0;
+    flex: 1 1 auto;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .popup-closer {
+    position: absolute;
+    z-index: 10;
+    top: 12px;
+    right: 12px;
+
+    width: 44px;
+    height: 44px;
+
+    font-size: 1.5rem;
+    background: #f4f4f2;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.12);
+  }
+
+  .popup-type {
+    flex: 0 0 auto;
+    margin-right: 50px;
+  }
+
+  .popup-city-header {
+    display: block;
+    flex: 0 0 auto;
+    padding-right: 48px;
+  }
+
+  .popup-city-header h3 {
+    margin: 0 0 4px;
+    font-size: 1.3rem;
+  }
+
+  .community-socials {
+    display: flex;
+    justify-content: flex-start;
+    gap: 9px;
+    margin-top: 12px;
+  }
+
+  .social-link {
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
+    justify-content: center;
+    padding: 0;
+    border-radius: 50%;
+  }
+
+  .social-link span {
+    display: none;
+  }
+
+  .social-link svg {
+    width: 19px;
+    height: 19px;
+  }
+
+  .popup-count {
+    flex: 0 0 auto;
+    padding-bottom: 10px;
+    margin: 14px 0 8px;
+    border-bottom: 1px solid #ececea;
+  }
+
+  .protest-list {
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none !important;
+
+    padding: 3px 3px 12px 0;
+    overflow-y: auto;
+
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .protest-item {
+    padding: 15px;
+    margin-bottom: 11px;
+    border-radius: 15px;
+  }
+
+  .protest-item h4 {
+    padding-right: 48px;
+    margin-bottom: 8px;
+    font-size: 1rem;
+    line-height: 1.35;
+  }
+
+  .protest-item-meta {
+    gap: 6px;
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+
+  .protest-item p {
+    margin: 10px 0;
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+
+  .protest-item a {
+    display: inline-flex;
+    min-height: 40px;
+    align-items: center;
+
+    margin-top: 4px;
+    padding: 8px 11px;
+
+    background: rgba(194, 22, 79, 0.08);
+    border-radius: 10px;
+    text-decoration: none;
+  }
+}
+
+
+@media (max-width: 700px) {
   :root {
     --panel-width: min(84vw, 304px);
   }
@@ -1056,16 +1211,25 @@ button {
 
   .ol-popup {
     position: fixed;
-    z-index: 70;
+    z-index: 90;
+    top: max(12px, env(safe-area-inset-top));
     right: 8px;
     bottom: max(8px, env(safe-area-inset-bottom));
     left: 8px;
 
+    display: flex;
     width: auto;
-    max-height: min(78dvh, 680px);
-    padding: 16px;
+    height: auto;
+    max-height: none;
+    padding: 18px;
+    overflow: hidden;
+    flex-direction: column;
 
-    border-radius: 20px;
+    background: rgba(255, 255, 255, 0.99);
+    border: 1px solid rgba(20, 20, 20, 0.10);
+    border-radius: 22px;
+    box-shadow: 0 22px 80px rgba(0, 0, 0, 0.30);
+
     transform: none;
   }
 
@@ -1074,15 +1238,37 @@ button {
   }
 
   .popup-closer {
-    top: 10px;
-    right: 10px;
-    width: 38px;
-    height: 38px;
+    top: 12px;
+    right: 12px;
+    width: 42px;
+    height: 42px;
+    font-size: 1.45rem;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, .10);
   }
 
   .popup-city-header {
     display: block;
     padding-right: 44px;
+  }
+
+  #popup-content {
+    display: flex;
+    min-height: 0;
+    flex: 1 1 auto;
+    flex-direction: column;
+    overflow: hidden;
+  }
+
+  .popup-type,
+  .popup-city-header,
+  .popup-count {
+    flex: 0 0 auto;
+  }
+
+  .popup-count {
+    padding-bottom: 10px;
+    margin: 12px 0 8px;
+    border-bottom: 1px solid #ececea;
   }
 
   .popup-city-header h3 {
@@ -1097,9 +1283,9 @@ button {
   }
 
   .social-link {
-    width: 40px;
-    height: 40px;
-    min-height: 40px;
+    width: 44px;
+    height: 44px;
+    min-height: 44px;
     justify-content: center;
     padding: 0;
     border-radius: 50%;
@@ -1115,8 +1301,13 @@ button {
   }
 
   .protest-list {
-    max-height: calc(min(78dvh, 680px) - 180px);
-    padding-right: 2px;
+    flex: 1 1 auto;
+    min-height: 0;
+    max-height: none;
+    padding: 2px 3px 8px 0;
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    -webkit-overflow-scrolling: touch;
   }
 
   .protest-item {
@@ -1193,14 +1384,15 @@ button {
 
 @media (max-width: 420px) {
   .ol-popup {
-    right: 6px;
-    bottom: max(6px, env(safe-area-inset-bottom));
-    left: 6px;
-    max-height: 82dvh;
-    padding: 14px;
-    border-radius: 18px;
-  }
+    top: max(5px, env(safe-area-inset-top)) !important;
+    right: 5px !important;
+    bottom: max(5px, env(safe-area-inset-bottom)) !important;
+    left: 5px !important;
 
+    padding: 15px;
+    border-radius: 19px;
+  }
+  
   .popup-city-header h3 {
     font-size: 1.12rem;
   }
@@ -1211,7 +1403,7 @@ button {
   }
 
   .protest-list {
-    max-height: calc(82dvh - 175px);
+    max-height: none;
   }
 
   .upcoming-rail {
