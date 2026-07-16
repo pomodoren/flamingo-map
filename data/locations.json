@@ -1,0 +1,83 @@
+[
+  {
+    "id": "berlin",
+    "title": "Berlin",
+    "city": "Berlin",
+    "country": "Germany",
+    "latitude": 52.52,
+    "longitude": 13.405,
+    "type": "protest-city",
+    "protests": [
+      {
+        "id": "berlin-2026-06-05",
+        "title": "Protect Sazan and Vjosa–Narta",
+        "date": "2026-06-05",
+        "status": "completed",
+        "description": "Protest for the protection of Sazan and Vjosa–Narta.",
+        "url": "https://example.org/protests/berlin-june"
+      },
+      {
+        "id": "berlin-2026-07-12",
+        "title": "Flamingo Protest Berlin",
+        "date": "2026-07-12",
+        "status": "completed",
+        "description": "A peaceful gathering near the Albanian Embassy.",
+        "url": "https://example.org/protests/berlin-july"
+      },
+      {
+        "id": "berlin-2026-08-20",
+        "title": "Community Action Berlin",
+        "date": "2026-08-20",
+        "status": "planned",
+        "description": "An upcoming public gathering in Berlin.",
+        "url": "https://example.org/protests/berlin-august"
+      }
+    ]
+  },
+  {
+    "id": "tirana",
+    "title": "Tirana",
+    "city": "Tirana",
+    "country": "Albania",
+    "latitude": 41.3275,
+    "longitude": 19.8187,
+    "type": "protest-city",
+    "protests": [
+      {
+        "id": "tirana-2026-06-10",
+        "title": "Protect Vjosa–Narta",
+        "date": "2026-06-10",
+        "status": "completed",
+        "description": "Public action supporting protected areas.",
+        "url": "https://example.org/protests/tirana-june"
+      },
+      {
+        "id": "tirana-2026-07-20",
+        "title": "Demonstration for Accountability",
+        "date": "2026-07-20",
+        "status": "planned",
+        "description": "Public action supporting transparency and accountability.",
+        "url": "https://example.org/protests/tirana-july"
+      }
+    ]
+  },
+  {
+    "id": "munich",
+    "title": "Munich",
+    "city": "Munich",
+    "country": "Germany",
+    "latitude": 48.1374,
+    "longitude": 11.5755,
+    "type": "protest-city",
+    "protests": [
+      {
+        "id": "munich-2026-08-08",
+        "title": "Community Information Protest",
+        "date": "2026-08-08",
+        "status": "planned",
+        "description": "A community gathering in Munich.",
+        "url": "https://example.org/protests/munich"
+      }
+    ]
+  }
+]
