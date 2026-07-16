@@ -1,111 +1,207 @@
 <!doctype html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, viewport-fit=cover"
+    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
-  <title>Flamingo Protest Map</title>
-  <meta name="description" content="Interactive map of Flamingo protests around the world.">
+    <title>Flamingo Protest Map</title>
+    <meta
+      name="description"
+      content="Interactive map of Flamingo protests around the world."
+    />
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/ol@10.9.0/ol.css">
-  <link rel="stylesheet" href="./style.css">
-</head>
-<body>
-  <main class="map-app">
-    <div id="map" class="map" role="application" aria-label="Interactive protest map"></div>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/ol@10.9.0/ol.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <main class="map-app">
+      <div
+        id="map"
+        class="map"
+        role="application"
+        aria-label="Interactive protest map"
+      ></div>
 
-    <aside id="map-panel" class="map-panel is-closed" aria-label="Map filters">
-      <div class="panel-header">
-        <div>
-          <p class="panel-eyebrow">Flamingo Revolution</p>
-          <h1>Protest Map</h1>
+      <aside
+        id="map-panel"
+        class="map-panel is-closed"
+        aria-label="Map filters"
+      >
+        <div class="panel-header">
+          <div>
+            <p class="panel-eyebrow">Flamingo Revolution</p>
+            <h1>Protest Map</h1>
+          </div>
+
+          <button
+            id="close-panel"
+            class="icon-button"
+            type="button"
+            aria-label="Close map filters"
+          >
+            <span aria-hidden="true">‹</span>
+          </button>
         </div>
 
-        <button id="close-panel" class="icon-button" type="button" aria-label="Close map filters">
-          <span aria-hidden="true">‹</span>
+        <section class="panel-section">
+          <label class="search-label" for="search">Search</label>
+          <input
+            id="search"
+            type="search"
+            placeholder="Search city or protest"
+            autocomplete="off"
+          />
+        </section>
+
+        <section class="panel-section">
+          <h2>Status</h2>
+
+          <label class="filter-option">
+            <input
+              class="status-filter"
+              type="checkbox"
+              value="planned"
+              checked
+            />
+            <span class="status-dot status-planned" aria-hidden="true"></span>
+            <span>Upcoming</span>
+          </label>
+
+          <label class="filter-option">
+            <input
+              class="status-filter"
+              type="checkbox"
+              value="active"
+              checked
+            />
+            <span class="status-dot status-active" aria-hidden="true"></span>
+            <span>Active</span>
+          </label>
+
+          <label class="filter-option">
+            <input
+              class="status-filter"
+              type="checkbox"
+              value="completed"
+              checked
+            />
+            <span class="status-dot status-completed" aria-hidden="true"></span>
+            <span>Past</span>
+          </label>
+        </section>
+
+        <section class="panel-section">
+          <h2>Legend</h2>
+
+          <div class="circle-legend">
+            <div class="circle-legend-item">
+              <span class="circle-example circle-small">1</span>
+              <span>1 protest</span>
+            </div>
+
+            <div class="circle-legend-item">
+              <span class="circle-example circle-medium">5</span>
+              <span>Several protests</span>
+            </div>
+
+            <div class="circle-legend-item">
+              <span class="circle-example circle-large">15</span>
+              <span>Many protests</span>
+            </div>
+
+            <div class="circle-legend-item">
+              <span class="circle-example circle-medium upcoming">5</span>
+              <span>Upcoming protest</span>
+            </div>
+          </div>
+        </section>
+
+        <section class="panel-section panel-summary" aria-live="polite">
+          <strong id="visible-count">0</strong>
+          <span>cities visible</span>
+        </section>
+      </aside>
+
+      <button
+        id="sidebar-handle"
+        class="sidebar-handle"
+        type="button"
+        aria-label="Open map filters"
+        aria-expanded="false"
+        aria-controls="map-panel"
+      >
+        <span class="sidebar-handle-icon" aria-hidden="true">›</span>
+      </button>
+
+      <section
+        id="upcoming-rail"
+        class="upcoming-rail"
+        aria-label="Upcoming protests"
+      >
+        <div class="upcoming-rail-header">
+          <div>
+            <p class="upcoming-eyebrow">Next events</p>
+            <h2>Upcoming protests</h2>
+          </div>
+
+          <button
+            id="toggle-upcoming"
+            class="upcoming-toggle"
+            type="button"
+            aria-expanded="true"
+            aria-controls="upcoming-content"
+            aria-label="Hide upcoming protests"
+          >
+            ↓
+          </button>
+        </div>
+
+        <div id="upcoming-content" class="upcoming-content">
+          <button
+            id="upcoming-previous"
+            class="upcoming-scroll-button upcoming-previous"
+            type="button"
+            aria-label="Scroll upcoming protests left"
+          >
+            ‹
+          </button>
+
+          <div id="upcoming-list" class="upcoming-list" tabindex="0"></div>
+
+          <button
+            id="upcoming-next"
+            class="upcoming-scroll-button upcoming-next"
+            type="button"
+            aria-label="Scroll upcoming protests right"
+          >
+            ›
+          </button>
+        </div>
+      </section>
+
+      <div id="popup" class="ol-popup" hidden>
+        <button
+          id="popup-closer"
+          class="popup-closer"
+          type="button"
+          aria-label="Close popup"
+        >
+          ×
         </button>
+        <div id="popup-content"></div>
       </div>
 
-      <section class="panel-section">
-        <label class="search-label" for="search">Search</label>
-        <input id="search" type="search" placeholder="Search city or protest" autocomplete="off">
-      </section>
+      <div id="map-message" class="map-message" hidden role="status"></div>
+    </main>
 
-      <section class="panel-section">
-        <h2>Status</h2>
-
-        <label class="filter-option">
-          <input class="status-filter" type="checkbox" value="planned" checked>
-          <span class="status-dot status-planned" aria-hidden="true"></span>
-          <span>Upcoming</span>
-        </label>
-
-        <label class="filter-option">
-          <input class="status-filter" type="checkbox" value="active" checked>
-          <span class="status-dot status-active" aria-hidden="true"></span>
-          <span>Active</span>
-        </label>
-
-        <label class="filter-option">
-          <input class="status-filter" type="checkbox" value="completed" checked>
-          <span class="status-dot status-completed" aria-hidden="true"></span>
-          <span>Past</span>
-        </label>
-      </section>
-
-      <section class="panel-section">
-        <h2>Legend</h2>
-
-        <div class="circle-legend">
-          <div class="circle-legend-item">
-            <span class="circle-example circle-small">1</span>
-            <span>1 protest</span>
-          </div>
-
-          <div class="circle-legend-item">
-            <span class="circle-example circle-medium">5</span>
-            <span>Several protests</span>
-          </div>
-
-          <div class="circle-legend-item">
-            <span class="circle-example circle-large">15</span>
-            <span>Many protests</span>
-          </div>
-
-          <div class="circle-legend-item">
-            <span class="circle-example circle-medium upcoming">5</span>
-            <span>Upcoming protest</span>
-          </div>
-        </div>
-      </section>
-
-      <section class="panel-section panel-summary" aria-live="polite">
-        <strong id="visible-count">0</strong>
-        <span>cities visible</span>
-      </section>
-    </aside>
-
-    <button
-      id="sidebar-handle"
-      class="sidebar-handle"
-      type="button"
-      aria-label="Open map filters"
-      aria-expanded="false"
-      aria-controls="map-panel"
-    >
-      <span class="sidebar-handle-icon" aria-hidden="true">›</span>
-    </button>
-
-    <div id="popup" class="ol-popup" hidden>
-      <button id="popup-closer" class="popup-closer" type="button" aria-label="Close popup">×</button>
-      <div id="popup-content"></div>
-    </div>
-
-    <div id="map-message" class="map-message" hidden role="status"></div>
-  </main>
-
-  <script src="https://cdn.jsdelivr.net/npm/ol@10.9.0/dist/ol.js"></script>
-  <script src="./map.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/ol@10.9.0/dist/ol.js"></script>
+    <script src="./map.js"></script>
+  </body>
 </html>

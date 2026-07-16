@@ -1,82 +1,898 @@
 [
   {
-    "id": "berlin",
+    "id": "athens-gr",
+    "title": "Athens",
+    "city": "Athens",
+    "country": "Greece",
+    "latitude": 37.9838,
+    "longitude": 23.7275,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "1",
+        "title": "Flamingo Protest - Athens",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Athens.",
+        "url": "",
+        "location": "Athens",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "amsterdam-nl",
+    "title": "Amsterdam",
+    "city": "Amsterdam",
+    "country": "Netherlands",
+    "latitude": 52.3676,
+    "longitude": 4.9041,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "2",
+        "title": "Flamingo Protest - Amsterdam",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Amsterdam.",
+        "url": "",
+        "location": "Amsterdam",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "bari-it",
+    "title": "Bari",
+    "city": "Bari",
+    "country": "Italy",
+    "latitude": 41.1171,
+    "longitude": 16.8719,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "3",
+        "title": "Flamingo Protest - Bari",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Bari.",
+        "url": "",
+        "location": "Bari",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "barcelona-es",
+    "title": "Barcelona",
+    "city": "Barcelona",
+    "country": "Spain",
+    "latitude": 41.3874,
+    "longitude": 2.1686,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "4",
+        "title": "Flamingo Protest - Barcelona",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Barcelona.",
+        "url": "",
+        "location": "Barcelona",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "berlin-de",
     "title": "Berlin",
     "city": "Berlin",
     "country": "Germany",
     "latitude": 52.52,
     "longitude": 13.405,
     "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
     "protests": [
       {
-        "id": "berlin-2026-06-05",
-        "title": "Protect Sazan and Vjosa–Narta",
-        "date": "2026-06-05",
+        "id": "5",
+        "title": "Flamingo Protest - Berlin",
+        "date": "",
         "status": "completed",
-        "description": "Protest for the protection of Sazan and Vjosa–Narta.",
-        "url": "https://example.org/protests/berlin-june"
-      },
-      {
-        "id": "berlin-2026-07-12",
-        "title": "Flamingo Protest Berlin",
-        "date": "2026-07-12",
-        "status": "completed",
-        "description": "A peaceful gathering near the Albanian Embassy.",
-        "url": "https://example.org/protests/berlin-july"
-      },
-      {
-        "id": "berlin-2026-08-20",
-        "title": "Community Action Berlin",
-        "date": "2026-08-20",
-        "status": "planned",
-        "description": "An upcoming public gathering in Berlin.",
-        "url": "https://example.org/protests/berlin-august"
+        "description": "Placeholder protest extracted from the public map for Berlin.",
+        "url": "",
+        "location": "Berlin",
+        "participants": null
       }
     ]
   },
   {
-    "id": "tirana",
-    "title": "Tirana",
-    "city": "Tirana",
-    "country": "Albania",
-    "latitude": 41.3275,
-    "longitude": 19.8187,
+    "id": "bologna-it",
+    "title": "Bologna",
+    "city": "Bologna",
+    "country": "Italy",
+    "latitude": 44.4949,
+    "longitude": 11.3426,
     "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
     "protests": [
       {
-        "id": "tirana-2026-06-10",
-        "title": "Protect Vjosa–Narta",
-        "date": "2026-06-10",
+        "id": "6",
+        "title": "Flamingo Protest - Bologna",
+        "date": "",
         "status": "completed",
-        "description": "Public action supporting protected areas.",
-        "url": "https://example.org/protests/tirana-june"
-      },
-      {
-        "id": "tirana-2026-07-20",
-        "title": "Demonstration for Accountability",
-        "date": "2026-07-20",
-        "status": "planned",
-        "description": "Public action supporting transparency and accountability.",
-        "url": "https://example.org/protests/tirana-july"
+        "description": "Placeholder protest extracted from the public map for Bologna.",
+        "url": "",
+        "location": "Bologna",
+        "participants": null
       }
     ]
   },
   {
-    "id": "munich",
+    "id": "bordeaux-fr",
+    "title": "Bordeaux",
+    "city": "Bordeaux",
+    "country": "France",
+    "latitude": 44.8378,
+    "longitude": -0.5792,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "7",
+        "title": "Flamingo Protest - Bordeaux",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Bordeaux.",
+        "url": "",
+        "location": "Bordeaux",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "boston-us",
+    "title": "Boston",
+    "city": "Boston",
+    "country": "United States",
+    "latitude": 42.3601,
+    "longitude": -71.0589,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "8",
+        "title": "Flamingo Protest - Boston",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Boston.",
+        "url": "",
+        "location": "Boston",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "brussels-be",
+    "title": "Brussels",
+    "city": "Brussels",
+    "country": "Belgium",
+    "latitude": 50.8503,
+    "longitude": 4.3517,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "9",
+        "title": "Flamingo Protest - Brussels",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Brussels.",
+        "url": "",
+        "location": "Brussels",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "cardiff-gb",
+    "title": "Cardiff",
+    "city": "Cardiff",
+    "country": "United Kingdom",
+    "latitude": 51.4816,
+    "longitude": -3.1791,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "10",
+        "title": "Flamingo Protest - Cardiff",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Cardiff.",
+        "url": "",
+        "location": "Cardiff",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "chicago-us",
+    "title": "Chicago",
+    "city": "Chicago",
+    "country": "United States",
+    "latitude": 41.8781,
+    "longitude": -87.6298,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "11",
+        "title": "Flamingo Protest - Chicago",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Chicago.",
+        "url": "",
+        "location": "Chicago",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "cologne-de",
+    "title": "Cologne",
+    "city": "Cologne",
+    "country": "Germany",
+    "latitude": 50.9375,
+    "longitude": 6.9603,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "12",
+        "title": "Flamingo Protest - Cologne",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Cologne.",
+        "url": "",
+        "location": "Cologne",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "copenhagen-dk",
+    "title": "Copenhagen",
+    "city": "Copenhagen",
+    "country": "Denmark",
+    "latitude": 55.6761,
+    "longitude": 12.5683,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "13",
+        "title": "Flamingo Protest - Copenhagen",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Copenhagen.",
+        "url": "",
+        "location": "Copenhagen",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "detroit-us",
+    "title": "Detroit",
+    "city": "Detroit",
+    "country": "United States",
+    "latitude": 42.3314,
+    "longitude": -83.0458,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "14",
+        "title": "Flamingo Protest - Detroit",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Detroit.",
+        "url": "",
+        "location": "Detroit",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "dublin-ie",
+    "title": "Dublin",
+    "city": "Dublin",
+    "country": "Ireland",
+    "latitude": 53.3498,
+    "longitude": -6.2603,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "15",
+        "title": "Flamingo Protest - Dublin",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Dublin.",
+        "url": "",
+        "location": "Dublin",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "frankfurt-de",
+    "title": "Frankfurt am Main",
+    "city": "Frankfurt am Main",
+    "country": "Germany",
+    "latitude": 50.1109,
+    "longitude": 8.6821,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "16",
+        "title": "Flamingo Protest - Frankfurt am Main",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Frankfurt am Main.",
+        "url": "",
+        "location": "Frankfurt am Main",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "genoa-it",
+    "title": "Genoa",
+    "city": "Genoa",
+    "country": "Italy",
+    "latitude": 44.4056,
+    "longitude": 8.9463,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "17",
+        "title": "Flamingo Protest - Genoa",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Genoa.",
+        "url": "",
+        "location": "Genoa",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "hamburg-de",
+    "title": "Hamburg",
+    "city": "Hamburg",
+    "country": "Germany",
+    "latitude": 53.5511,
+    "longitude": 9.9937,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "18",
+        "title": "Flamingo Protest - Hamburg",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Hamburg.",
+        "url": "",
+        "location": "Hamburg",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "lisbon-pt",
+    "title": "Lisbon",
+    "city": "Lisbon",
+    "country": "Portugal",
+    "latitude": 38.7223,
+    "longitude": -9.1393,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "19",
+        "title": "Flamingo Protest - Lisbon",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Lisbon.",
+        "url": "",
+        "location": "Lisbon",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "london-gb",
+    "title": "London",
+    "city": "London",
+    "country": "United Kingdom",
+    "latitude": 51.5072,
+    "longitude": -0.1276,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "20",
+        "title": "Flamingo Protest - London",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for London.",
+        "url": "",
+        "location": "London",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "lyon-fr",
+    "title": "Lyon",
+    "city": "Lyon",
+    "country": "France",
+    "latitude": 45.764,
+    "longitude": 4.8357,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "21",
+        "title": "Flamingo Protest - Lyon",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Lyon.",
+        "url": "",
+        "location": "Lyon",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "madrid-es",
+    "title": "Madrid",
+    "city": "Madrid",
+    "country": "Spain",
+    "latitude": 40.4168,
+    "longitude": -3.7038,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "22",
+        "title": "Flamingo Protest - Madrid",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Madrid.",
+        "url": "",
+        "location": "Madrid",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "manchester-gb",
+    "title": "Manchester",
+    "city": "Manchester",
+    "country": "United Kingdom",
+    "latitude": 53.4808,
+    "longitude": -2.2426,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "23",
+        "title": "Flamingo Protest - Manchester",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Manchester.",
+        "url": "",
+        "location": "Manchester",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "milan-it",
+    "title": "Milan",
+    "city": "Milan",
+    "country": "Italy",
+    "latitude": 45.4642,
+    "longitude": 9.19,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "24",
+        "title": "Flamingo Protest - Milan",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Milan.",
+        "url": "",
+        "location": "Milan",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "munich-de",
     "title": "Munich",
     "city": "Munich",
     "country": "Germany",
     "latitude": 48.1374,
     "longitude": 11.5755,
     "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
     "protests": [
       {
-        "id": "munich-2026-08-08",
-        "title": "Community Information Protest",
-        "date": "2026-08-08",
+        "id": "25",
+        "title": "Flamingo Protest - Munich",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Munich.",
+        "url": "",
+        "location": "Munich",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "new-york-us",
+    "title": "New York",
+    "city": "New York",
+    "country": "United States",
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "26",
+        "title": "Flamingo Protest - New York",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for New York.",
+        "url": "",
+        "location": "New York",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "oslo-no",
+    "title": "Oslo",
+    "city": "Oslo",
+    "country": "Norway",
+    "latitude": 59.9139,
+    "longitude": 10.7522,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "27",
+        "title": "Flamingo Protest - Oslo",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Oslo.",
+        "url": "",
+        "location": "Oslo",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "paris-fr",
+    "title": "Paris",
+    "city": "Paris",
+    "country": "France",
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "28",
+        "title": "Flamingo Protest - Paris",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Paris.",
+        "url": "",
+        "location": "Paris",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "philadelphia-us",
+    "title": "Philadelphia",
+    "city": "Philadelphia",
+    "country": "United States",
+    "latitude": 39.9526,
+    "longitude": -75.1652,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "29",
+        "title": "Flamingo Protest - Philadelphia",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Philadelphia.",
+        "url": "",
+        "location": "Philadelphia",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "rome-it",
+    "title": "Rome",
+    "city": "Rome",
+    "country": "Italy",
+    "latitude": 41.9028,
+    "longitude": 12.4964,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "30",
+        "title": "Flamingo Protest - Rome",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Rome.",
+        "url": "",
+        "location": "Rome",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "san-jose-us",
+    "title": "San Jose",
+    "city": "San Jose",
+    "country": "United States",
+    "latitude": 37.3382,
+    "longitude": -121.8863,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "31",
+        "title": "Flamingo Protest - San Jose",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for San Jose.",
+        "url": "",
+        "location": "San Jose",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "stockholm-se",
+    "title": "Stockholm",
+    "city": "Stockholm",
+    "country": "Sweden",
+    "latitude": 59.3293,
+    "longitude": 18.0686,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "32",
+        "title": "Flamingo Protest - Stockholm",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Stockholm.",
+        "url": "",
+        "location": "Stockholm",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "stuttgart-de",
+    "title": "Stuttgart",
+    "city": "Stuttgart",
+    "country": "Germany",
+    "latitude": 48.7758,
+    "longitude": 9.1829,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "33",
+        "title": "Flamingo Protest - Stuttgart",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Stuttgart.",
+        "url": "",
+        "location": "Stuttgart",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "tirana-al",
+    "title": "Tiranë",
+    "city": "Tiranë",
+    "country": "Albania",
+    "latitude": 41.3275,
+    "longitude": 19.8187,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "34",
+        "title": "Flamingo Protest - Tiranë",
+        "date": "",
         "status": "planned",
-        "description": "A community gathering in Munich.",
-        "url": "https://example.org/protests/munich"
+        "description": "Placeholder protest extracted from the public map for Tiranë.",
+        "url": "",
+        "location": "Tiranë",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "toronto-ca",
+    "title": "Toronto",
+    "city": "Toronto",
+    "country": "Canada",
+    "latitude": 43.6532,
+    "longitude": -79.3832,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "35",
+        "title": "Flamingo Protest - Toronto",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Toronto.",
+        "url": "",
+        "location": "Toronto",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "toulouse-fr",
+    "title": "Toulouse",
+    "city": "Toulouse",
+    "country": "France",
+    "latitude": 43.6047,
+    "longitude": 1.4442,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "36",
+        "title": "Flamingo Protest - Toulouse",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Toulouse.",
+        "url": "",
+        "location": "Toulouse",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "turin-it",
+    "title": "Turin",
+    "city": "Turin",
+    "country": "Italy",
+    "latitude": 45.0703,
+    "longitude": 7.6869,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "37",
+        "title": "Flamingo Protest - Turin",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Turin.",
+        "url": "",
+        "location": "Turin",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "vancouver-ca",
+    "title": "Vancouver",
+    "city": "Vancouver",
+    "country": "Canada",
+    "latitude": 49.2827,
+    "longitude": -123.1207,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "38",
+        "title": "Flamingo Protest - Vancouver",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Vancouver.",
+        "url": "",
+        "location": "Vancouver",
+        "participants": null
+      }
+    ]
+  },
+  {
+    "id": "washington-dc-us",
+    "title": "Washington",
+    "city": "Washington",
+    "country": "United States",
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "type": "protest-city",
+    "chapterActive": true,
+    "url": "",
+    "protests": [
+      {
+        "id": "39",
+        "title": "Flamingo Protest - Washington",
+        "date": "",
+        "status": "completed",
+        "description": "Placeholder protest extracted from the public map for Washington.",
+        "url": "",
+        "location": "Washington",
+        "participants": null
       }
     ]
   }

@@ -1,0 +1,6 @@
+protest_id,city_id,title,date,status,description,url,location,participants
+toronto-ca-002,toronto-ca,Flamingo Community Gathering Toronto,2026-08-22,planned,Upcoming community protest supporting environmental protection and accountability.,,Toronto,
+vancouver-ca-002,vancouver-ca,Protect Vjosa-Narta Vancouver,2026-09-05,planned,Public gathering in support of Vjosa-Narta and protected areas in Albania.,,Vancouver,
+washington-dc-us-002,washington-dc-us,Flamingo Protest Washington DC,2026-09-12,planned,Peaceful demonstration calling for transparency and protection of public natural assets.,,Washington,
+toulouse-fr-002,toulouse-fr,Flamingo Gathering Toulouse,2026-08-29,active,Community action and information event for the Albanian diaspora.,,Toulouse,
+turin-it-002,turin-it,Protect Albania's Natural Heritage Turin,2026-09-19,planned,Upcoming protest supporting protected areas and environmental accountability.,,Turin,

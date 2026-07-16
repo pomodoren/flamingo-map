@@ -208,46 +208,228 @@ function openPopup(feature) {
   const country = escapeHtml(feature.get("country"));
   const protests = feature.get("protests") || [];
 
+  const instagramUrl = safeUrl(feature.get("instagram"));
+  const facebookUrl = safeUrl(feature.get("facebook"));
+
   const protestItems = protests
     .slice()
-    .sort((first, second) => String(second.date).localeCompare(String(first.date)))
+    .sort((first, second) => {
+      const statusOrder = {
+        active: 0,
+        planned: 1,
+        completed: 2,
+        cancelled: 3,
+      };
+
+      const firstOrder =
+        statusOrder[first.status] ?? 99;
+
+      const secondOrder =
+        statusOrder[second.status] ?? 99;
+
+      if (firstOrder !== secondOrder) {
+        return firstOrder - secondOrder;
+      }
+
+      return String(first.date || "").localeCompare(
+        String(second.date || "")
+      );
+    })
     .map(protest => {
       const title = escapeHtml(protest.title);
       const date = formatDate(protest.date);
-      const status = escapeHtml(protest.status);
+      const status = String(
+        protest.status || "completed"
+      ).toLowerCase();
+
+      const safeStatus = escapeHtml(status);
       const description = escapeHtml(protest.description);
       const location = escapeHtml(protest.location);
-      const participants = Number.isFinite(Number(protest.participants)) && protest.participants !== ""
-        ? Number(protest.participants)
-        : null;
+
+      const participants =
+        Number.isFinite(Number(protest.participants)) &&
+        protest.participants !== ""
+          ? Number(protest.participants)
+          : null;
+
       const url = safeUrl(protest.url);
 
+      const isUpcoming =
+        status === "planned" ||
+        status === "active";
+
+      const statusLabel = {
+        planned: "Upcoming",
+        active: "Happening now",
+        completed: "Past protest",
+        cancelled: "Cancelled",
+      }[status] || safeStatus;
+
       return `
-        <article class="protest-item">
+        <article
+          class="
+            protest-item
+            protest-item-${safeStatus}
+            ${isUpcoming ? "protest-item-upcoming" : ""}
+          "
+        >
+          ${
+            isUpcoming
+              ? `
+                <div class="upcoming-badge">
+                  ${status === "active" ? "Live" : "Upcoming"}
+                </div>
+              `
+              : ""
+          }
+
           <h4>${title}</h4>
+
           <div class="protest-item-meta">
             ${date ? `<span>${date}</span>` : ""}
-            ${status ? `<span>${status}</span>` : ""}
+            ${
+              status
+                ? `
+                  <span class="protest-status protest-status-${safeStatus}">
+                    ${statusLabel}
+                  </span>
+                `
+                : ""
+            }
             ${location ? `<span>${location}</span>` : ""}
-            ${participants !== null ? `<span>${participants} participants</span>` : ""}
+            ${
+              participants !== null
+                ? `<span>${participants} participants</span>`
+                : ""
+            }
           </div>
-          ${description ? `<p>${description}</p>` : ""}
-          ${url ? `<a href="${url}" target="_parent" rel="noopener">View protest →</a>` : ""}
+
+          ${
+            description
+              ? `<p>${description}</p>`
+              : ""
+          }
+
+          ${
+            url
+              ? `
+                <a
+                  href="${url}"
+                  target="_parent"
+                  rel="noopener"
+                >
+                  View protest →
+                </a>
+              `
+              : ""
+          }
         </article>
       `;
     })
     .join("");
 
+  const socialLinks = `
+    <div class="community-socials">
+      ${
+        instagramUrl
+          ? `
+            <a
+              class="social-link social-instagram"
+              href="${instagramUrl}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="${city} on Instagram"
+              title="Instagram"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <rect
+                  x="3"
+                  y="3"
+                  width="18"
+                  height="18"
+                  rx="5"
+                  ry="5"
+                ></rect>
+                <circle
+                  cx="12"
+                  cy="12"
+                  r="4"
+                ></circle>
+                <circle
+                  cx="17.5"
+                  cy="6.5"
+                  r="1"
+                  class="social-icon-fill"
+                ></circle>
+              </svg>
+              <span>Instagram</span>
+            </a>
+          `
+          : ""
+      }
+
+      ${
+        facebookUrl
+          ? `
+            <a
+              class="social-link social-facebook"
+              href="${facebookUrl}"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="${city} on Facebook"
+              title="Facebook"
+            >
+              <svg
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+              >
+                <path
+                  d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v8h4v-8h3.2l.8-4H13V9c0-.7.3-1 1-1z"
+                  class="social-icon-fill"
+                ></path>
+              </svg>
+              <span>Facebook</span>
+            </a>
+          `
+          : ""
+      }
+    </div>
+  `;
+
   popupContentElement.innerHTML = `
     <p class="popup-type">Protest city</p>
-    <h3>${city || "Unknown city"}</h3>
-    ${country ? `<p class="popup-meta">${country}</p>` : ""}
-    <p class="popup-count">${protests.length} ${protests.length === 1 ? "protest" : "protests"}</p>
-    <div class="protest-list">${protestItems}</div>
+
+    <div class="popup-city-header">
+      <div>
+        <h3>${city || "Unknown city"}</h3>
+        ${
+          country
+            ? `<p class="popup-meta">${country}</p>`
+            : ""
+        }
+      </div>
+
+      ${socialLinks}
+    </div>
+
+    <p class="popup-count">
+      ${protests.length}
+      ${protests.length === 1 ? "protest" : "protests"}
+    </p>
+
+    <div class="protest-list">
+      ${protestItems}
+    </div>
   `;
 
   popupElement.hidden = false;
-  popupOverlay.setPosition(feature.getGeometry().getCoordinates());
+
+  popupOverlay.setPosition(
+    feature.getGeometry().getCoordinates()
+  );
 }
 
 function closePopup() {
@@ -410,3 +592,243 @@ loadLocations().catch(error => {
   console.error(error);
   showMessage("The map loaded, but the location data could not be read.");
 });
+
+const upcomingRailElement =
+  document.getElementById("upcoming-rail");
+
+const upcomingListElement =
+  document.getElementById("upcoming-list");
+
+const upcomingToggleElement =
+  document.getElementById("toggle-upcoming");
+
+const upcomingPreviousElement =
+  document.getElementById("upcoming-previous");
+
+const upcomingNextElement =
+  document.getElementById("upcoming-next");
+
+function getUpcomingProtests() {
+  const upcoming = [];
+
+  source.getFeatures().forEach(feature => {
+    const city = feature.get("city") || "";
+    const country = feature.get("country") || "";
+    const protests = feature.get("protests") || [];
+
+    protests.forEach(protest => {
+      if (
+        protest.status !== "planned" &&
+        protest.status !== "active"
+      ) {
+        return;
+      }
+
+      upcoming.push({
+        ...protest,
+        city,
+        country,
+        feature,
+      });
+    });
+  });
+
+  return upcoming.sort((first, second) => {
+    if (!first.date) {
+      return 1;
+    }
+
+    if (!second.date) {
+      return -1;
+    }
+
+    return String(first.date).localeCompare(
+      String(second.date)
+    );
+  });
+}
+
+function renderUpcomingProtests() {
+  if (!upcomingListElement) {
+    return;
+  }
+
+  const upcoming = getUpcomingProtests();
+
+  if (upcoming.length === 0) {
+    upcomingListElement.innerHTML = `
+      <p class="upcoming-empty">
+        No upcoming protests have been added.
+      </p>
+    `;
+
+    return;
+  }
+
+  upcomingListElement.innerHTML = upcoming
+    .map((protest, index) => {
+      const title = escapeHtml(protest.title);
+      const city = escapeHtml(protest.city);
+      const country = escapeHtml(protest.country);
+      const date = formatDate(protest.date);
+      const status = escapeHtml(protest.status);
+
+      const place = [city, country]
+        .filter(Boolean)
+        .join(", ");
+
+      return `
+        <button
+          class="upcoming-card"
+          type="button"
+          data-upcoming-index="${index}"
+        >
+          <p class="upcoming-card-date">
+            ${date || "Date to be confirmed"}
+          </p>
+
+          <h3>${title}</h3>
+
+          ${
+            place
+              ? `
+                <p class="upcoming-card-place">
+                  ${place}
+                </p>
+              `
+              : ""
+          }
+
+          <span class="upcoming-card-status">
+            ${status}
+          </span>
+        </button>
+      `;
+    })
+    .join("");
+
+  upcomingListElement
+    .querySelectorAll(".upcoming-card")
+    .forEach((button, index) => {
+      button.addEventListener("click", () => {
+        const protest = upcoming[index];
+
+        if (!protest) {
+          return;
+        }
+
+        const feature = protest.feature;
+
+        map.getView().animate({
+          center: feature
+            .getGeometry()
+            .getCoordinates(),
+
+          zoom: Math.max(
+            map.getView().getZoom() || 4,
+            8
+          ),
+
+          duration: 500,
+        });
+
+        openPopup(feature);
+      });
+    });
+}
+
+async function loadLocations() {
+  hideMessage();
+
+  const response = await fetch(DATA_URL, {
+    cache: "no-store",
+  });
+
+  if (!response.ok) {
+    throw new Error(`HTTP ${response.status}`);
+  }
+
+  const data = await response.json();
+
+  if (!Array.isArray(data)) {
+    throw new Error("The data file must contain a JSON array.");
+  }
+
+  const locations = data
+    .map(normalizeLocation)
+    .filter(Boolean);
+
+  const features = locations.map(location => {
+    const feature = new ol.Feature({
+      geometry: new ol.geom.Point(
+        ol.proj.fromLonLat([
+          location.longitude,
+          location.latitude,
+        ])
+      ),
+
+      ...location,
+    });
+
+    feature.setId(location.id);
+
+    return feature;
+  });
+
+  source.clear();
+  source.addFeatures(features);
+
+  applyFilters();
+  fitToVisibleFeatures();
+  renderUpcomingProtests();
+}
+
+loadLocations().catch(error => {
+  console.error(error);
+
+  showMessage(
+    "The map loaded, but the location data could not be read."
+  );
+});
+
+upcomingToggleElement?.addEventListener(
+  "click",
+  () => {
+    const collapsed =
+      upcomingRailElement?.classList.toggle(
+        "is-collapsed"
+      );
+
+    upcomingToggleElement.setAttribute(
+      "aria-expanded",
+      String(!collapsed)
+    );
+
+    upcomingToggleElement.setAttribute(
+      "aria-label",
+      collapsed
+        ? "Show upcoming protests"
+        : "Hide upcoming protests"
+    );
+  }
+);
+
+upcomingPreviousElement?.addEventListener(
+  "click",
+  () => {
+    upcomingListElement?.scrollBy({
+      left: -260,
+      behavior: "smooth",
+    });
+  }
+);
+
+upcomingNextElement?.addEventListener(
+  "click",
+  () => {
+    upcomingListElement?.scrollBy({
+      left: 260,
+      behavior: "smooth",
+    });
+  }
+);
