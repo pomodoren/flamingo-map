@@ -1,9 +1,13 @@
 import fs from "node:fs/promises";
 
-const citiesUrl = "https://docs.google.com/spreadsheets/d/1i07VQru-t1-KmDzw84lkuXW2D0horxup/edit?gid=774046949#gid=774046949";
-// process.env.CITIES_CSV_URL;
-const protestsUrl = "https://docs.google.com/spreadsheets/d/1i07VQru-t1-KmDzw84lkuXW2D0horxup/edit?gid=1671770781#gid=1671770781";
-// process.env.PROTESTS_CSV_URL;
+const SHEET_ID = "1i07VQru-t1-KmDzw84lkuXW2D0horxup";
+
+const citiesUrl =
+  `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=774046949`;
+
+const protestsUrl =
+  `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=1671770781`;
+  
 
 if (!citiesUrl) {
   throw new Error(
