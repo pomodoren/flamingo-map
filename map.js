@@ -5,133 +5,65 @@ const popupElement = document.getElementById("popup");
 const popupContentElement = document.getElementById("popup-content");
 const popupCloserElement = document.getElementById("popup-closer");
 const messageElement = document.getElementById("map-message");
-
 const searchElement = document.getElementById("search");
-const clearSearchElement = document.getElementById("clear-search");
-
 const visibleCountElement = document.getElementById("visible-count");
 const panelElement = document.getElementById("map-panel");
-const panelToggleElement = document.getElementById("toggle-panel");
-
-const typeFilters = Array.from(
-  document.querySelectorAll(".type-filter")
-);
-
-const statusFilters = Array.from(
-  document.querySelectorAll(".status-filter")
-);
+const sidebarHandleElement = document.getElementById("sidebar-handle");
+const closePanelElement = document.getElementById("close-panel");
+const statusFilters = Array.from(document.querySelectorAll(".status-filter"));
 
 const source = new ol.source.Vector();
-
 const styleCache = new Map();
 
 function getMarkerStyle(feature) {
+  const count = Number(feature.get("protestCount")) || 1;
+  const hasUpcoming = Boolean(feature.get("hasUpcoming"));
+  const radius = Math.min(28, 7 + Math.sqrt(count) * 4);
+  const cacheKey = `${count}-${hasUpcoming}`;
 
-    const count = feature.get("protestCount") || 1;
-    const hasUpcoming = feature.get("hasUpcoming");
+  if (styleCache.has(cacheKey)) {
+    return styleCache.get(cacheKey);
+  }
 
-    const radius = Math.min(
-        28,
-        7 + Math.sqrt(count) * 4
-    );
+  const styles = [];
 
-    const cacheKey = `${count}-${hasUpcoming}`;
+  if (hasUpcoming) {
+    styles.push(new ol.style.Style({
+      image: new ol.style.Circle({
+        radius: radius + 5,
+        fill: new ol.style.Fill({ color: "rgba(0, 0, 0, 0)" }),
+        stroke: new ol.style.Stroke({ color: "#f3c84b", width: 5 }),
+      }),
+    }));
+  }
 
-    if (styleCache.has(cacheKey)) {
-        return styleCache.get(cacheKey);
-    }
+  styles.push(new ol.style.Style({
+    image: new ol.style.Circle({
+      radius,
+      fill: new ol.style.Fill({ color: "#d72657" }),
+      stroke: new ol.style.Stroke({ color: "#ffffff", width: 2.5 }),
+    }),
+    text: new ol.style.Text({
+      text: String(count),
+      font: "700 13px Inter, system-ui, sans-serif",
+      fill: new ol.style.Fill({ color: "#ffffff" }),
+      stroke: new ol.style.Stroke({ color: "rgba(0,0,0,.22)", width: 2 }),
+    }),
+  }));
 
-    const styles = [];
-
-    //
-    // Yellow outer ring
-    //
-
-    if (hasUpcoming) {
-
-        styles.push(
-            new ol.style.Style({
-
-                image: new ol.style.Circle({
-
-                    radius: radius + 5,
-
-                    fill: new ol.style.Fill({
-                        color: "rgba(0,0,0,0)"
-                    }),
-
-                    stroke: new ol.style.Stroke({
-                        color: "#FFD54A",
-                        width: 5
-                    })
-
-                })
-
-            })
-        );
-
-    }
-
-    //
-    // Red circle
-    //
-
-    styles.push(
-
-        new ol.style.Style({
-
-            image: new ol.style.Circle({
-
-                radius,
-
-                fill: new ol.style.Fill({
-                    color: "#D72657"
-                }),
-
-                stroke: new ol.style.Stroke({
-                    color: "white",
-                    width: 2
-                })
-
-            }),
-
-            text: new ol.style.Text({
-
-                text: String(count),
-
-                font: "bold 13px sans-serif",
-
-                fill: new ol.style.Fill({
-                    color: "white"
-                })
-
-            })
-
-        })
-
-    );
-
-    styleCache.set(cacheKey, styles);
-
-    return styles;
-
+  styleCache.set(cacheKey, styles);
+  return styles;
 }
 
 const locationLayer = new ol.layer.Vector({
   source,
-
   style: feature => getMarkerStyle(feature),
 });
 
 const baseMapLayer = new ol.layer.Tile({
   source: new ol.source.XYZ({
     url: "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
-
-    attributions:
-      '© <a href="https://www.openstreetmap.org/copyright" ' +
-      'target="_blank" rel="noopener">' +
-      "OpenStreetMap contributors</a>",
-
+    attributions: '© <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noopener">OpenStreetMap contributors</a>',
     crossOrigin: "anonymous",
     maxZoom: 19,
   }),
@@ -139,12 +71,7 @@ const baseMapLayer = new ol.layer.Tile({
 
 const map = new ol.Map({
   target: mapElement,
-
-  layers: [
-    baseMapLayer,
-    locationLayer,
-  ],
-
+  layers: [baseMapLayer, locationLayer],
   view: new ol.View({
     center: ol.proj.fromLonLat([14.5, 45.5]),
     zoom: 4,
@@ -158,21 +85,13 @@ const popupOverlay = new ol.Overlay({
   positioning: "bottom-center",
   stopEvent: true,
   offset: [0, -12],
-  autoPan: {
-    animation: {
-      duration: 200,
-    },
-  },
+  autoPan: { animation: { duration: 200 } },
 });
 
 map.addOverlay(popupOverlay);
 
 function selectedValues(elements) {
-  return new Set(
-    elements
-      .filter(element => element.checked)
-      .map(element => element.value)
-  );
+  return new Set(elements.filter(element => element.checked).map(element => element.value));
 }
 
 function matchesSearch(feature, searchText) {
@@ -181,7 +100,6 @@ function matchesSearch(feature, searchText) {
   }
 
   const protests = feature.get("protests") || [];
-
   const values = [
     feature.get("title"),
     feature.get("city"),
@@ -189,35 +107,22 @@ function matchesSearch(feature, searchText) {
     ...protests.flatMap(protest => [
       protest.title,
       protest.description,
+      protest.location,
       protest.date,
       protest.status,
     ]),
   ];
 
-  return values.some(value =>
-    String(value || "")
-      .toLowerCase()
-      .includes(searchText)
-  );
+  return values.some(value => String(value || "").toLowerCase().includes(searchText));
 }
 
 function featureIsVisible(feature) {
   const selectedStatuses = selectedValues(statusFilters);
-
-  const searchText = searchElement
-    ? searchElement.value.trim().toLowerCase()
-    : "";
-
+  const searchText = searchElement?.value.trim().toLowerCase() || "";
   const protests = feature.get("protests") || [];
+  const hasMatchingStatus = protests.some(protest => selectedStatuses.has(protest.status));
 
-  const hasMatchingStatus = protests.some(protest =>
-    selectedStatuses.has(protest.status)
-  );
-
-  return (
-    hasMatchingStatus &&
-    matchesSearch(feature, searchText)
-  );
+  return hasMatchingStatus && matchesSearch(feature, searchText);
 }
 
 function applyFilters() {
@@ -225,7 +130,6 @@ function applyFilters() {
 
   source.getFeatures().forEach(feature => {
     const visible = featureIsVisible(feature);
-
     feature.setStyle(visible ? null : new ol.style.Style({}));
     feature.set("mapVisible", visible);
 
@@ -234,27 +138,22 @@ function applyFilters() {
     }
   });
 
-  visibleCountElement.textContent = String(visibleCount);
+  if (visibleCountElement) {
+    visibleCountElement.textContent = String(visibleCount);
+  }
+
   closePopup();
 }
 
 function fitToVisibleFeatures() {
-  const visibleFeatures = source
-    .getFeatures()
-    .filter(feature => feature.get("mapVisible") !== false);
+  const visibleFeatures = source.getFeatures().filter(feature => feature.get("mapVisible") !== false);
 
   if (visibleFeatures.length === 0) {
     return;
   }
 
   const extent = ol.extent.createEmpty();
-
-  visibleFeatures.forEach(feature => {
-    ol.extent.extend(
-      extent,
-      feature.getGeometry().getExtent()
-    );
-  });
+  visibleFeatures.forEach(feature => ol.extent.extend(extent, feature.getGeometry().getExtent()));
 
   map.getView().fit(extent, {
     padding: [70, 70, 70, 70],
@@ -264,17 +163,13 @@ function fitToVisibleFeatures() {
 }
 
 function escapeHtml(value) {
-  return String(value || "").replace(/[&<>"']/g, character => {
-    const entities = {
-      "&": "&amp;",
-      "<": "&lt;",
-      ">": "&gt;",
-      '"': "&quot;",
-      "'": "&#039;",
-    };
-
-    return entities[character];
-  });
+  return String(value || "").replace(/[&<>"']/g, character => ({
+    "&": "&amp;",
+    "<": "&lt;",
+    ">": "&gt;",
+    '"': "&quot;",
+    "'": "&#039;",
+  })[character]);
 }
 
 function safeUrl(value) {
@@ -284,12 +179,7 @@ function safeUrl(value) {
 
   try {
     const url = new URL(value, window.location.href);
-
-    if (!["http:", "https:"].includes(url.protocol)) {
-      return "";
-    }
-
-    return url.href;
+    return ["http:", "https:"].includes(url.protocol) ? url.href : "";
   } catch {
     return "";
   }
@@ -316,52 +206,33 @@ function formatDate(value) {
 function openPopup(feature) {
   const city = escapeHtml(feature.get("city"));
   const country = escapeHtml(feature.get("country"));
-
   const protests = feature.get("protests") || [];
-  const protestCount = protests.length;
 
   const protestItems = protests
     .slice()
-    .sort((first, second) => {
-      return String(second.date).localeCompare(
-        String(first.date)
-      );
-    })
+    .sort((first, second) => String(second.date).localeCompare(String(first.date)))
     .map(protest => {
       const title = escapeHtml(protest.title);
       const date = formatDate(protest.date);
       const status = escapeHtml(protest.status);
       const description = escapeHtml(protest.description);
+      const location = escapeHtml(protest.location);
+      const participants = Number.isFinite(Number(protest.participants)) && protest.participants !== ""
+        ? Number(protest.participants)
+        : null;
       const url = safeUrl(protest.url);
 
       return `
         <article class="protest-item">
           <h4>${title}</h4>
-
           <div class="protest-item-meta">
             ${date ? `<span>${date}</span>` : ""}
             ${status ? `<span>${status}</span>` : ""}
+            ${location ? `<span>${location}</span>` : ""}
+            ${participants !== null ? `<span>${participants} participants</span>` : ""}
           </div>
-
-          ${
-            description
-              ? `<p>${description}</p>`
-              : ""
-          }
-
-          ${
-            url
-              ? `
-                <a
-                  href="${url}"
-                  target="_parent"
-                  rel="noopener"
-                >
-                  View protest →
-                </a>
-              `
-              : ""
-          }
+          ${description ? `<p>${description}</p>` : ""}
+          ${url ? `<a href="${url}" target="_parent" rel="noopener">View protest →</a>` : ""}
         </article>
       `;
     })
@@ -369,30 +240,14 @@ function openPopup(feature) {
 
   popupContentElement.innerHTML = `
     <p class="popup-type">Protest city</p>
-
-    <h3>${city}</h3>
-
-    ${
-      country
-        ? `<p class="popup-meta">${country}</p>`
-        : ""
-    }
-
-    <p class="popup-count">
-      ${protestCount}
-      ${protestCount === 1 ? "protest" : "protests"}
-    </p>
-
-    <div class="protest-list">
-      ${protestItems}
-    </div>
+    <h3>${city || "Unknown city"}</h3>
+    ${country ? `<p class="popup-meta">${country}</p>` : ""}
+    <p class="popup-count">${protests.length} ${protests.length === 1 ? "protest" : "protests"}</p>
+    <div class="protest-list">${protestItems}</div>
   `;
 
   popupElement.hidden = false;
-
-  popupOverlay.setPosition(
-    feature.getGeometry().getCoordinates()
-  );
+  popupOverlay.setPosition(feature.getGeometry().getCoordinates());
 }
 
 function closePopup() {
@@ -401,11 +256,19 @@ function closePopup() {
 }
 
 function showMessage(message) {
+  if (!messageElement) {
+    return;
+  }
+
   messageElement.textContent = message;
   messageElement.hidden = false;
 }
 
 function hideMessage() {
+  if (!messageElement) {
+    return;
+  }
+
   messageElement.hidden = true;
   messageElement.textContent = "";
 }
@@ -417,63 +280,44 @@ function normalizeLocation(location, index) {
   if (
     !Number.isFinite(latitude) ||
     !Number.isFinite(longitude) ||
-    latitude < -90 ||
-    latitude > 90 ||
-    longitude < -180 ||
-    longitude > 180
+    latitude < -90 || latitude > 90 ||
+    longitude < -180 || longitude > 180
   ) {
-    console.warn(
-      `Skipping location ${index + 1}: invalid coordinates.`,
-      location
-    );
-
+    console.warn(`Skipping location ${index + 1}: invalid coordinates.`, location);
     return null;
   }
 
+  const id = String(location.id || `city-${index + 1}`);
   const protests = Array.isArray(location.protests)
     ? location.protests.map((protest, protestIndex) => ({
-        id:
-          String(protest.id || "") ||
-          `${location.id}-protest-${protestIndex + 1}`,
-
-        title: String(
-          protest.title || `Protest ${protestIndex + 1}`
-        ),
-
+        id: String(protest.id || `${id}-protest-${protestIndex + 1}`),
+        title: String(protest.title || `Protest ${protestIndex + 1}`),
         date: String(protest.date || ""),
-
-        status: String(
-          protest.status || "completed"
-        ).toLowerCase(),
-
+        status: String(protest.status || "completed").toLowerCase(),
         description: String(protest.description || ""),
-
         url: String(protest.url || ""),
+        location: String(protest.location || ""),
+        participants: protest.participants ?? "",
       }))
     : [];
 
   return {
-      id: location.id,
-      city: location.city,
-      country: location.country,
-      latitude,
-      longitude,
-      protests,
-      protestCount: protests.length,
-      hasUpcoming: protests.some(
-        protest =>
-          protest.status === "planned" ||
-          protest.status === "active"
-      )
+    id,
+    title: String(location.title || location.city || "Unknown city"),
+    city: String(location.city || location.title || ""),
+    country: String(location.country || ""),
+    latitude,
+    longitude,
+    protests,
+    protestCount: protests.length,
+    hasUpcoming: protests.some(protest => ["planned", "active"].includes(protest.status)),
   };
 }
 
 async function loadLocations() {
   hideMessage();
 
-  const response = await fetch(DATA_URL, {
-    cache: "no-store",
-  });
+  const response = await fetch(DATA_URL, { cache: "no-store" });
 
   if (!response.ok) {
     throw new Error(`HTTP ${response.status}`);
@@ -485,52 +329,67 @@ async function loadLocations() {
     throw new Error("The data file must contain a JSON array.");
   }
 
-  const locations = data
+  const features = data
     .map(normalizeLocation)
-    .filter(Boolean);
+    .filter(Boolean)
+    .map(location => {
+      const feature = new ol.Feature({
+        geometry: new ol.geom.Point(ol.proj.fromLonLat([location.longitude, location.latitude])),
+        ...location,
+      });
 
-  const features = locations.map(location => {
-    const feature = new ol.Feature({
-      geometry: new ol.geom.Point(
-        ol.proj.fromLonLat([
-          location.longitude,
-          location.latitude,
-        ])
-      ),
-
-      ...location,
+      feature.setId(location.id);
+      return feature;
     });
-
-    feature.setId(location.id);
-
-    return feature;
-  });
 
   source.clear();
   source.addFeatures(features);
-
   applyFilters();
   fitToVisibleFeatures();
 }
 
-map.on("singleclick", event => {
-  const feature = map.forEachFeatureAtPixel(
-    event.pixel,
-    candidate => {
-      if (candidate.get("mapVisible") === false) {
-        return undefined;
-      }
-
-      return candidate;
-    }
-  );
-
-  if (!feature) {
-    closePopup();
+function setSidebar(open) {
+  if (!panelElement || !sidebarHandleElement) {
     return;
   }
 
-  openPopup(feature);
+  panelElement.classList.toggle("is-closed", !open);
+  sidebarHandleElement.classList.toggle("is-panel-open", open);
+  sidebarHandleElement.setAttribute("aria-expanded", String(open));
+  sidebarHandleElement.setAttribute(
+    "aria-label",
+    open ? "Close map filters" : "Open map filters"
+  );
+
+  window.setTimeout(() => map.updateSize(), 280);
+}
+
+sidebarHandleElement?.addEventListener("click", () => {
+  const open = panelElement?.classList.contains("is-closed") ?? true;
+  setSidebar(open);
+});
+
+closePanelElement?.addEventListener("click", () => setSidebar(false));
+popupCloserElement?.addEventListener("click", closePopup);
+statusFilters.forEach(element => element.addEventListener("change", applyFilters));
+
+searchElement?.addEventListener("input", applyFilters);
+searchElement?.addEventListener("keydown", event => {
+  if (event.key === "Enter") {
+    fitToVisibleFeatures();
+  }
+});
+
+map.on("singleclick", event => {
+  const feature = map.forEachFeatureAtPixel(event.pixel, candidate => (
+    candidate.get("mapVisible") === false ? undefined : candidate
+  ));
+
+  if (feature) {
+    openPopup(feature);
+  } else {
+    closePopup();
+  }
 });
 
 map.on("pointermove", event => {
@@ -542,61 +401,12 @@ map.on("pointermove", event => {
     layerFilter: layer => layer === locationLayer,
   });
 
-  map.getTargetElement().style.cursor = hasFeature
-    ? "pointer"
-    : "";
+  map.getTargetElement().style.cursor = hasFeature ? "pointer" : "";
 });
 
-popupCloserElement.addEventListener("click", closePopup);
-
-typeFilters.forEach(element => {
-  element.addEventListener("change", applyFilters);
-});
-
-statusFilters.forEach(element => {
-  element.addEventListener("change", applyFilters);
-});
-
-if (searchElement) {
-  searchElement.addEventListener("input", applyFilters);
-
-  searchElement.addEventListener("keydown", event => {
-    if (event.key === "Enter") {
-      fitToVisibleFeatures();
-    }
-  });
-}
-
-if (clearSearchElement && searchElement) {
-  clearSearchElement.addEventListener("click", () => {
-    searchElement.value = "";
-    applyFilters();
-    fitToVisibleFeatures();
-    searchElement.focus();
-  });
-}
-
-if (popupCloserElement) {
-  popupCloserElement.addEventListener("click", closePopup);
-}
-
-if (panelToggleElement && panelElement) {
-  panelToggleElement.addEventListener("click", () => {
-    const isHidden = panelElement.classList.toggle("is-hidden");
-
-    panelToggleElement.setAttribute(
-      "aria-expanded",
-      String(!isHidden)
-    );
-
-    window.setTimeout(() => map.updateSize(), 0);
-  });
-}
+window.addEventListener("resize", () => map.updateSize());
 
 loadLocations().catch(error => {
   console.error(error);
-
-  showMessage(
-    "The map loaded, but the location data could not be read."
-  );
+  showMessage("The map loaded, but the location data could not be read.");
 });
