@@ -32,6 +32,7 @@ const statusFilters = Array.from(
   document.querySelectorAll(".status-filter")
 );
 
+
 /* =========================================================
    Dedicated mobile popup
    ========================================================= */
@@ -135,7 +136,9 @@ function getMarkerStatus(feature) {
 
 function getMarkerStyle(feature) {
   const count = Number(feature.get("protestCount")) || 1;
-  const markerStatus = getMarkerStatus(feature);
+  const markerStatus =
+    feature.get("markerStatus") ||
+    getMarkerStatus(feature);
 
   const radius = Math.min(
     28,
@@ -501,7 +504,12 @@ function renderProtestItem(protest) {
     protest.title || "Untitled protest"
   );
 
-  const date = formatDate(protest.date);
+  const startDate = formatDate(protest.startDate || protest.date);
+  const endDate = formatDate(protest.endDate);
+  const date =
+    endDate && endDate !== startDate
+      ? `${startDate} – ${endDate}`
+      : startDate;
 
   const status = normalizeStatus(
     protest.status
@@ -525,19 +533,17 @@ function renderProtestItem(protest) {
     protest.importance === "major" ||
     protest.major === true;
 
-  const participantNumber = Number(
-    protest.participants
+  const participants =
+    protest.participants === null ||
+    protest.participants === undefined
+      ? ""
+      : String(protest.participants).trim();
+
+  const sourceUrl = safeUrl(
+    protest.sourceUrl || protest.url
   );
 
-  const participants =
-    protest.participants !== "" &&
-    protest.participants !== null &&
-    protest.participants !== undefined &&
-    Number.isFinite(participantNumber)
-      ? participantNumber
-      : null;
-
-  const url = safeUrl(protest.url);
+  const source = escapeHtml(protest.source);
 
   const isUpcoming = [
     "confirmed",
@@ -594,17 +600,8 @@ function renderProtestItem(protest) {
         }
 
         ${
-          participants !== null
-            ? `
-              <span>
-                ${participants}
-                ${
-                  participants === 1
-                    ? "participant"
-                    : "participants"
-                }
-              </span>
-            `
+          participants
+            ? `<span>${escapeHtml(participants)} participants</span>`
             : ""
         }
       </div>
@@ -616,17 +613,19 @@ function renderProtestItem(protest) {
       }
 
       ${
-        url
+        sourceUrl
           ? `
             <a
-              href="${url}"
+              href="${sourceUrl}"
               target="_blank"
               rel="noopener noreferrer"
             >
-              View protest →
+              ${source ? `Source: ${source} →` : "View source →"}
             </a>
           `
-          : ""
+          : source
+            ? `<p class="protest-source">Source: ${source}</p>`
+            : ""
       }
     </article>
   `;
@@ -663,9 +662,9 @@ function sortProtests(protests) {
         return firstOrder - secondOrder;
       }
 
-      return String(first.date || "")
+      return String(first.startDate || first.date || "")
         .localeCompare(
-          String(second.date || "")
+          String(second.startDate || second.date || "")
         );
     });
 }
@@ -881,7 +880,8 @@ function matchesSearch(
       protest.title,
       protest.description,
       protest.location,
-      protest.date,
+      protest.startDate,
+      protest.endDate,
       protest.status,
     ]),
   ];
@@ -1116,17 +1116,17 @@ function getUpcomingProtests() {
 
   return upcoming.sort(
     (first, second) => {
-      if (!first.date) {
+      if (!(first.startDate || first.date)) {
         return 1;
       }
 
-      if (!second.date) {
+      if (!(second.startDate || second.date)) {
         return -1;
       }
 
-      return String(first.date)
+      return String(first.startDate || first.date)
         .localeCompare(
-          String(second.date)
+          String(second.startDate || second.date)
         );
     }
   );
@@ -1167,7 +1167,7 @@ function renderUpcomingProtests() {
         );
 
         const date = formatDate(
-          protest.date
+          protest.startDate || protest.date
         );
 
         const status =
@@ -1299,8 +1299,20 @@ function normalizeProtest(
       "Untitled protest"
     ),
 
-    date: String(
-      protest.date || ""
+    startDate: String(
+      protest.startDate ||
+      protest.start_date ||
+      protest.date ||
+      ""
+    ),
+
+    endDate: String(
+      protest.endDate ||
+      protest.end_date ||
+      protest.startDate ||
+      protest.start_date ||
+      protest.date ||
+      ""
     ),
 
     status,
@@ -1318,8 +1330,15 @@ function normalizeProtest(
       protest.description || ""
     ),
 
-    url: String(
-      protest.url || ""
+    source: String(
+      protest.source || ""
+    ),
+
+    sourceUrl: String(
+      protest.sourceUrl ||
+      protest.source_url ||
+      protest.url ||
+      ""
     ),
 
     location: String(
@@ -1416,7 +1435,14 @@ function normalizeLocation(location) {
     protests,
 
     protestCount:
+      Number(location.protestCount) ||
       protests.length,
+
+    markerStatus: String(
+      location.markerStatus ||
+      location.marker_status ||
+      ""
+    ),
 
     hasUpcoming:
       protests.some(protest =>

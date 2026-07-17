@@ -8,19 +8,6 @@ const citiesUrl =
 const protestsUrl =
   `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=1671770781`;
 
-
-if (!citiesUrl) {
-  throw new Error(
-    "CITIES_CSV_URL is missing. Add it as a GitHub repository secret."
-  );
-}
-
-if (!protestsUrl) {
-  throw new Error(
-    "PROTESTS_CSV_URL is missing. Add it as a GitHub repository secret."
-  );
-}
-
 const [citiesCsv, protestsCsv] = await Promise.all([
   downloadCsv(citiesUrl, "cities"),
   downloadCsv(protestsUrl, "protests"),
@@ -32,16 +19,16 @@ const protestRows = csvToObjects(protestsCsv);
 validateHeaders(
   cityRows.headers,
   [
-  "city_id",
-  "city",
-  "country",
-  "latitude",
-  "longitude",
-  "chapter_active",
-  "city_url",
-  "instagram_url",
-  "facebook_url",
-],
+    "city_id",
+    "city",
+    "country",
+    "latitude",
+    "longitude",
+    "chapter_active",
+    "city_url",
+    "instagram_url",
+    "facebook_url",
+  ],
   "cities"
 );
 
@@ -51,12 +38,15 @@ validateHeaders(
     "protest_id",
     "city_id",
     "title",
-    "date",
+    "start_date",
+    "end_date",
     "status",
-    "description",
-    "url",
-    "location",
+    "importance",
     "participants",
+    "location",
+    "description",
+    "source",
+    "source_url",
   ],
   "protests"
 );
@@ -65,23 +55,13 @@ const cities = cityRows.items
   .map((row, index) => normalizeCity(row, index + 2))
   .filter(Boolean);
 
-const citiesById = new Map(
-  cities.map(city => [city.id, city])
-);
-
-for (const city of cities) {
-  city.protests = [];
-}
+const citiesById = new Map(cities.map(city => [city.id, city]));
 
 for (let index = 0; index < protestRows.items.length; index += 1) {
-  const row = protestRows.items[index];
   const spreadsheetRow = index + 2;
+  const protest = normalizeProtest(protestRows.items[index], spreadsheetRow);
 
-  const protest = normalizeProtest(row, spreadsheetRow);
-
-  if (!protest) {
-    continue;
-  }
+  if (!protest) continue;
 
   const city = citiesById.get(protest.cityId);
 
@@ -95,27 +75,30 @@ for (let index = 0; index < protestRows.items.length; index += 1) {
   city.protests.push({
     id: protest.id,
     title: protest.title,
-    date: protest.date,
+    startDate: protest.startDate,
+    endDate: protest.endDate,
     status: protest.status,
-    description: protest.description,
-    url: protest.url,
-    location: protest.location,
+    importance: protest.importance,
     participants: protest.participants,
+    location: protest.location,
+    description: protest.description,
+    source: protest.source,
+    sourceUrl: protest.sourceUrl,
   });
 }
 
 for (const city of cities) {
   city.protests.sort((first, second) =>
-    String(second.date).localeCompare(String(first.date))
+    String(second.startDate).localeCompare(String(first.startDate))
   );
+
+  city.protestCount = city.protests.length;
+  city.markerStatus = computeMarkerStatus(city.protests);
 }
 
 const output = cities.filter(city => city.protests.length > 0);
 
-await fs.mkdir("data", {
-  recursive: true,
-});
-
+await fs.mkdir("data", { recursive: true });
 await fs.writeFile(
   "data/locations.json",
   `${JSON.stringify(output, null, 2)}\n`,
@@ -123,19 +106,15 @@ await fs.writeFile(
 );
 
 console.log(
-  `Saved ${output.length} cities and ${
-    output.reduce(
-      (total, city) => total + city.protests.length,
-      0
-    )
-  } protests.`
+  `Saved ${output.length} cities and ${output.reduce(
+    (total, city) => total + city.protests.length,
+    0
+  )} protests.`
 );
 
 async function downloadCsv(url, label) {
   const response = await fetch(url, {
-    headers: {
-      "User-Agent": "flamingo-map-data-updater",
-    },
+    headers: { "User-Agent": "flamingo-map-data-updater" },
   });
 
   if (!response.ok) {
@@ -184,12 +163,12 @@ function normalizeCity(row, spreadsheetRow) {
     longitude,
     type: "protest-city",
     chapterActive: parseBoolean(row.chapter_active),
-
-    cityUrl: String(row.city_url || "").trim(),
-    instagramUrl: String(row.instagram_url || "").trim(),
-    facebookUrl: String(row.facebook_url || "").trim(),
-
+    cityUrl: normalizeUrl(row.city_url),
+    instagramUrl: normalizeUrl(row.instagram_url),
+    facebookUrl: normalizeUrl(row.facebook_url),
     protests: [],
+    protestCount: 0,
+    markerStatus: "completed",
   };
 }
 
@@ -205,32 +184,79 @@ function normalizeProtest(row, spreadsheetRow) {
     return null;
   }
 
-  const participantsText = String(
-    row.participants || ""
-  ).trim();
-
-  const participants =
-    participantsText === ""
-      ? null
-      : Number(participantsText);
-
   return {
     id,
     cityId,
     title,
-    date: String(row.date || "").trim(),
-    status:
-      String(row.status || "completed")
-        .trim()
-        .toLowerCase(),
-    description: String(row.description || "").trim(),
-    url: String(row.url || "").trim(),
+    startDate: String(row.start_date || "").trim(),
+    endDate: String(row.end_date || row.start_date || "").trim(),
+    status: normalizeStatus(row.status),
+    importance: normalizeImportance(row.importance),
+    participants: String(row.participants || "").trim() || null,
     location: String(row.location || "").trim(),
-    participants:
-      Number.isFinite(participants)
-        ? participants
-        : null,
+    description: String(row.description || "").trim(),
+    source: String(row.source || "").trim(),
+    sourceUrl: normalizeUrl(row.source_url),
   };
+}
+
+function computeMarkerStatus(protests) {
+  if (protests.some(protest => protest.status === "active")) {
+    return "active";
+  }
+
+  if (
+    protests.some(protest =>
+      ["confirmed", "planned"].includes(protest.status)
+    )
+  ) {
+    return "confirmed";
+  }
+
+  if (protests.some(protest => protest.status === "tentative")) {
+    return "tentative";
+  }
+
+  if (protests.some(protest => protest.importance === "major")) {
+    return "major";
+  }
+
+  return "completed";
+}
+
+function normalizeStatus(value) {
+  const status = String(value || "completed").trim().toLowerCase();
+  const allowed = new Set([
+    "active",
+    "confirmed",
+    "planned",
+    "tentative",
+    "completed",
+    "cancelled",
+  ]);
+
+  return allowed.has(status) ? status : "completed";
+}
+
+function normalizeImportance(value) {
+  return String(value || "normal").trim().toLowerCase() === "major"
+    ? "major"
+    : "normal";
+}
+
+function normalizeUrl(value) {
+  const text = String(value || "").trim();
+  if (!text) return "";
+
+  try {
+    const candidate = /^[a-z][a-z0-9+.-]*:/i.test(text)
+      ? text
+      : `https://${text}`;
+    const url = new URL(candidate);
+    return ["http:", "https:"].includes(url.protocol) ? url.href : "";
+  } catch {
+    return "";
+  }
 }
 
 function parseBoolean(value) {
@@ -254,12 +280,7 @@ function validateHeaders(actualHeaders, requiredHeaders, label) {
 function csvToObjects(csvText) {
   const rows = parseCsv(csvText);
 
-  if (rows.length === 0) {
-    return {
-      headers: [],
-      items: [],
-    };
-  }
+  if (rows.length === 0) return { headers: [], items: [] };
 
   const headers = rows[0].map(header =>
     String(header).trim().toLowerCase()
@@ -267,9 +288,7 @@ function csvToObjects(csvText) {
 
   const items = rows
     .slice(1)
-    .filter(row =>
-      row.some(value => String(value).trim() !== "")
-    )
+    .filter(row => row.some(value => String(value).trim() !== ""))
     .map(row =>
       Object.fromEntries(
         headers.map((header, index) => [
@@ -279,10 +298,7 @@ function csvToObjects(csvText) {
       )
     );
 
-  return {
-    headers,
-    items,
-  };
+  return { headers, items };
 }
 
 function parseCsv(text) {
@@ -296,10 +312,7 @@ function parseCsv(text) {
     const nextCharacter = text[index + 1];
 
     if (insideQuotes) {
-      if (
-        character === '"' &&
-        nextCharacter === '"'
-      ) {
+      if (character === '"' && nextCharacter === '"') {
         field += '"';
         index += 1;
       } else if (character === '"') {
@@ -307,7 +320,6 @@ function parseCsv(text) {
       } else {
         field += character;
       }
-
       continue;
     }
 
