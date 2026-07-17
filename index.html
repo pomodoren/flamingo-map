@@ -2,41 +2,57 @@
 <html lang="en">
   <head>
     <meta charset="utf-8" />
+
     <meta
       name="viewport"
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
-    <meta name="referrer" content="strict-origin-when-cross-origin" />
+
+    <meta
+      name="referrer"
+      content="strict-origin-when-cross-origin"
+    />
 
     <title>Flamingo Protest Map</title>
+
     <meta
       name="description"
-      content="Interactive map of Flamingo protests around the world."
+      content="Interactive map of Flamingo Revolution protests and gatherings around the world."
     />
 
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/ol@10.9.0/ol.css"
     />
-    <link rel="stylesheet" href="./style.css" />
+
+    <link
+      rel="stylesheet"
+      href="./style.css"
+    />
   </head>
+
   <body>
     <main class="map-app">
+      <!-- Map -->
       <div
         id="map"
         class="map"
         role="application"
-        aria-label="Interactive protest map"
+        aria-label="Interactive map of Flamingo Revolution protests"
       ></div>
 
+      <!-- Sidebar -->
       <aside
         id="map-panel"
         class="map-panel is-closed"
-        aria-label="Map filters"
+        aria-label="Map filters and movement overview"
       >
         <div class="panel-header">
           <div>
-            <p class="panel-eyebrow">Flamingo Revolution</p>
+            <p class="panel-eyebrow">
+              Flamingo Revolution
+            </p>
+
             <h1>Protest Map</h1>
           </div>
 
@@ -50,8 +66,15 @@
           </button>
         </div>
 
+        <!-- Search -->
         <section class="panel-section">
-          <label class="search-label" for="search">Search</label>
+          <label
+            class="search-label"
+            for="search"
+          >
+            Search
+          </label>
+
           <input
             id="search"
             type="search"
@@ -60,6 +83,7 @@
           />
         </section>
 
+        <!-- Status filters -->
         <section class="panel-section">
           <h2>Status</h2>
 
@@ -70,8 +94,29 @@
               value="planned"
               checked
             />
-            <span class="status-dot status-planned" aria-hidden="true"></span>
+
+            <span
+              class="status-dot status-planned"
+              aria-hidden="true"
+            ></span>
+
             <span>Upcoming</span>
+          </label>
+
+          <label class="filter-option">
+            <input
+              class="status-filter"
+              type="checkbox"
+              value="confirmed"
+              checked
+            />
+
+            <span
+              class="status-dot status-confirmed"
+              aria-hidden="true"
+            ></span>
+
+            <span>Confirmed</span>
           </label>
 
           <label class="filter-option">
@@ -81,8 +126,29 @@
               value="active"
               checked
             />
-            <span class="status-dot status-active" aria-hidden="true"></span>
-            <span>Active</span>
+
+            <span
+              class="status-dot status-active"
+              aria-hidden="true"
+            ></span>
+
+            <span>Happening now</span>
+          </label>
+
+          <label class="filter-option">
+            <input
+              class="status-filter"
+              type="checkbox"
+              value="tentative"
+              checked
+            />
+
+            <span
+              class="status-dot status-tentative"
+              aria-hidden="true"
+            ></span>
+
+            <span>Not confirmed</span>
           </label>
 
           <label class="filter-option">
@@ -92,89 +158,193 @@
               value="completed"
               checked
             />
-            <span class="status-dot status-completed" aria-hidden="true"></span>
-            <span>Past</span>
+
+            <span
+              class="status-dot status-completed"
+              aria-hidden="true"
+            ></span>
+
+            <span>Past protests</span>
           </label>
         </section>
 
+        <!-- Statistics -->
         <section class="panel-section">
-          <h3>Movement overview</h3>
+          <h2>Movement overview</h2>
 
           <div class="stats-list">
             <div class="stat-row">
-              <span class="stat-label">Cities</span>
-              <strong id="visible-count" class="stat-value">0</strong>
-            </div>
+              <span class="stat-label">
+                Cities
+              </span>
 
-            <div class="stat-row">
-              <span class="stat-label">Protests</span>
-              <strong id="protest-count" class="stat-value">0</strong>
-            </div>
-
-            <div class="stat-row">
-              <span class="stat-label">Confirmed upcoming</span>
-              <strong id="confirmed-count" class="stat-value stat-confirmed">
+              <strong
+                id="visible-count"
+                class="stat-value"
+              >
                 0
               </strong>
             </div>
 
             <div class="stat-row">
-              <span class="stat-label">Not confirmed</span>
-              <strong id="tentative-count" class="stat-value stat-tentative">
+              <span class="stat-label">
+                Protests
+              </span>
+
+              <strong
+                id="protest-count"
+                class="stat-value"
+              >
                 0
               </strong>
             </div>
 
             <div class="stat-row">
-              <span class="stat-label">Major gatherings</span>
-              <strong id="major-count" class="stat-value stat-major">
+              <span class="stat-label">
+                Confirmed upcoming
+              </span>
+
+              <strong
+                id="confirmed-count"
+                class="stat-value stat-confirmed"
+              >
                 0
               </strong>
             </div>
 
             <div class="stat-row">
-              <span class="stat-label">Completed</span>
-              <strong id="completed-count" class="stat-value stat-completed">
+              <span class="stat-label">
+                Not confirmed
+              </span>
+
+              <strong
+                id="tentative-count"
+                class="stat-value stat-tentative"
+              >
+                0
+              </strong>
+            </div>
+
+            <div class="stat-row">
+              <span class="stat-label">
+                Major gatherings
+              </span>
+
+              <strong
+                id="major-count"
+                class="stat-value stat-major"
+              >
+                0
+              </strong>
+            </div>
+
+            <div class="stat-row">
+              <span class="stat-label">
+                Completed
+              </span>
+
+              <strong
+                id="completed-count"
+                class="stat-value stat-completed"
+              >
                 0
               </strong>
             </div>
           </div>
         </section>
 
-
+        <!-- Legend -->
         <section class="panel-section">
           <h2>Legend</h2>
 
           <div class="circle-legend">
             <div class="circle-legend-item">
-              <span class="circle-example circle-medium confirmed">5</span>
-              <span>Confirmed upcoming</span>
+              <span
+                class="circle-example circle-medium confirmed"
+                aria-hidden="true"
+              >
+                5
+              </span>
+
+              <span>
+                Confirmed or active protests
+              </span>
             </div>
 
             <div class="circle-legend-item">
-              <span class="circle-example circle-medium tentative">5</span>
-              <span>Not yet confirmed</span>
+              <span
+                class="circle-example circle-medium tentative"
+                aria-hidden="true"
+              >
+                5
+              </span>
+
+              <span>
+                Not yet confirmed
+              </span>
             </div>
 
             <div class="circle-legend-item">
-              <span class="circle-example circle-medium">5</span>
-              <span>Completed protests</span>
+              <span
+                class="circle-example circle-medium completed"
+                aria-hidden="true"
+              >
+                5
+              </span>
+
+              <span>
+                Completed protests
+              </span>
             </div>
 
             <div class="circle-legend-item">
-              <span class="circle-example circle-medium major">5</span>
-              <span>Major gathering</span>
+              <span
+                class="circle-example circle-medium major"
+                aria-hidden="true"
+              >
+                5
+              </span>
+
+              <span>
+                Major gathering
+              </span>
             </div>
 
             <div class="circle-legend-item">
-              <span class="circle-example circle-small">1</span>
-              <span>Circle size shows protest count</span>
+              <span
+                class="circle-example circle-small completed"
+                aria-hidden="true"
+              >
+                1
+              </span>
+
+              <span>
+                Circle size shows protest count
+              </span>
             </div>
           </div>
         </section>
 
+        <!-- Dataset note -->
+        <section class="panel-section panel-footer">
+          <p>
+            Protest information is maintained by local Flamingo communities.
+          </p>
+
+          <p>
+            Dataset licensed under
+            <a
+              href="https://creativecommons.org/licenses/by/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              CC BY 4.0
+            </a>.
+          </p>
+        </section>
       </aside>
 
+      <!-- Sidebar handle -->
       <button
         id="sidebar-handle"
         class="sidebar-handle"
@@ -183,9 +353,15 @@
         aria-expanded="false"
         aria-controls="map-panel"
       >
-        <span class="sidebar-handle-icon" aria-hidden="true">›</span>
+        <span
+          class="sidebar-handle-icon"
+          aria-hidden="true"
+        >
+          ›
+        </span>
       </button>
 
+      <!-- Upcoming protests -->
       <section
         id="upcoming-rail"
         class="upcoming-rail"
@@ -193,7 +369,10 @@
       >
         <div class="upcoming-rail-header">
           <div>
-            <p class="upcoming-eyebrow">Next events</p>
+            <p class="upcoming-eyebrow">
+              Next events
+            </p>
+
             <h2>Upcoming protests</h2>
           </div>
 
@@ -205,46 +384,49 @@
             aria-controls="upcoming-content"
             aria-label="Hide upcoming protests"
           >
-            ↓
+            <span aria-hidden="true">↓</span>
           </button>
         </div>
 
-        <div id="upcoming-content" class="upcoming-content">
-          <button
-            id="upcoming-previous"
-            class="upcoming-scroll-button upcoming-previous"
-            type="button"
-            aria-label="Scroll upcoming protests left"
-          >
-            ‹
-          </button>
-
-          <div id="upcoming-list" class="upcoming-list" tabindex="0"></div>
-
-          <button
-            id="upcoming-next"
-            class="upcoming-scroll-button upcoming-next"
-            type="button"
-            aria-label="Scroll upcoming protests right"
-          >
-            ›
-          </button>
+        <div
+          id="upcoming-content"
+          class="upcoming-content"
+        >
+          <div
+            id="upcoming-list"
+            class="upcoming-list"
+            tabindex="0"
+            aria-live="polite"
+          ></div>
         </div>
       </section>
 
-      <div id="popup" class="ol-popup" hidden>
+      <!-- Desktop OpenLayers popup -->
+      <div
+        id="popup"
+        class="ol-popup"
+        hidden
+      >
         <button
           id="popup-closer"
           class="popup-closer"
           type="button"
-          aria-label="Close popup"
+          aria-label="Close protest details"
         >
           ×
         </button>
+
         <div id="popup-content"></div>
       </div>
 
-      <div id="map-message" class="map-message" hidden role="status"></div>
+      <!-- Loading and error messages -->
+      <div
+        id="map-message"
+        class="map-message"
+        hidden
+        role="status"
+        aria-live="polite"
+      ></div>
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/ol@10.9.0/dist/ol.js"></script>
