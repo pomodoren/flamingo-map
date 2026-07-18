@@ -1278,75 +1278,122 @@ function renderUpcomingProtests() {
    Data normalization
    ========================================================= */
 
-function normalizeProtest(
-  protest,
-  index,
-  cityId
-) {
-  const status =
-    normalizeStatus(
-      protest.status
-    );
+function parseIsoDate(value) {
+  const match = String(value || "")
+    .trim()
+    .match(/^(\d{4})-(\d{2})-(\d{2})$/);
+
+  if (!match) {
+    return null;
+  }
+
+  const year = Number(match[1]);
+  const month = Number(match[2]);
+  const day = Number(match[3]);
+  const date = new Date(Date.UTC(year, month - 1, day));
+
+  if (
+    date.getUTCFullYear() !== year ||
+    date.getUTCMonth() !== month - 1 ||
+    date.getUTCDate() !== day
+  ) {
+    return null;
+  }
+
+  return date;
+}
+
+function countInclusiveDays(startDate, endDate) {
+  const start = parseIsoDate(startDate);
+  const end = parseIsoDate(endDate || startDate);
+
+  if (!start || !end || end < start) {
+    return 1;
+  }
+
+  return Math.floor((end.getTime() - start.getTime()) / 86400000) + 1;
+}
+
+function normalizeProtest(row, index = 0, fallbackCityId = "") {
+  if (!row || typeof row !== "object") {
+    return null;
+  }
+
+  const id = String(
+    row.id ||
+    row.protest_id ||
+    `${fallbackCityId || "protest"}-${index + 1}`
+  ).trim();
+
+  const title = String(
+    row.title ||
+    row.name ||
+    "Untitled protest"
+  ).trim();
+
+  const startDate = String(
+    row.startDate ||
+    row.start_date ||
+    row.date ||
+    ""
+  ).trim();
+
+  const endDate = String(
+    row.endDate ||
+    row.end_date ||
+    startDate
+  ).trim();
+
+  const participantsValue =
+    row.participants === null ||
+    row.participants === undefined
+      ? ""
+      : String(row.participants).trim();
+
+  const sourceUrl = safeUrl(
+    row.sourceUrl ||
+    row.source_url ||
+    row.url
+  );
 
   return {
-    id: String(
-      protest.id ||
-      `${cityId}-protest-${index + 1}`
-    ),
-
-    title: String(
-      protest.title ||
-      "Untitled protest"
-    ),
-
-    startDate: String(
-      protest.startDate ||
-      protest.start_date ||
-      protest.date ||
+    id,
+    cityId: String(
+      row.cityId ||
+      row.city_id ||
+      fallbackCityId ||
       ""
-    ),
-
-    endDate: String(
-      protest.endDate ||
-      protest.end_date ||
-      protest.startDate ||
-      protest.start_date ||
-      protest.date ||
-      ""
-    ),
-
-    status,
-
+    ).trim(),
+    title,
+    startDate,
+    endDate,
+    protestDays:
+      Number.isFinite(Number(row.protestDays)) &&
+      Number(row.protestDays) > 0
+        ? Number(row.protestDays)
+        : countInclusiveDays(startDate, endDate),
+    status: String(
+      row.status || "completed"
+    )
+      .trim()
+      .toLowerCase(),
     importance: String(
-      protest.importance || ""
-    ).toLowerCase(),
-
-    major:
-      protest.major === true ||
-      String(protest.major || "")
-        .toLowerCase() === "true",
-
+      row.importance || "normal"
+    )
+      .trim()
+      .toLowerCase(),
     description: String(
-      protest.description || ""
-    ),
-
-    source: String(
-      protest.source || ""
-    ),
-
-    sourceUrl: String(
-      protest.sourceUrl ||
-      protest.source_url ||
-      protest.url ||
-      ""
-    ),
-
+      row.description || ""
+    ).trim(),
     location: String(
-      protest.location || ""
-    ),
-
+      row.location || ""
+    ).trim(),
     participants:
-      protest.participants ?? "",
+      participantsValue || null,
+    source: String(
+      row.source || ""
+    ).trim(),
+    sourceUrl,
   };
 }
 
@@ -1379,14 +1426,15 @@ function normalizeLocation(location) {
   const protests = Array.isArray(
     location.protests
   )
-    ? location.protests.map(
-        (protest, index) =>
+    ? location.protests
+        .map((protest, index) =>
           normalizeProtest(
             protest,
             index,
             id
           )
-      )
+        )
+        .filter(Boolean)
     : [];
 
   return {
@@ -1434,9 +1482,19 @@ function normalizeLocation(location) {
 
     protests,
 
+    protestGroupCount:
+      Number(location.protestGroupCount) ||
+      protests.length,
+
     protestCount:
       Number(location.protestCount) ||
-      protests.length,
+      protests.reduce(
+        (total, protest) =>
+          total + Number(
+            protest.protestDays || 1
+          ),
+        0
+      ),
 
     markerStatus: String(
       location.markerStatus ||
