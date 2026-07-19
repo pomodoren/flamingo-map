@@ -1,35 +1,5 @@
 [
   {
-    "id": "akerni-pishe-poronarta-albania",
-    "title": "Akërni / Pishë Poro–Narta",
-    "city": "Akërni / Pishë Poro–Narta",
-    "country": "Albania",
-    "latitude": 40.529,
-    "longitude": 19.43,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "1",
-        "title": "Akërni construction-site demonstration",
-        "startDate": "2026-05-16",
-        "endDate": "2026-05-16",
-        "status": "completed",
-        "importance": "major",
-        "participants": null,
-        "location": "Akërni construction site, Pishë Poro–Narta",
-        "description": "Local residents and environmental activists marched to and entered the fenced construction area, opposing works in the protected landscape.",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestCount": 1,
-    "markerStatus": "major"
-  },
-  {
     "id": "dalan-zvernec-albania",
     "title": "Dalan / Zvërnec",
     "city": "Dalan / Zvërnec",
@@ -47,15 +17,17 @@
         "title": "Dalan beach protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Dalan beach",
-        "description": "Gathering at Dalan beach returned the demonstrations to the coast near the proposed development.",
+        "description": "Local gathering as the protest movement expanded beyond Tirana.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -77,6 +49,7 @@
         "title": "Durrës solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-09",
+        "dayCount": 6,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -86,7 +59,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestCount": 1,
+    "protestRecordCount": 1,
+    "protestCount": 6,
     "markerStatus": "completed"
   },
   {
@@ -107,16 +81,18 @@
         "title": "Elbasan solidarity protests",
         "startDate": "2026-06-04",
         "endDate": "2026-06-09",
+        "dayCount": 6,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Smaller gatherings continued as the movement spread nationally.",
+        "description": "Local gathering as the protest movement expanded beyond Tirana.",
         "source": "",
         "sourceUrl": ""
       }
     ],
-    "protestCount": 1,
+    "protestRecordCount": 1,
+    "protestCount": 6,
     "markerStatus": "completed"
   },
   {
@@ -137,16 +113,18 @@
         "title": "Fier solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-09",
+        "dayCount": 6,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Local gathering as the protest movement expanded beyond Tirana.",
+        "description": "Several days of demonstrations continued in Tirana as the movement spread nationally.",
         "source": "",
         "sourceUrl": ""
       }
     ],
-    "protestCount": 1,
+    "protestRecordCount": 1,
+    "protestCount": 6,
     "markerStatus": "completed"
   },
   {
@@ -167,16 +145,18 @@
         "title": "Gjirokastër solidarity protests",
         "startDate": "2026-06-04",
         "endDate": "2026-06-09",
+        "dayCount": 6,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Smaller gatherings continued as the movement spread nationally.",
+        "description": "Local gathering as the protest movement expanded beyond Tirana.",
         "source": "",
         "sourceUrl": ""
       }
     ],
-    "protestCount": 1,
+    "protestRecordCount": 1,
+    "protestCount": 6,
     "markerStatus": "completed"
   },
   {
@@ -197,15 +177,17 @@
         "title": "Kakome property-rights protest",
         "startDate": "2026-06-21",
         "endDate": "2026-06-21",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Kakome",
-        "description": "Residents and emigrants protested long-running property disputes and removed sections of fencing around disputed land.",
+        "description": "Protesters marched to Parliament during a plenary session, called on deputies to resign and confronted an MP.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -227,16 +209,18 @@
         "title": "Korçë solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-09",
+        "dayCount": 6,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Local gathering as the protest movement expanded beyond Tirana.",
+        "description": "Protesters demanded Rama's resignation and repeal of protected-area law changes; police used water cannon after a cordon was breached.",
         "source": "",
         "sourceUrl": ""
       }
     ],
-    "protestCount": 1,
+    "protestRecordCount": 1,
+    "protestCount": 6,
     "markerStatus": "completed"
   },
   {
@@ -257,6 +241,7 @@
         "title": "Kukës solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-09",
+        "dayCount": 6,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -266,7 +251,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestCount": 1,
+    "protestRecordCount": 1,
+    "protestCount": 6,
     "markerStatus": "completed"
   },
   {
@@ -287,45 +273,17 @@
         "title": "Lezhë march",
         "startDate": "2026-06-09",
         "endDate": "2026-06-09",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Central Lezhë",
-        "description": "Protesters marched through central Lezhë and raised concerns about living costs, unemployment and emigration.",
+        "description": "Gathering at Dalan beach returned the demonstrations to the coast near the proposed development.",
         "source": "",
         "sourceUrl": ""
       }
     ],
-    "protestCount": 1,
-    "markerStatus": "completed"
-  },
-  {
-    "id": "narta-albania",
-    "title": "Narta",
-    "city": "Narta",
-    "country": "Albania",
-    "latitude": 40.455,
-    "longitude": 19.485,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "2",
-        "title": "Narta Lagoon and Pishë Poro–Narta beach protest",
-        "startDate": "2026-05-23",
-        "endDate": "2026-05-23",
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "Near Narta Lagoon",
-        "description": "Residents and environmental activists protested barbed-wire fencing and defended the protected Vjosa–Narta landscape.",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -347,15 +305,17 @@
         "title": "Mërtur River dams protest",
         "startDate": "2026-07-05",
         "endDate": "2026-07-05",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Mërtur River area",
-        "description": "Residents and environmental activists protested a KESH project for three dams, citing inadequate consultation and environmental threats.",
+        "description": "March from Skanderbeg Square toward the prime minister's office, police station no. 3 and the Tirana Prosecutor's Office.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -377,47 +337,19 @@
         "title": "Pogradec solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-09",
+        "dayCount": 6,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Local gathering as the protest movement expanded beyond Tirana.",
+        "description": "Smaller gatherings continued as the movement spread nationally.",
         "source": "",
         "sourceUrl": ""
       }
     ],
-    "protestCount": 1,
+    "protestRecordCount": 1,
+    "protestCount": 6,
     "markerStatus": "completed"
-  },
-  {
-    "id": "portonovo-zvernec-albania",
-    "title": "Portonovo / Zvërnec",
-    "city": "Portonovo / Zvërnec",
-    "country": "Albania",
-    "latitude": 40.503,
-    "longitude": 19.418,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "3",
-        "title": "Portonovo project-site protest",
-        "startDate": "2026-05-30",
-        "endDate": "2026-05-30",
-        "status": "completed",
-        "importance": "major",
-        "participants": null,
-        "location": "Portonovo project site",
-        "description": "Demonstration near the project site escalated into confrontations with private security; pepper spray was reported.",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestCount": 1,
-    "markerStatus": "major"
   },
   {
     "id": "rrjoll-albania",
@@ -437,15 +369,17 @@
         "title": "Rrjoll resort-site protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Rrjoll project site",
-        "description": "Residents protested a separate resort project, breached fencing and entered the construction area amid tensions with police and security.",
+        "description": "Protesters marched through central Lezhë and raised concerns about living costs, unemployment and emigration.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "major"
   },
@@ -467,15 +401,17 @@
         "title": "Rozafa Castle protest",
         "startDate": "2026-06-08",
         "endDate": "2026-06-08",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Below Rozafa Castle",
-        "description": "Demonstrators gathered below Rozafa Castle during Rama's visit, opposing developments at Zvërnec and Rrjoll.",
+        "description": "Smaller gatherings continued as the movement spread nationally.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -497,32 +433,7 @@
         "title": "Forty-third through forty-sixth consecutive protests",
         "startDate": "2026-07-12",
         "endDate": "2026-07-15",
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "Central Tirana",
-        "description": "Daily protests continued from Skanderbeg Square to the prime minister's office and through central Tirana.",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "43",
-        "title": "Forty-second consecutive nationwide protest",
-        "startDate": "2026-07-11",
-        "endDate": "2026-07-11",
-        "status": "completed",
-        "importance": "major",
-        "participants": "tens of thousands",
-        "location": "Central Tirana",
-        "description": "Saturday nationwide and diaspora mobilization through central Tirana demanding Rama's resignation.",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "42",
-        "title": "Concert-funding protest",
-        "startDate": "2026-07-09",
-        "endDate": "2026-07-09",
+        "dayCount": 4,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -532,15 +443,44 @@
         "sourceUrl": ""
       },
       {
-        "id": "41",
-        "title": "Continuing daily Tirana protests",
-        "startDate": "2026-07-05",
-        "endDate": "2026-07-10",
+        "id": "43",
+        "title": "Forty-second consecutive nationwide protest",
+        "startDate": "2026-07-11",
+        "endDate": "2026-07-11",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "major",
+        "participants": "tens of thousands",
+        "location": "Central Tirana",
+        "description": "Daily demonstrations continued with demands for Rama's resignation, transitional government and police accountability.",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "42",
+        "title": "Concert-funding protest",
+        "startDate": "2026-07-09",
+        "endDate": "2026-07-09",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Central Tirana",
-        "description": "Daily demonstrations continued with demands for Rama's resignation, transitional government and police accountability.",
+        "description": "Residents and environmental activists protested a KESH project for three dams, citing inadequate consultation and environmental threats.",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "41",
+        "title": "Continuing daily Tirana protests",
+        "startDate": "2026-07-05",
+        "endDate": "2026-07-10",
+        "dayCount": 6,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Central Tirana",
+        "description": "Nationwide and diaspora protest demanding Rama's resignation, a technical government, SPAK investigations and detainee releases.",
         "source": "",
         "sourceUrl": ""
       },
@@ -549,11 +489,12 @@
         "title": "Thirty-fifth nationwide and diaspora mobilization",
         "startDate": "2026-07-04",
         "endDate": "2026-07-04",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Skanderbeg Square, Dëshmorët e Kombit Boulevard and Mine Peza Street",
-        "description": "Nationwide and diaspora protest demanding Rama's resignation, a technical government, SPAK investigations and detainee releases.",
+        "description": "After the Parliament clashes, protesters marched to police station no. 3 demanding the release of detained protesters.",
         "source": "",
         "sourceUrl": ""
       },
@@ -562,11 +503,12 @@
         "title": "Thirty-fourth consecutive protest",
         "startDate": "2026-07-03",
         "endDate": "2026-07-03",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Central Tirana",
-        "description": "March from Skanderbeg Square toward the prime minister's office, police station no. 3 and the Tirana Prosecutor's Office.",
+        "description": "Major escalation outside Parliament; police used tear gas, pepper spray and water cannon after clashes and a cordon breach.",
         "source": "",
         "sourceUrl": ""
       },
@@ -575,11 +517,12 @@
         "title": "Parliament clashes",
         "startDate": "2026-07-02",
         "endDate": "2026-07-02",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Parliament of Albania",
-        "description": "Major escalation outside Parliament; police used tear gas, pepper spray and water cannon after clashes and a cordon breach.",
+        "description": "Protesters gathered outside SPAK and submitted material described as evidence of state capture and unlawful development.",
         "source": "",
         "sourceUrl": ""
       },
@@ -588,11 +531,12 @@
         "title": "Police-station solidarity march",
         "startDate": "2026-07-02",
         "endDate": "2026-07-02",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Police station no. 3, Mine Peza Street",
-        "description": "After the Parliament clashes, protesters marched to police station no. 3 demanding the release of detained protesters.",
+        "description": "Evening protest demanded Rama's resignation and investigations into senior officials.",
         "source": "",
         "sourceUrl": ""
       },
@@ -601,11 +545,12 @@
         "title": "SPAK protest and submission",
         "startDate": "2026-07-01",
         "endDate": "2026-07-01",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "SPAK",
-        "description": "Protesters gathered outside SPAK and submitted material described as evidence of state capture and unlawful development.",
+        "description": "Protesters gathered outside Parliament, demanded government resignation and clashed with police after symbolic actions against officials.",
         "source": "",
         "sourceUrl": ""
       },
@@ -614,11 +559,12 @@
         "title": "Regular evening protest",
         "startDate": "2026-07-01",
         "endDate": "2026-07-01",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Central Tirana",
-        "description": "Evening protest demanded Rama's resignation and investigations into senior officials.",
+        "description": "Regular evening protest resumed in Skanderbeg Square and outside the prime minister's office.",
         "source": "",
         "sourceUrl": ""
       },
@@ -627,11 +573,12 @@
         "title": "Parliament plenary-session protest",
         "startDate": "2026-06-30",
         "endDate": "2026-06-30",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Parliament of Albania",
-        "description": "Protesters gathered outside Parliament, demanded government resignation and clashed with police after symbolic actions against officials.",
+        "description": "The protest wave entered its fifth week and announced a larger mobilization for 4 July.",
         "source": "",
         "sourceUrl": ""
       },
@@ -640,11 +587,12 @@
         "title": "Thirty-first evening protest",
         "startDate": "2026-06-30",
         "endDate": "2026-06-30",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Skanderbeg Square and prime minister's office",
-        "description": "Regular evening protest resumed in Skanderbeg Square and outside the prime minister's office.",
+        "description": "Thirtieth consecutive protest with participation or addresses by several European political representatives.",
         "source": "",
         "sourceUrl": ""
       },
@@ -653,32 +601,7 @@
         "title": "One-month anniversary protest",
         "startDate": "2026-06-29",
         "endDate": "2026-06-29",
-        "status": "completed",
-        "importance": "major",
-        "participants": null,
-        "location": "Central Tirana",
-        "description": "Thirtieth consecutive protest with participation or addresses by several European political representatives.",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "30",
-        "title": "Twenty-ninth consecutive protest",
-        "startDate": "2026-06-28",
-        "endDate": "2026-06-28",
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "Central Tirana",
-        "description": "The protest wave entered its fifth week and announced a larger mobilization for 4 July.",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "29",
-        "title": "Twenty-eighth consecutive nationwide protest",
-        "startDate": "2026-06-27",
-        "endDate": "2026-06-27",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
@@ -688,10 +611,11 @@
         "sourceUrl": ""
       },
       {
-        "id": "28",
-        "title": "Five-point platform protests",
-        "startDate": "2026-06-25",
-        "endDate": "2026-06-26",
+        "id": "30",
+        "title": "Twenty-ninth consecutive protest",
+        "startDate": "2026-06-28",
+        "endDate": "2026-06-28",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -701,15 +625,44 @@
         "sourceUrl": ""
       },
       {
+        "id": "29",
+        "title": "Twenty-eighth consecutive nationwide protest",
+        "startDate": "2026-06-27",
+        "endDate": "2026-06-27",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "major",
+        "participants": null,
+        "location": "Central Tirana",
+        "description": "Union of Trade Unions of Albania protested over wages, staffing, social dialogue, union rights and public services.",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "28",
+        "title": "Five-point platform protests",
+        "startDate": "2026-06-25",
+        "endDate": "2026-06-26",
+        "dayCount": 2,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Central Tirana",
+        "description": "Residents and emigrants protested long-running property disputes and removed sections of fencing around disputed land.",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "27",
         "title": "Trade-union protest",
         "startDate": "2026-06-23",
         "endDate": "2026-06-23",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Tirana",
-        "description": "Union of Trade Unions of Albania protested over wages, staffing, social dialogue, union rights and public services.",
+        "description": "Largest demonstration to date, with nationwide and diaspora participation filling much of Dëshmorët e Kombit Boulevard.",
         "source": "",
         "sourceUrl": ""
       },
@@ -718,11 +671,12 @@
         "title": "Twenty-first consecutive nationwide protest",
         "startDate": "2026-06-20",
         "endDate": "2026-06-20",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": "25000+",
         "location": "Dëshmorët e Kombit Boulevard",
-        "description": "Largest demonstration to date, with nationwide and diaspora participation filling much of Dëshmorët e Kombit Boulevard.",
+        "description": "Daily marches continued, targeting both government and opposition; one march reached Parliament during a plenary session.",
         "source": "",
         "sourceUrl": ""
       },
@@ -731,11 +685,12 @@
         "title": "Parliament protest",
         "startDate": "2026-06-18",
         "endDate": "2026-06-18",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Parliament of Albania",
-        "description": "Protesters marched to Parliament during a plenary session, called on deputies to resign and confronted an MP.",
+        "description": "March from Skanderbeg Square to the prime minister's office, then onto the Tirana–Durrës Highway and toward Rinas airport.",
         "source": "",
         "sourceUrl": ""
       },
@@ -744,11 +699,12 @@
         "title": "Daily evening protests and marches",
         "startDate": "2026-06-15",
         "endDate": "2026-06-19",
+        "dayCount": 5,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Central Tirana",
-        "description": "Daily marches continued, targeting both government and opposition; one march reached Parliament during a plenary session.",
+        "description": "One of the movement's largest gatherings, with strong diaspora participation and demands for Rama's resignation and anti-corruption action.",
         "source": "",
         "sourceUrl": ""
       },
@@ -757,11 +713,12 @@
         "title": "Tirana highway and airport march",
         "startDate": "2026-06-14",
         "endDate": "2026-06-15",
+        "dayCount": 2,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Tirana–Durrës Highway and Rinas road",
-        "description": "March from Skanderbeg Square to the prime minister's office, then onto the Tirana–Durrës Highway and toward Rinas airport.",
+        "description": "Residents protested a separate resort project, breached fencing and entered the construction area amid tensions with police and security.",
         "source": "",
         "sourceUrl": ""
       },
@@ -770,11 +727,12 @@
         "title": "Large Tirana diaspora-supported protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": "100000",
         "location": "Central Tirana",
-        "description": "One of the movement's largest gatherings, with strong diaspora participation and demands for Rama's resignation and anti-corruption action.",
+        "description": "Larger nationwide gathering marking the League of Prizren anniversary and a broader challenge to the political system.",
         "source": "",
         "sourceUrl": ""
       },
@@ -783,11 +741,12 @@
         "title": "Prizren 1878, Tirana 2026 nationwide gathering",
         "startDate": "2026-06-10",
         "endDate": "2026-06-10",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Central Tirana",
-        "description": "Larger nationwide gathering marking the League of Prizren anniversary and a broader challenge to the political system.",
+        "description": "Demonstrators gathered below Rozafa Castle during Rama's visit, opposing developments at Zvërnec and Rrjoll.",
         "source": "",
         "sourceUrl": ""
       },
@@ -796,11 +755,12 @@
         "title": "Continuing Tirana demonstrations",
         "startDate": "2026-06-04",
         "endDate": "2026-06-09",
+        "dayCount": 6,
         "status": "completed",
         "importance": "major",
         "participants": "several thousand",
         "location": "Central Tirana",
-        "description": "Several days of demonstrations continued in Tirana as the movement spread nationally.",
+        "description": "Daily demonstrations in Skanderbeg Square and toward the prime minister's office, demanding transparency and increasingly Rama's resignation.",
         "source": "",
         "sourceUrl": ""
       },
@@ -809,11 +769,12 @@
         "title": "Escalated Tirana protest",
         "startDate": "2026-06-03",
         "endDate": "2026-06-03",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Central Tirana",
-        "description": "Protesters demanded Rama's resignation and repeal of protected-area law changes; police used water cannon after a cordon was breached.",
+        "description": "March from the State Police Directorate to the Ministry of Interior and prime minister's office, demanding accountability and cancellation of the project.",
         "source": "",
         "sourceUrl": ""
       },
@@ -822,11 +783,12 @@
         "title": "Daily Tirana demonstrations",
         "startDate": "2026-06-01",
         "endDate": "2026-06-02",
+        "dayCount": 2,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Skanderbeg Square and prime minister's office",
-        "description": "Daily demonstrations in Skanderbeg Square and toward the prime minister's office, demanding transparency and increasingly Rama's resignation.",
+        "description": "",
         "source": "",
         "sourceUrl": ""
       },
@@ -835,16 +797,18 @@
         "title": "First Tirana march",
         "startDate": "2026-05-31",
         "endDate": "2026-05-31",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Central Tirana",
-        "description": "March from the State Police Directorate to the Ministry of Interior and prime minister's office, demanding accountability and cancellation of the project.",
+        "description": "",
         "source": "",
         "sourceUrl": ""
       }
     ],
-    "protestCount": 27,
+    "protestRecordCount": 27,
+    "protestCount": 47,
     "markerStatus": "major"
   },
   {
@@ -865,6 +829,7 @@
         "title": "Vlorë solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-09",
+        "dayCount": 6,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -872,10 +837,53 @@
         "description": "Local gathering as the protest movement expanded beyond Tirana.",
         "source": "",
         "sourceUrl": ""
+      },
+      {
+        "id": "3",
+        "title": "Portonovo project-site protest",
+        "startDate": "2026-05-30",
+        "endDate": "2026-05-30",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "major",
+        "participants": null,
+        "location": "Portonovo project site",
+        "description": "Demonstration near the project site escalated into confrontations with private security; pepper spray was reported.",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "2",
+        "title": "Narta Lagoon and Pishë Poro–Narta beach protest",
+        "startDate": "2026-05-23",
+        "endDate": "2026-05-23",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Near Narta Lagoon",
+        "description": "Residents and environmental activists protested barbed-wire fencing and defended the protected Vjosa–Narta landscape.",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "1",
+        "title": "Akërni construction-site demonstration",
+        "startDate": "2026-05-16",
+        "endDate": "2026-05-16",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "major",
+        "participants": null,
+        "location": "Akërni construction site, Pishë Poro–Narta",
+        "description": "Local residents and environmental activists marched to and entered the fenced construction area, opposing works in the protected landscape.",
+        "source": "",
+        "sourceUrl": ""
       }
     ],
-    "protestCount": 1,
-    "markerStatus": "completed"
+    "protestRecordCount": 4,
+    "protestCount": 9,
+    "markerStatus": "major"
   },
   {
     "id": "melbourne-australia",
@@ -895,15 +903,17 @@
         "title": "Melbourne solidarity protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Demonstrators protested the project and raised concerns over pensions, working conditions, education and youth policy.",
-        "description": "Participants gathered in support of the protests in Albania and called for Rama's resignation.",
+        "description": "A large protest predominantly comprising members of the Albanian diaspora.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -921,21 +931,37 @@
     "facebookUrl": "",
     "protests": [
       {
+        "id": "85",
+        "title": "Vienna diaspora protest",
+        "startDate": "2026-07-19",
+        "endDate": "2026-07-19",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "Participants gathered in support of the protests in Albania and called for Rama's resignation.",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "49",
         "title": "Vienna diaspora protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Albanians protested against the government, carried 'Albania is not for sale' placards and called for Rama to resign.",
+        "description": "Rally near the Albanian Consulate under the call 'For nature, for justice, for Albania'.",
         "source": "",
         "sourceUrl": ""
       }
     ],
-    "protestCount": 1,
-    "markerStatus": "completed"
+    "protestRecordCount": 2,
+    "protestCount": 2,
+    "markerStatus": "confirmed"
   },
   {
     "id": "brussels-belgium",
@@ -955,15 +981,17 @@
         "title": "Brussels EU-quarter protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Near EU headquarters",
-        "description": "Gathering near EU headquarters supporting the Albanian protests and calling for environmental protection and transparency.",
+        "description": "Large diaspora protest supporting protection of Vjosa–Narta and opposing the resort project.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -985,15 +1013,17 @@
         "title": "Sofia solidarity protest",
         "startDate": "2026-06-08",
         "endDate": "2026-06-08",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Demonstrators called on the European Union to act and side with protesters in Albania.",
+        "description": "Diaspora protest held as part of wider international gatherings.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1015,15 +1045,17 @@
         "title": "Toronto diaspora protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "",
-        "description": "Participants carried Albanian flags and called for Prime Minister Edi Rama to resign.",
+        "description": "Around 450 people gathered for a solidarity protest.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "major"
   },
@@ -1045,15 +1077,17 @@
         "title": "Lyon diaspora protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Participants gathered with flags and flamingo symbols in support of the Albanian protests.",
+        "description": "A second consecutive gathering outside the embassy called for environmental protection, transparency and Rama's resignation.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1071,15 +1105,30 @@
     "facebookUrl": "",
     "protests": [
       {
+        "id": "84",
+        "title": "Berlin embassy protest",
+        "startDate": "2026-07-19",
+        "endDate": "2026-07-19",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": "100",
+        "location": "Near the Embassy of Albania",
+        "description": "Albanian Americans from several states gathered outside UN headquarters in support of the forty-third protest in Albania.",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "79",
         "title": "Berlin protest during Rama visit",
         "startDate": "2026-06-16",
         "endDate": "2026-06-16",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Conference venue area",
-        "description": "Protesters confronted Rama during the Annual Conference of the Eastern Committee and called for his resignation.",
+        "description": "Genoa was listed among the coordinated 14 June protest locations.",
         "source": "",
         "sourceUrl": ""
       },
@@ -1088,17 +1137,19 @@
         "title": "Berlin embassy protest",
         "startDate": "2026-06-05",
         "endDate": "2026-06-05",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": "several hundred",
         "location": "Near the Embassy of Albania",
-        "description": "Demonstrators protested the project and raised concerns over pensions, working conditions, education and youth policy.",
+        "description": "Daily protests continued from Skanderbeg Square to the prime minister's office and through central Tirana.",
         "source": "",
         "sourceUrl": ""
       }
     ],
-    "protestCount": 2,
-    "markerStatus": "major"
+    "protestRecordCount": 3,
+    "protestCount": 3,
+    "markerStatus": "confirmed"
   },
   {
     "id": "cologne-germany",
@@ -1118,15 +1169,17 @@
         "title": "Cologne diaspora protest",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": "several hundred",
         "location": "",
-        "description": "Several hundred people participated in the demonstration.",
+        "description": "Participants gathered with flamingo symbols and Albanian flags.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "major"
   },
@@ -1148,15 +1201,17 @@
         "title": "Düsseldorf protest during Rama visit",
         "startDate": "2026-07-01",
         "endDate": "2026-07-01",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Diaspora protesters gathered during Rama's meeting with the North Rhine-Westphalia minister-president.",
+        "description": "Faenza was listed among the coordinated 14 June protest locations.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1178,15 +1233,17 @@
         "title": "Hamburg diaspora protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Diaspora protest held as part of the international mobilization.",
+        "description": "Diaspora members gathered outside the Albanian Embassy and called for Rama and the government to resign.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1208,6 +1265,7 @@
         "title": "Heidelberg diaspora protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -1217,6 +1275,7 @@
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1238,11 +1297,12 @@
         "title": "Second Munich diaspora protest",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Diaspora protest held alongside the Tirana demonstrations.",
+        "description": "Participants protested outside the Albanian Embassy and called for Rama's resignation.",
         "source": "",
         "sourceUrl": ""
       },
@@ -1251,15 +1311,17 @@
         "title": "Munich consulate protest",
         "startDate": "2026-06-05",
         "endDate": "2026-06-05",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Near the Albanian Consulate",
-        "description": "Rally near the Albanian Consulate under the call 'For nature, for justice, for Albania'.",
+        "description": "Citizens gathered outside the Albanian Embassy in solidarity and opposed interventions in protected natural areas.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 2,
     "protestCount": 2,
     "markerStatus": "completed"
   },
@@ -1281,15 +1343,17 @@
         "title": "Nuremberg diaspora protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": "dozens",
         "location": "",
-        "description": "Dozens of Albanians gathered as part of diaspora protests.",
+        "description": "Demonstrators called on the European Union to act and side with protesters in Albania.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1311,15 +1375,17 @@
         "title": "Stuttgart diaspora protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Diaspora protest held as part of the international mobilization.",
+        "description": "Gathering near EU headquarters supporting the Albanian protests and calling for environmental protection and transparency.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1341,15 +1407,17 @@
         "title": "Athens Syntagma Square protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Syntagma Square",
-        "description": "Diaspora and solidarity activists opposed development near Vjosa–Narta and Zvërnec.",
+        "description": "Protest held under the call 'Save Vjosa-Narta'.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1371,15 +1439,17 @@
         "title": "Dublin diaspora protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Participants protested against Rama's government and demanded his resignation.",
+        "description": "Participants gathered with flags and flamingo symbols in support of the Albanian protests.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1401,15 +1471,17 @@
         "title": "Bologna diaspora protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": "hundreds",
         "location": "",
-        "description": "Hundreds protested against Edi Rama and the proposed resort project.",
+        "description": "Diaspora protest held as part of the international mobilization.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1431,17 +1503,19 @@
         "title": "Faenza planned diaspora rally",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
-        "status": "planned",
+        "dayCount": 1,
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Faenza was listed among the coordinated 14 June protest locations.",
+        "description": "Diaspora rally with Albanian flags and placards calling for the government's resignation.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "florence-italy",
@@ -1461,15 +1535,17 @@
         "title": "Florence diaspora protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": "450",
         "location": "",
-        "description": "Around 450 people gathered for a solidarity protest.",
+        "description": "Diaspora and solidarity activists opposed development near Vjosa–Narta and Zvërnec.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "major"
   },
@@ -1491,17 +1567,19 @@
         "title": "Genoa planned diaspora rally",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
-        "status": "planned",
+        "dayCount": 1,
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Genoa was listed among the coordinated 14 June protest locations.",
+        "description": "Diaspora rally with Albanian flags and placards calling for the government's resignation.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "milan-italy",
@@ -1521,15 +1599,17 @@
         "title": "Milan diaspora protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": "2000",
         "location": "",
-        "description": "Around 2,000 people joined the protests with signs, songs and anti-government slogans.",
+        "description": "Albanians protested against the government, carried 'Albania is not for sale' placards and called for Rama to resign.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "major"
   },
@@ -1551,15 +1631,17 @@
         "title": "Pisa diaspora protest",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Diaspora rally with Albanian flags and placards calling for the government's resignation.",
+        "description": "Several hundred people participated in the demonstration.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1581,15 +1663,17 @@
         "title": "Rome diaspora protest",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Diaspora rally with Albanian flags and placards calling for the government's resignation.",
+        "description": "Diaspora protest held alongside the Tirana demonstrations.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1611,15 +1695,17 @@
         "title": "Pristina embassy solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Embassy of Albania",
-        "description": "Citizens gathered outside the Albanian Embassy in solidarity and opposed interventions in protected natural areas.",
+        "description": "Saturday nationwide and diaspora mobilization through central Tirana demanding Rama's resignation.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1641,15 +1727,17 @@
         "title": "The Hague diaspora protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Diaspora protest against the government and Zvërnec development under the slogan 'Albania is not for sale'.",
+        "description": "Diaspora protest held as part of the international mobilization.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1671,15 +1759,17 @@
         "title": "Skopje solidarity protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Macedonia Square",
-        "description": "Solidarity protest listed at Macedonia Square as part of the international calendar.",
+        "description": "Hundreds protested against Edi Rama and the proposed resort project.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1701,11 +1791,12 @@
         "title": "Second Stockholm protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Diaspora members again protested and called for Rama's resignation.",
+        "description": "Dozens of Albanians gathered as part of diaspora protests.",
         "source": "",
         "sourceUrl": ""
       },
@@ -1714,15 +1805,17 @@
         "title": "Save Vjosa-Narta protest",
         "startDate": "2026-06-05",
         "endDate": "2026-06-05",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Protest held under the call 'Save Vjosa-Narta'.",
+        "description": "Demonstrators protested the project and raised concerns over pensions, working conditions, education and youth policy.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 2,
     "protestCount": 2,
     "markerStatus": "completed"
   },
@@ -1744,11 +1837,12 @@
         "title": "Bern embassy protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Embassy of Albania",
-        "description": "Participants protested outside the Albanian Embassy and called for Rama's resignation.",
+        "description": "Participants protested against Rama's government and demanded his resignation.",
         "source": "",
         "sourceUrl": ""
       },
@@ -1757,15 +1851,17 @@
         "title": "Bern diaspora protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Diaspora protest held as part of wider international gatherings.",
+        "description": "Diaspora protest against the government and Zvërnec development under the slogan 'Albania is not for sale'.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 2,
     "protestCount": 2,
     "markerStatus": "completed"
   },
@@ -1787,11 +1883,12 @@
         "title": "Third London diaspora protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
-        "description": "Participants gathered with flamingo symbols and Albanian flags.",
+        "description": "Diaspora members again protested and called for Rama's resignation.",
         "source": "",
         "sourceUrl": ""
       },
@@ -1800,11 +1897,12 @@
         "title": "Second London embassy protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Embassy of Albania",
-        "description": "A second consecutive gathering outside the embassy called for environmental protection, transparency and Rama's resignation.",
+        "description": "Solidarity protest listed at Macedonia Square as part of the international calendar.",
         "source": "",
         "sourceUrl": ""
       },
@@ -1813,15 +1911,17 @@
         "title": "London embassy protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Embassy of Albania",
-        "description": "Diaspora members gathered outside the Albanian Embassy, opposing the resort development and calling for Rama's resignation.",
+        "description": "Around 2,000 people joined the protests with signs, songs and anti-government slogans.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 3,
     "protestCount": 3,
     "markerStatus": "major"
   },
@@ -1843,11 +1943,12 @@
         "title": "United Nations headquarters protest",
         "startDate": "2026-07-12",
         "endDate": "2026-07-12",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "United Nations headquarters",
-        "description": "Albanian Americans from several states gathered outside UN headquarters in support of the forty-third protest in Albania.",
+        "description": "Diaspora protesters gathered during Rama's meeting with the North Rhine-Westphalia minister-president.",
         "source": "",
         "sourceUrl": ""
       },
@@ -1856,15 +1957,17 @@
         "title": "New York consulate protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": "1500–2000",
         "location": "Outside the Albanian Consulate",
-        "description": "Large diaspora protest supporting protection of Vjosa–Narta and opposing the resort project.",
+        "description": "Diaspora members gathered outside the Albanian Embassy, opposing the resort development and calling for Rama's resignation.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 2,
     "protestCount": 2,
     "markerStatus": "major"
   },
@@ -1886,15 +1989,17 @@
         "title": "Washington embassy protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Embassy of Albania",
-        "description": "Diaspora members gathered outside the Albanian Embassy and called for Rama and the government to resign.",
+        "description": "Participants carried Albanian flags and called for Prime Minister Edi Rama to resign.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "completed"
   },
@@ -1916,15 +2021,17 @@
         "title": "Waterbury diaspora protest",
         "startDate": "2026-06-28",
         "endDate": "2026-06-28",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "Waterbury, Connecticut",
-        "description": "A large protest predominantly comprising members of the Albanian diaspora.",
+        "description": "Protesters confronted Rama during the Annual Conference of the Eastern Committee and called for his resignation.",
         "source": "",
         "sourceUrl": ""
       }
     ],
+    "protestRecordCount": 1,
     "protestCount": 1,
     "markerStatus": "major"
   }

@@ -8,10 +8,7 @@
       content="width=device-width, initial-scale=1, viewport-fit=cover"
     />
 
-    <meta
-      name="referrer"
-      content="strict-origin-when-cross-origin"
-    />
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
 
     <title>Flamingo Protest Map</title>
 
@@ -25,10 +22,7 @@
       href="https://cdn.jsdelivr.net/npm/ol@10.9.0/ol.css"
     />
 
-    <link
-      rel="stylesheet"
-      href="./style.css"
-    />
+    <link rel="stylesheet" href="./style.css" />
   </head>
 
   <body>
@@ -49,9 +43,7 @@
       >
         <div class="panel-header">
           <div>
-            <p class="panel-eyebrow">
-              Flamingo Revolution
-            </p>
+            <p class="panel-eyebrow">Flamingo Revolution</p>
 
             <h1>Protest Map</h1>
           </div>
@@ -68,12 +60,7 @@
 
         <!-- Search -->
         <section class="panel-section">
-          <label
-            class="search-label"
-            for="search"
-          >
-            Search
-          </label>
+          <label class="search-label" for="search"> Search </label>
 
           <input
             id="search"
@@ -95,10 +82,7 @@
               checked
             />
 
-            <span
-              class="status-dot status-planned"
-              aria-hidden="true"
-            ></span>
+            <span class="status-dot status-planned" aria-hidden="true"></span>
 
             <span>Upcoming</span>
           </label>
@@ -111,10 +95,7 @@
               checked
             />
 
-            <span
-              class="status-dot status-confirmed"
-              aria-hidden="true"
-            ></span>
+            <span class="status-dot status-confirmed" aria-hidden="true"></span>
 
             <span>Confirmed</span>
           </label>
@@ -127,10 +108,7 @@
               checked
             />
 
-            <span
-              class="status-dot status-active"
-              aria-hidden="true"
-            ></span>
+            <span class="status-dot status-active" aria-hidden="true"></span>
 
             <span>Happening now</span>
           </label>
@@ -143,10 +121,7 @@
               checked
             />
 
-            <span
-              class="status-dot status-tentative"
-              aria-hidden="true"
-            ></span>
+            <span class="status-dot status-tentative" aria-hidden="true"></span>
 
             <span>Not confirmed</span>
           </label>
@@ -159,10 +134,7 @@
               checked
             />
 
-            <span
-              class="status-dot status-completed"
-              aria-hidden="true"
-            ></span>
+            <span class="status-dot status-completed" aria-hidden="true"></span>
 
             <span>Past protests</span>
           </label>
@@ -174,79 +146,45 @@
 
           <div class="stats-list">
             <div class="stat-row">
-              <span class="stat-label">
-                Cities
-              </span>
+              <span class="stat-label"> Cities </span>
 
-              <strong
-                id="visible-count"
-                class="stat-value"
-              >
+              <strong id="visible-count" class="stat-value"> 0 </strong>
+            </div>
+
+            <div class="stat-row">
+              <span class="stat-label"> Protests </span>
+
+              <strong id="protest-count" class="stat-value"> 0 </strong>
+            </div>
+
+            <div class="stat-row">
+              <span class="stat-label"> Confirmed upcoming </span>
+
+              <strong id="confirmed-count" class="stat-value stat-confirmed">
                 0
               </strong>
             </div>
 
             <div class="stat-row">
-              <span class="stat-label">
-                Protests
-              </span>
+              <span class="stat-label"> Not confirmed </span>
 
-              <strong
-                id="protest-count"
-                class="stat-value"
-              >
+              <strong id="tentative-count" class="stat-value stat-tentative">
                 0
               </strong>
             </div>
 
             <div class="stat-row">
-              <span class="stat-label">
-                Confirmed upcoming
-              </span>
+              <span class="stat-label"> Major gatherings </span>
 
-              <strong
-                id="confirmed-count"
-                class="stat-value stat-confirmed"
-              >
+              <strong id="major-count" class="stat-value stat-major">
                 0
               </strong>
             </div>
 
             <div class="stat-row">
-              <span class="stat-label">
-                Not confirmed
-              </span>
+              <span class="stat-label"> Completed </span>
 
-              <strong
-                id="tentative-count"
-                class="stat-value stat-tentative"
-              >
-                0
-              </strong>
-            </div>
-
-            <div class="stat-row">
-              <span class="stat-label">
-                Major gatherings
-              </span>
-
-              <strong
-                id="major-count"
-                class="stat-value stat-major"
-              >
-                0
-              </strong>
-            </div>
-
-            <div class="stat-row">
-              <span class="stat-label">
-                Completed
-              </span>
-
-              <strong
-                id="completed-count"
-                class="stat-value stat-completed"
-              >
+              <strong id="completed-count" class="stat-value stat-completed">
                 0
               </strong>
             </div>
@@ -254,83 +192,69 @@
         </section>
 
         <!-- Legend -->
-        <section class="panel-section">
+        <section class="panel-section panel-section-compact">
           <h2>Legend</h2>
 
-          <div class="circle-legend">
+          <div class="circle-legend circle-legend-compact">
             <div class="circle-legend-item">
               <span
-                class="circle-example circle-medium confirmed"
+                class="circle-example circle-small confirmed"
                 aria-hidden="true"
+                >3</span
               >
-                5
-              </span>
-
-              <span>
-                Confirmed or active protests
-              </span>
+              <span>Confirmed / active</span>
             </div>
 
             <div class="circle-legend-item">
               <span
-                class="circle-example circle-medium tentative"
+                class="circle-example circle-small tentative"
                 aria-hidden="true"
+                >3</span
               >
-                5
-              </span>
-
-              <span>
-                Not yet confirmed
-              </span>
-            </div>
-
-            <div class="circle-legend-item">
-              <span
-                class="circle-example circle-medium completed"
-                aria-hidden="true"
-              >
-                5
-              </span>
-
-              <span>
-                Completed protests
-              </span>
-            </div>
-
-            <div class="circle-legend-item">
-              <span
-                class="circle-example circle-medium major"
-                aria-hidden="true"
-              >
-                5
-              </span>
-
-              <span>
-                Major gathering
-              </span>
+              <span>Not confirmed</span>
             </div>
 
             <div class="circle-legend-item">
               <span
                 class="circle-example circle-small completed"
                 aria-hidden="true"
+                >3</span
               >
-                1
-              </span>
+              <span>Completed</span>
+            </div>
 
-              <span>
-                Circle size shows protest count
-              </span>
+            <div class="circle-legend-item">
+              <span class="circle-example circle-small major" aria-hidden="true"
+                >3</span
+              >
+              <span>Major gathering</span>
             </div>
           </div>
+
+          <p class="legend-note" style="color: grey">
+            The number and circle size show total protest days.
+          </p>
         </section>
+
 
         <!-- Dataset note -->
         <section class="panel-section panel-footer">
+
+          <h2>Dataset Info </h2>
+          <div style="color: grey">
           <p>
             Protest information is maintained by local Flamingo communities.
           </p>
 
+          <p>
+            Complete the 
+          <a
+            class="dataset-link"
+            href="https://docs.google.com/spreadsheets/d/1i07VQru-t1-KmDzw84lkuXW2D0horxup/edit"
+            target="_blank"
+            rel="noopener noreferrer"
+          >Dataset</a>!
+          </p>
           <p>
             Dataset licensed under
             <a
@@ -338,9 +262,10 @@
               target="_blank"
               rel="noopener noreferrer"
             >
-              CC BY 4.0
-            </a>.
+              CC BY 4.0 </a
+            >.
           </p>
+          </div>
         </section>
       </aside>
 
@@ -353,12 +278,7 @@
         aria-expanded="false"
         aria-controls="map-panel"
       >
-        <span
-          class="sidebar-handle-icon"
-          aria-hidden="true"
-        >
-          ›
-        </span>
+        <span class="sidebar-handle-icon" aria-hidden="true"> › </span>
       </button>
 
       <!-- Upcoming protests -->
@@ -369,9 +289,7 @@
       >
         <div class="upcoming-rail-header">
           <div>
-            <p class="upcoming-eyebrow">
-              Next events
-            </p>
+            <p class="upcoming-eyebrow">Next events</p>
 
             <h2>Upcoming protests</h2>
           </div>
@@ -388,10 +306,7 @@
           </button>
         </div>
 
-        <div
-          id="upcoming-content"
-          class="upcoming-content"
-        >
+        <div id="upcoming-content" class="upcoming-content">
           <div
             id="upcoming-list"
             class="upcoming-list"
@@ -402,11 +317,7 @@
       </section>
 
       <!-- Desktop OpenLayers popup -->
-      <div
-        id="popup"
-        class="ol-popup"
-        hidden
-      >
+      <div id="popup" class="ol-popup" hidden>
         <button
           id="popup-closer"
           class="popup-closer"

@@ -1,0 +1,24 @@
+/* =========================
+   OpenLayers controls
+   ========================= */
+
+.ol-control button {
+  width: 40px;
+  height: 40px;
+  color: #222;
+  background: rgba(255, 255, 255, .94);
+  border-radius: 8px;
+}
+
+.ol-zoom {
+  top: 12px;
+  right: 12px;
+  left: auto;
+}
+
+.ol-attribution {
+  right: 8px;
+  bottom: 8px;
+  max-width: calc(100% - 16px);
+}
+
