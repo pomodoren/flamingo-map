@@ -1133,6 +1133,20 @@
         "sourceUrl": ""
       },
       {
+        "id": "95",
+        "title": "Berlin Protest #3",
+        "startDate": "2026-07-07",
+        "endDate": "2026-07-07",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "93",
         "title": "Berlin Protest #4",
         "startDate": "2026-07-05",
@@ -1203,8 +1217,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 7,
-    "protestCount": 7,
+    "protestRecordCount": 8,
+    "protestCount": 8,
     "markerStatus": "confirmed"
   },
   {
@@ -1377,6 +1391,20 @@
         "sourceUrl": ""
       },
       {
+        "id": "96",
+        "title": "Munich Protest #3",
+        "startDate": "2026-07-08",
+        "endDate": "2026-07-08",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "94",
         "title": "Munich Protest #4",
         "startDate": "2026-07-06",
@@ -1447,8 +1475,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 7,
-    "protestCount": 7,
+    "protestRecordCount": 8,
+    "protestCount": 8,
     "markerStatus": "confirmed"
   },
   {
