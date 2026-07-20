@@ -936,7 +936,7 @@
         "startDate": "2026-07-19",
         "endDate": "2026-07-19",
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -961,7 +961,7 @@
     ],
     "protestRecordCount": 2,
     "protestCount": 2,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "brussels-belgium",
@@ -1105,12 +1105,26 @@
     "facebookUrl": "",
     "protests": [
       {
+        "id": "87",
+        "title": "Berlin Protest #8",
+        "startDate": "2026-07-26",
+        "endDate": "2026-07-26",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "84",
         "title": "Berlin embassy protest",
         "startDate": "2026-07-19",
         "endDate": "2026-07-19",
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": "100",
         "location": "Near the Embassy of Albania",
@@ -1147,8 +1161,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 3,
-    "protestCount": 3,
+    "protestRecordCount": 4,
+    "protestCount": 4,
     "markerStatus": "confirmed"
   },
   {
@@ -1293,6 +1307,20 @@
     "facebookUrl": "",
     "protests": [
       {
+        "id": "86",
+        "title": "Munich Protest #8",
+        "startDate": "2026-07-25",
+        "endDate": "2026-07-25",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "73",
         "title": "Second Munich diaspora protest",
         "startDate": "2026-06-14",
@@ -1321,9 +1349,9 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 2,
-    "protestCount": 2,
-    "markerStatus": "completed"
+    "protestRecordCount": 3,
+    "protestCount": 3,
+    "markerStatus": "confirmed"
   },
   {
     "id": "nuremberg-germany",
