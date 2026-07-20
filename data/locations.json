@@ -932,7 +932,7 @@
     "protests": [
       {
         "id": "85",
-        "title": "Vienna diaspora protest",
+        "title": "Vienna protest #7",
         "startDate": "2026-07-19",
         "endDate": "2026-07-19",
         "dayCount": 1,
@@ -1120,7 +1120,7 @@
       },
       {
         "id": "84",
-        "title": "Berlin embassy protest",
+        "title": "Berlin protest #7",
         "startDate": "2026-07-19",
         "endDate": "2026-07-19",
         "dayCount": 1,
@@ -1129,6 +1129,48 @@
         "participants": "100",
         "location": "Near the Embassy of Albania",
         "description": "Albanian Americans from several states gathered outside UN headquarters in support of the forty-third protest in Albania.",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "93",
+        "title": "Berlin Protest #4",
+        "startDate": "2026-07-05",
+        "endDate": "2026-07-05",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "91",
+        "title": "Berlin Protest #5",
+        "startDate": "2026-07-03",
+        "endDate": "2026-07-03",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "89",
+        "title": "Berlin Protest #6",
+        "startDate": "2026-07-01",
+        "endDate": "2026-07-01",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
         "source": "",
         "sourceUrl": ""
       },
@@ -1161,8 +1203,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 4,
-    "protestCount": 4,
+    "protestRecordCount": 7,
+    "protestCount": 7,
     "markerStatus": "confirmed"
   },
   {
@@ -1313,6 +1355,62 @@
         "endDate": "2026-07-25",
         "dayCount": 1,
         "status": "planned",
+        "importance": "major",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "88",
+        "title": "Munich Protest #7",
+        "startDate": "2026-07-19",
+        "endDate": "2026-07-19",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "94",
+        "title": "Munich Protest #4",
+        "startDate": "2026-07-06",
+        "endDate": "2026-07-06",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "92",
+        "title": "Munich Protest #5",
+        "startDate": "2026-07-04",
+        "endDate": "2026-07-04",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "90",
+        "title": "Munich Protest #6",
+        "startDate": "2026-07-02",
+        "endDate": "2026-07-02",
+        "dayCount": 1,
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -1349,8 +1447,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 3,
-    "protestCount": 3,
+    "protestRecordCount": 7,
+    "protestCount": 7,
     "markerStatus": "confirmed"
   },
   {
