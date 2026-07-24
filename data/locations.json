@@ -13,7 +13,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "21",
+        "id": "23",
         "title": "Dalan beach protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
@@ -45,7 +45,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "7",
+        "id": "26",
         "title": "Durrës solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
@@ -77,7 +77,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "8",
+        "id": "29",
         "title": "Elbasan solidarity protests",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
@@ -109,7 +109,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "9",
+        "id": "31",
         "title": "Fier solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
@@ -141,7 +141,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "10",
+        "id": "40",
         "title": "Gjirokastër solidarity protests",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
@@ -173,7 +173,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "64",
+        "id": "45",
         "title": "Kakome property-rights protest",
         "startDate": "2026-06-21",
         "endDate": "2026-06-21",
@@ -205,7 +205,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "11",
+        "id": "46",
         "title": "Korçë solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
@@ -237,7 +237,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "12",
+        "id": "47",
         "title": "Kukës solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
@@ -269,7 +269,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "40",
+        "id": "48",
         "title": "Lezhë march",
         "startDate": "2026-06-09",
         "endDate": "2026-06-09",
@@ -301,7 +301,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "83",
+        "id": "85",
         "title": "Mërtur River dams protest",
         "startDate": "2026-07-05",
         "endDate": "2026-07-05",
@@ -333,7 +333,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "13",
+        "id": "95",
         "title": "Pogradec solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
@@ -365,7 +365,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "48",
+        "id": "98",
         "title": "Rrjoll resort-site protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
@@ -397,7 +397,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "38",
+        "id": "99",
         "title": "Rozafa Castle protest",
         "startDate": "2026-06-08",
         "endDate": "2026-06-08",
@@ -429,7 +429,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "104",
+        "id": "143",
         "title": "Tirana Protest #55",
         "startDate": "2026-07-26",
         "endDate": "2026-07-31",
@@ -443,7 +443,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "105",
+        "id": "142",
         "title": "Tirana Last Day of Parliament",
         "startDate": "2026-07-25",
         "endDate": "2026-07-25",
@@ -452,12 +452,12 @@
         "importance": "major",
         "participants": null,
         "location": "",
-        "description": "Major clash with police",
+        "description": "",
         "source": "",
         "sourceUrl": ""
       },
       {
-        "id": "91",
+        "id": "141",
         "title": "Protest in Albania",
         "startDate": "2026-07-12",
         "endDate": "2026-07-24",
@@ -471,7 +471,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "88",
+        "id": "140",
         "title": "Forty-second consecutive nationwide protest",
         "startDate": "2026-07-11",
         "endDate": "2026-07-11",
@@ -485,7 +485,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "87",
+        "id": "139",
         "title": "Concert-funding protest",
         "startDate": "2026-07-09",
         "endDate": "2026-07-09",
@@ -499,7 +499,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "84",
+        "id": "138",
         "title": "Continuing daily Tirana protests",
         "startDate": "2026-07-05",
         "endDate": "2026-07-10",
@@ -513,7 +513,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "82",
+        "id": "137",
         "title": "Thirty-fifth nationwide and diaspora mobilization",
         "startDate": "2026-07-04",
         "endDate": "2026-07-04",
@@ -527,7 +527,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "80",
+        "id": "136",
         "title": "Thirty-fourth consecutive protest",
         "startDate": "2026-07-03",
         "endDate": "2026-07-03",
@@ -541,7 +541,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "78",
+        "id": "134",
         "title": "Parliament clashes",
         "startDate": "2026-07-02",
         "endDate": "2026-07-02",
@@ -555,7 +555,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "79",
+        "id": "135",
         "title": "Police-station solidarity march",
         "startDate": "2026-07-02",
         "endDate": "2026-07-02",
@@ -569,7 +569,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "75",
+        "id": "132",
         "title": "SPAK protest and submission",
         "startDate": "2026-07-01",
         "endDate": "2026-07-01",
@@ -583,7 +583,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "76",
+        "id": "133",
         "title": "Regular evening protest",
         "startDate": "2026-07-01",
         "endDate": "2026-07-01",
@@ -597,7 +597,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "72",
+        "id": "130",
         "title": "Parliament plenary-session protest",
         "startDate": "2026-06-30",
         "endDate": "2026-06-30",
@@ -611,7 +611,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "73",
+        "id": "131",
         "title": "Thirty-first evening protest",
         "startDate": "2026-06-30",
         "endDate": "2026-06-30",
@@ -625,7 +625,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "71",
+        "id": "129",
         "title": "One-month anniversary protest",
         "startDate": "2026-06-29",
         "endDate": "2026-06-29",
@@ -639,7 +639,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "69",
+        "id": "128",
         "title": "Twenty-ninth consecutive protest",
         "startDate": "2026-06-28",
         "endDate": "2026-06-28",
@@ -653,7 +653,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "68",
+        "id": "127",
         "title": "Twenty-eighth consecutive nationwide protest",
         "startDate": "2026-06-27",
         "endDate": "2026-06-27",
@@ -667,7 +667,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "66",
+        "id": "126",
         "title": "Five-point platform protests",
         "startDate": "2026-06-25",
         "endDate": "2026-06-26",
@@ -681,7 +681,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "65",
+        "id": "125",
         "title": "Trade-union protest",
         "startDate": "2026-06-23",
         "endDate": "2026-06-23",
@@ -695,7 +695,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "62",
+        "id": "124",
         "title": "Twenty-first consecutive nationwide protest",
         "startDate": "2026-06-20",
         "endDate": "2026-06-20",
@@ -709,7 +709,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "61",
+        "id": "123",
         "title": "Parliament protest",
         "startDate": "2026-06-18",
         "endDate": "2026-06-18",
@@ -723,7 +723,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "59",
+        "id": "122",
         "title": "Daily evening protests and marches",
         "startDate": "2026-06-15",
         "endDate": "2026-06-19",
@@ -737,7 +737,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "58",
+        "id": "121",
         "title": "Tirana highway and airport march",
         "startDate": "2026-06-14",
         "endDate": "2026-06-15",
@@ -751,7 +751,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "50",
+        "id": "120",
         "title": "Large Tirana diaspora-supported protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
@@ -765,7 +765,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "41",
+        "id": "119",
         "title": "Prizren 1878, Tirana 2026 nationwide gathering",
         "startDate": "2026-06-10",
         "endDate": "2026-06-10",
@@ -779,7 +779,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "15",
+        "id": "118",
         "title": "Continuing Tirana demonstrations",
         "startDate": "2026-06-04",
         "endDate": "2026-06-09",
@@ -793,7 +793,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "6",
+        "id": "117",
         "title": "Escalated Tirana protest",
         "startDate": "2026-06-03",
         "endDate": "2026-06-03",
@@ -807,7 +807,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "5",
+        "id": "116",
         "title": "Daily Tirana demonstrations",
         "startDate": "2026-06-01",
         "endDate": "2026-06-02",
@@ -821,7 +821,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "4",
+        "id": "115",
         "title": "First Tirana march",
         "startDate": "2026-05-31",
         "endDate": "2026-05-31",
@@ -853,7 +853,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "16",
+        "id": "158",
         "title": "Vlorë solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
@@ -867,7 +867,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "3",
+        "id": "157",
         "title": "Portonovo project-site protest",
         "startDate": "2026-05-30",
         "endDate": "2026-05-30",
@@ -881,7 +881,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "2",
+        "id": "156",
         "title": "Narta Lagoon and Pishë Poro–Narta beach protest",
         "startDate": "2026-05-23",
         "endDate": "2026-05-23",
@@ -895,7 +895,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "1",
+        "id": "155",
         "title": "Akërni construction-site demonstration",
         "startDate": "2026-05-16",
         "endDate": "2026-05-16",
@@ -914,130 +914,6 @@
     "markerStatus": "major"
   },
   {
-    "id": "melbourne-australia",
-    "title": "Melbourne",
-    "city": "Melbourne",
-    "country": "Australia",
-    "latitude": -37.8136,
-    "longitude": 144.9631,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "46",
-        "title": "Melbourne solidarity protest",
-        "startDate": "2026-06-13",
-        "endDate": "2026-06-13",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "Demonstrators protested the project and raised concerns over pensions, working conditions, education and youth policy.",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
-    "markerStatus": "completed"
-  },
-  {
-    "id": "vienna-austria",
-    "title": "Vienna",
-    "city": "Vienna",
-    "country": "Austria",
-    "latitude": 48.2082,
-    "longitude": 16.3738,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "103",
-        "title": "Vienna Protest #8",
-        "startDate": "2026-07-26",
-        "endDate": "2026-07-26",
-        "dayCount": 1,
-        "status": "planned",
-        "importance": "normal",
-        "participants": null,
-        "location": "Stephanplatz",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "94",
-        "title": "Vienna protest #7",
-        "startDate": "2026-07-19",
-        "endDate": "2026-07-19",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "27",
-        "title": "Vienna diaspora protest",
-        "startDate": "2026-06-06",
-        "endDate": "2026-06-06",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestRecordCount": 3,
-    "protestCount": 3,
-    "markerStatus": "confirmed"
-  },
-  {
-    "id": "brussels-belgium",
-    "title": "Brussels",
-    "city": "Brussels",
-    "country": "Belgium",
-    "latitude": 50.8503,
-    "longitude": 4.3517,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "31",
-        "title": "Brussels EU-quarter protest",
-        "startDate": "2026-06-07",
-        "endDate": "2026-06-07",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "Near EU headquarters",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
-    "markerStatus": "completed"
-  },
-  {
     "id": "sofia-bulgaria",
     "title": "Sofia",
     "city": "Sofia",
@@ -1051,7 +927,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "39",
+        "id": "101",
         "title": "Sofia solidarity protest",
         "startDate": "2026-06-08",
         "endDate": "2026-06-08",
@@ -1070,38 +946,6 @@
     "markerStatus": "completed"
   },
   {
-    "id": "toronto-canada",
-    "title": "Toronto",
-    "city": "Toronto",
-    "country": "Canada",
-    "latitude": 43.6532,
-    "longitude": -79.3832,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "26",
-        "title": "Toronto diaspora protest",
-        "startDate": "2026-06-06",
-        "endDate": "2026-06-06",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "major",
-        "participants": null,
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
-    "markerStatus": "major"
-  },
-  {
     "id": "lyon-france",
     "title": "Lyon",
     "city": "Lyon",
@@ -1115,7 +959,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "45",
+        "id": "61",
         "title": "Lyon diaspora protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
@@ -1147,7 +991,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "98",
+        "id": "10",
         "title": "Berlin Protest #8",
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
@@ -1161,7 +1005,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "92",
+        "id": "9",
         "title": "Berlin protest #7",
         "startDate": "2026-07-19",
         "endDate": "2026-07-19",
@@ -1175,7 +1019,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "89",
+        "id": "8",
         "title": "Berlin Protest #6",
         "startDate": "2026-07-12",
         "endDate": "2026-07-12",
@@ -1189,7 +1033,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "67",
+        "id": "7",
         "title": "Berlin Protest #5",
         "startDate": "2026-06-27",
         "endDate": "2026-06-27",
@@ -1203,7 +1047,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "63",
+        "id": "6",
         "title": "Berlin Protest #4",
         "startDate": "2026-06-21",
         "endDate": "2026-06-21",
@@ -1217,7 +1061,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "60",
+        "id": "5",
         "title": "Berlin protest during Rama visit #3",
         "startDate": "2026-06-16",
         "endDate": "2026-06-16",
@@ -1231,7 +1075,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "51",
+        "id": "4",
         "title": "Berlin Protest #2",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
@@ -1245,7 +1089,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "17",
+        "id": "3",
         "title": "Berlin embassy protest #1",
         "startDate": "2026-06-05",
         "endDate": "2026-06-05",
@@ -1277,7 +1121,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "52",
+        "id": "22",
         "title": "Cologne diaspora protest",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
@@ -1296,70 +1140,6 @@
     "markerStatus": "major"
   },
   {
-    "id": "dusseldorf-germany",
-    "title": "Düsseldorf",
-    "city": "Düsseldorf",
-    "country": "Germany",
-    "latitude": 51.2277,
-    "longitude": 6.7735,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "74",
-        "title": "Düsseldorf protest during Rama visit",
-        "startDate": "2026-07-01",
-        "endDate": "2026-07-01",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
-    "markerStatus": "completed"
-  },
-  {
-    "id": "hamburg-germany",
-    "title": "Hamburg",
-    "city": "Hamburg",
-    "country": "Germany",
-    "latitude": 53.5511,
-    "longitude": 9.9937,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "32",
-        "title": "Hamburg diaspora protest",
-        "startDate": "2026-06-07",
-        "endDate": "2026-06-07",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
-    "markerStatus": "completed"
-  },
-  {
     "id": "heidelberg-germany",
     "title": "Heidelberg",
     "city": "Heidelberg",
@@ -1373,7 +1153,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "33",
+        "id": "44",
         "title": "Heidelberg diaspora protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
@@ -1405,7 +1185,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "97",
+        "id": "77",
         "title": "Munich Protest #8",
         "startDate": "2026-07-25",
         "endDate": "2026-07-25",
@@ -1419,7 +1199,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "93",
+        "id": "76",
         "title": "Munich Protest #7",
         "startDate": "2026-07-19",
         "endDate": "2026-07-19",
@@ -1433,7 +1213,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "86",
+        "id": "75",
         "title": "Munich Protest #3",
         "startDate": "2026-07-08",
         "endDate": "2026-07-08",
@@ -1447,7 +1227,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "85",
+        "id": "74",
         "title": "Munich Protest #4",
         "startDate": "2026-07-06",
         "endDate": "2026-07-06",
@@ -1461,7 +1241,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "81",
+        "id": "73",
         "title": "Munich Protest #5",
         "startDate": "2026-07-04",
         "endDate": "2026-07-04",
@@ -1475,7 +1255,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "77",
+        "id": "72",
         "title": "Munich Protest #6",
         "startDate": "2026-07-02",
         "endDate": "2026-07-02",
@@ -1489,7 +1269,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "55",
+        "id": "71",
         "title": "Second Munich diaspora protest",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
@@ -1503,7 +1283,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "18",
+        "id": "70",
         "title": "Munich consulate protest",
         "startDate": "2026-06-05",
         "endDate": "2026-06-05",
@@ -1535,7 +1315,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "47",
+        "id": "86",
         "title": "Nuremberg diaspora protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
@@ -1543,38 +1323,6 @@
         "status": "completed",
         "importance": "normal",
         "participants": "dozens",
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
-    "markerStatus": "completed"
-  },
-  {
-    "id": "stuttgart-germany",
-    "title": "Stuttgart",
-    "city": "Stuttgart",
-    "country": "Germany",
-    "latitude": 48.7758,
-    "longitude": 9.1829,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "https://www.instagram.com/flamingosofstuttgart/",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "36",
-        "title": "Stuttgart diaspora protest",
-        "startDate": "2026-06-07",
-        "endDate": "2026-06-07",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
         "location": "",
         "description": "",
         "source": "",
@@ -1599,7 +1347,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "20",
+        "id": "1",
         "title": "Athens Syntagma Square protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
@@ -1631,7 +1379,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "43",
+        "id": "25",
         "title": "Dublin diaspora protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
@@ -1639,38 +1387,6 @@
         "status": "completed",
         "importance": "normal",
         "participants": null,
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
-    "markerStatus": "completed"
-  },
-  {
-    "id": "bologna-italy",
-    "title": "Bologna",
-    "city": "Bologna",
-    "country": "Italy",
-    "latitude": 44.4949,
-    "longitude": 11.3426,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "30",
-        "title": "Bologna diaspora protest",
-        "startDate": "2026-06-07",
-        "endDate": "2026-06-07",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": "hundreds",
         "location": "",
         "description": "",
         "source": "",
@@ -1695,7 +1411,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "53",
+        "id": "30",
         "title": "Faenza planned diaspora rally",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
@@ -1727,7 +1443,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "22",
+        "id": "33",
         "title": "Florence diaspora protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
@@ -1759,7 +1475,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "54",
+        "id": "39",
         "title": "Genoa planned diaspora rally",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
@@ -1791,7 +1507,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "100",
+        "id": "69",
         "title": "Milan Protest",
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
@@ -1805,7 +1521,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "24",
+        "id": "68",
         "title": "Milan diaspora protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
@@ -1837,7 +1553,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "56",
+        "id": "94",
         "title": "Pisa diaspora protest",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
@@ -1869,7 +1585,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "57",
+        "id": "97",
         "title": "Rome diaspora protest",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
@@ -1901,7 +1617,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "14",
+        "id": "96",
         "title": "Pristina embassy solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
@@ -1933,8 +1649,50 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "37",
+        "id": "114",
+        "title": "Amsterdam Protest #1",
+        "startDate": "2026-06-20",
+        "endDate": "2026-06-20",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "113",
+        "title": "Hague Protest #2",
+        "startDate": "2026-06-14",
+        "endDate": "2026-06-14",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "111",
         "title": "The Hague diaspora protest",
+        "startDate": "2026-06-07",
+        "endDate": "2026-06-07",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "112",
+        "title": "Hague Protest #1",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
         "dayCount": 1,
@@ -1947,8 +1705,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
+    "protestRecordCount": 4,
+    "protestCount": 4,
     "markerStatus": "completed"
   },
   {
@@ -1965,7 +1723,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "35",
+        "id": "100",
         "title": "Skopje solidarity protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
@@ -1997,7 +1755,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "49",
+        "id": "103",
         "title": "Second Stockholm protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
@@ -2011,7 +1769,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "19",
+        "id": "102",
         "title": "Save Vjosa-Narta protest",
         "startDate": "2026-06-05",
         "endDate": "2026-06-05",
@@ -2043,7 +1801,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "42",
+        "id": "12",
         "title": "Bern embassy protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
@@ -2057,7 +1815,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "29",
+        "id": "11",
         "title": "Bern diaspora protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
@@ -2076,172 +1834,6 @@
     "markerStatus": "completed"
   },
   {
-    "id": "london-united-kingdom",
-    "title": "London",
-    "city": "London",
-    "country": "United Kingdom",
-    "latitude": 51.5072,
-    "longitude": -0.1276,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "https://www.instagram.com/protesta_shqiptare_londer/",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "99",
-        "title": "London Protest",
-        "startDate": "2026-07-26",
-        "endDate": "2026-07-26",
-        "dayCount": 1,
-        "status": "planned",
-        "importance": "normal",
-        "participants": null,
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "44",
-        "title": "Third London diaspora protest",
-        "startDate": "2026-06-13",
-        "endDate": "2026-06-13",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "34",
-        "title": "Second London embassy protest",
-        "startDate": "2026-06-07",
-        "endDate": "2026-06-07",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "Embassy of Albania",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "23",
-        "title": "London embassy protest",
-        "startDate": "2026-06-06",
-        "endDate": "2026-06-06",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "major",
-        "participants": null,
-        "location": "Embassy of Albania",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestRecordCount": 4,
-    "protestCount": 4,
-    "markerStatus": "confirmed"
-  },
-  {
-    "id": "new-york-city-united-states",
-    "title": "New York City",
-    "city": "New York City",
-    "country": "United States",
-    "latitude": 40.7128,
-    "longitude": -74.006,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "101",
-        "title": "New York Protest",
-        "startDate": "2026-07-26",
-        "endDate": "2026-07-26",
-        "dayCount": 1,
-        "status": "planned",
-        "importance": "normal",
-        "participants": null,
-        "location": "4pm time",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "90",
-        "title": "United Nations headquarters protest",
-        "startDate": "2026-07-12",
-        "endDate": "2026-07-12",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "major",
-        "participants": null,
-        "location": "United Nations headquarters",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "25",
-        "title": "New York consulate protest",
-        "startDate": "2026-06-06",
-        "endDate": "2026-06-06",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "major",
-        "participants": "1500–2000",
-        "location": "Outside the Albanian Consulate",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestRecordCount": 3,
-    "protestCount": 3,
-    "markerStatus": "confirmed"
-  },
-  {
-    "id": "washington-d-c-united-states",
-    "title": "Washington, D.C.",
-    "city": "Washington, D.C.",
-    "country": "United States",
-    "latitude": 38.9072,
-    "longitude": -77.0369,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "28",
-        "title": "Washington embassy protest",
-        "startDate": "2026-06-06",
-        "endDate": "2026-06-06",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "Embassy of Albania",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
-    "markerStatus": "completed"
-  },
-  {
     "id": "waterbury-united-states",
     "title": "Waterbury",
     "city": "Waterbury",
@@ -2255,7 +1847,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "70",
+        "id": "165",
         "title": "Waterbury diaspora protest",
         "startDate": "2026-06-28",
         "endDate": "2026-06-28",
@@ -2287,7 +1879,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "95",
+        "id": "24",
         "title": "Dortmund Protest",
         "startDate": "2026-07-25",
         "endDate": "2026-07-25",
@@ -2296,38 +1888,6 @@
         "importance": "normal",
         "participants": null,
         "location": "Vorplatz DSW21-Kundencenter",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      }
-    ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
-    "markerStatus": "confirmed"
-  },
-  {
-    "id": "philadelphia-usa",
-    "title": "Philadelphia",
-    "city": "Philadelphia",
-    "country": "United States",
-    "latitude": 39.9526,
-    "longitude": -75.1652,
-    "type": "protest-city",
-    "chapterActive": false,
-    "cityUrl": "",
-    "instagramUrl": "",
-    "facebookUrl": "",
-    "protests": [
-      {
-        "id": "102",
-        "title": "Philly Protest",
-        "startDate": "2026-07-26",
-        "endDate": "2026-07-26",
-        "dayCount": 1,
-        "status": "planned",
-        "importance": "normal",
-        "participants": null,
-        "location": "City Hall",
         "description": "",
         "source": "",
         "sourceUrl": ""
@@ -2351,7 +1911,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "96",
+        "id": "37",
         "title": "Frankfurt Protest #N",
         "startDate": "2026-07-25",
         "endDate": "2026-07-25",
@@ -2367,6 +1927,1484 @@
     ],
     "protestRecordCount": 1,
     "protestCount": 1,
+    "markerStatus": "confirmed"
+  },
+  {
+    "id": "boston-usa",
+    "title": "Boston",
+    "city": "Boston",
+    "country": "United States",
+    "latitude": 42.3611,
+    "longitude": -71.0571,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "https://www.instagram.com/vala.mass",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "17",
+        "title": "Boston Protest #3",
+        "startDate": "2026-07-26",
+        "endDate": "2026-07-26",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Boston Common Park across the State House",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "16",
+        "title": "Boston Protest #2",
+        "startDate": "2026-06-27",
+        "endDate": "2026-06-27",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Boston Common Park across the State House",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "15",
+        "title": "Boston Protest #1",
+        "startDate": "2026-06-14",
+        "endDate": "2026-06-14",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Boston Common Park across the State House",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 3,
+    "protestCount": 3,
+    "markerStatus": "confirmed"
+  },
+  {
+    "id": "madrid-spain",
+    "title": "Madrid",
+    "city": "Madrid",
+    "country": "Spain",
+    "latitude": 40.4168,
+    "longitude": -3.7038,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "65",
+        "title": "Madrid Protest #4",
+        "startDate": "2026-06-27",
+        "endDate": "2026-06-27",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "64",
+        "title": "Madrid Protest #3",
+        "startDate": "2026-06-20",
+        "endDate": "2026-06-20",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "63",
+        "title": "Madrid Protest #2",
+        "startDate": "2026-06-12",
+        "endDate": "2026-06-12",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "62",
+        "title": "Madrid Protest #1",
+        "startDate": "2026-06-04",
+        "endDate": "2026-06-04",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 4,
+    "protestCount": 4,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "barcelona-spain",
+    "title": "Barcelona",
+    "city": "Barcelona",
+    "country": "Spain",
+    "latitude": 41.3874,
+    "longitude": 2.1686,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "2",
+        "title": "Barcelona Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-10",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 1,
+    "protestCount": 1,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "bologna-italy",
+    "title": "Bologna",
+    "city": "Bologna",
+    "country": "Italy",
+    "latitude": 44.4949,
+    "longitude": 11.3426,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "14",
+        "title": "Bologna Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-10",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "13",
+        "title": "Bologna diaspora protest",
+        "startDate": "2026-06-07",
+        "endDate": "2026-06-07",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "hundreds",
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 2,
+    "protestCount": 2,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "toronto-canada",
+    "title": "Toronto",
+    "city": "Toronto",
+    "country": "Canada",
+    "latitude": 43.6532,
+    "longitude": -79.3832,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "146",
+        "title": "Toronto Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-10",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "145",
+        "title": "Toronto diaspora protest",
+        "startDate": "2026-06-06",
+        "endDate": "2026-06-06",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "major",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 2,
+    "protestCount": 2,
+    "markerStatus": "major"
+  },
+  {
+    "id": "melbourne-australia",
+    "title": "Melbourne",
+    "city": "Melbourne",
+    "country": "Australia",
+    "latitude": -37.8136,
+    "longitude": 144.9631,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "67",
+        "title": "Melbourne solidarity protest",
+        "startDate": "2026-06-13",
+        "endDate": "2026-06-13",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Demonstrators protested the project and raised concerns over pensions, working conditions, education and youth policy.",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "66",
+        "title": "Melbourne Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-10",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 2,
+    "protestCount": 2,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "paris-france",
+    "title": "Paris",
+    "city": "Paris",
+    "country": "France",
+    "latitude": 48.8566,
+    "longitude": 2.3522,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "87",
+        "title": "Paris Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-10",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 1,
+    "protestCount": 1,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "brussels-belgium",
+    "title": "Brussels",
+    "city": "Brussels",
+    "country": "Belgium",
+    "latitude": 50.8503,
+    "longitude": 4.3517,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "21",
+        "title": "Netherlands & Belgium Joint Protest",
+        "startDate": "2026-06-27",
+        "endDate": "2026-06-27",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "major",
+        "participants": null,
+        "location": "Brussels",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "20",
+        "title": "Brussels Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-10",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "19",
+        "title": "Brussels EU-quarter protest",
+        "startDate": "2026-06-07",
+        "endDate": "2026-06-07",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Near EU headquarters",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 3,
+    "protestCount": 3,
+    "markerStatus": "major"
+  },
+  {
+    "id": "geneva-switzerland",
+    "title": "Geneva",
+    "city": "Geneva",
+    "country": "Switzerland",
+    "latitude": 46.2044,
+    "longitude": 6.1432,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "38",
+        "title": "Geneva Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-10",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 1,
+    "protestCount": 1,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "firenze-italy",
+    "title": "Firenze",
+    "city": "Firenze",
+    "country": "Italy",
+    "latitude": 43.7696,
+    "longitude": 11.2558,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "32",
+        "title": "Firenze Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-10",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 1,
+    "protestCount": 1,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "hamburg-germany",
+    "title": "Hamburg",
+    "city": "Hamburg",
+    "country": "Germany",
+    "latitude": 53.5511,
+    "longitude": 9.9937,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "43",
+        "title": "Hamburg Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-10",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "42",
+        "title": "Hamburg diaspora protest",
+        "startDate": "2026-06-07",
+        "endDate": "2026-06-07",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 2,
+    "protestCount": 2,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "bremen-germany",
+    "title": "Bremen",
+    "city": "Bremen",
+    "country": "Germany",
+    "latitude": 53.0793,
+    "longitude": 8.8017,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "18",
+        "title": "Bremen Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-10",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 1,
+    "protestCount": 1,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "dusseldorf-germany",
+    "title": "Düsseldorf",
+    "city": "Düsseldorf",
+    "country": "Germany",
+    "latitude": 51.2277,
+    "longitude": 6.7735,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "28",
+        "title": "Düsseldorf protest during Rama visit",
+        "startDate": "2026-07-01",
+        "endDate": "2026-07-01",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "27",
+        "title": "Düsseldorf Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-10",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 2,
+    "protestCount": 2,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "torino-italy",
+    "title": "Torino",
+    "city": "Torino",
+    "country": "Italy",
+    "latitude": 45.0703,
+    "longitude": 7.6869,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "144",
+        "title": "Torino Protest #1",
+        "startDate": "2026-06-10",
+        "endDate": "2026-06-10",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 1,
+    "protestCount": 1,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "graz-austria",
+    "title": "Graz",
+    "city": "Graz",
+    "country": "Austria",
+    "latitude": 47.0707,
+    "longitude": 15.4395,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "41",
+        "title": "Graz Protest #1",
+        "startDate": "2026-06-19",
+        "endDate": "2026-06-19",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 1,
+    "protestCount": 1,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "linz-austria",
+    "title": "Linz",
+    "city": "Linz",
+    "country": "Austria",
+    "latitude": 48.3069,
+    "longitude": 14.2858,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "50",
+        "title": "Linz Protest #2",
+        "startDate": "2026-06-21",
+        "endDate": "2026-06-21",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "49",
+        "title": "Linz Protest #1",
+        "startDate": "2026-06-14",
+        "endDate": "2026-06-14",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 2,
+    "protestCount": 2,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "florida-usa",
+    "title": "Florida (Naples, Jacksonville, Tampa)",
+    "city": "Florida (Naples, Jacksonville, Tampa)",
+    "country": "United States",
+    "latitude": 27.9506,
+    "longitude": -82.4572,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "35",
+        "title": "Tampa Protest #2",
+        "startDate": "2026-06-14",
+        "endDate": "2026-06-14",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "36",
+        "title": "Jacksonville Protest #3",
+        "startDate": "2026-06-14",
+        "endDate": "2026-06-14",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "34",
+        "title": "Naples Protest #1",
+        "startDate": "2026-06-12",
+        "endDate": "2026-06-12",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 3,
+    "protestCount": 3,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "philadelphia-usa",
+    "title": "Philadelphia",
+    "city": "Philadelphia",
+    "country": "United States",
+    "latitude": 39.9526,
+    "longitude": -75.1652,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "92",
+        "title": "Philly Protest",
+        "startDate": "2026-07-26",
+        "endDate": "2026-07-26",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "City Hall",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "93",
+        "title": "Philadelphia Protest #5",
+        "startDate": "2026-07-26",
+        "endDate": "2026-07-26",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "91",
+        "title": "Philadelphia Protest #4",
+        "startDate": "2026-07-17",
+        "endDate": "2026-07-17",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Bebe Rexha concert",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "90",
+        "title": "Philadelphia Protest #3",
+        "startDate": "2026-06-27",
+        "endDate": "2026-06-27",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "89",
+        "title": "Philadelphia Protest #2",
+        "startDate": "2026-06-20",
+        "endDate": "2026-06-20",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "88",
+        "title": "Philadelphia Protest #1",
+        "startDate": "2026-06-13",
+        "endDate": "2026-06-13",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 6,
+    "protestCount": 6,
+    "markerStatus": "confirmed"
+  },
+  {
+    "id": "new-york-usa",
+    "title": "New York",
+    "city": "New York",
+    "country": "United States",
+    "latitude": 40.7128,
+    "longitude": -74.006,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "84",
+        "title": "New York Protest #7",
+        "startDate": "2026-07-28",
+        "endDate": "2026-07-28",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "83",
+        "title": "New York Protest #6",
+        "startDate": "2026-07-18",
+        "endDate": "2026-07-18",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "82",
+        "title": "New York Protest #5",
+        "startDate": "2026-07-11",
+        "endDate": "2026-07-11",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "81",
+        "title": "New York Protest #4",
+        "startDate": "2026-06-28",
+        "endDate": "2026-06-28",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "80",
+        "title": "New York Protest #3",
+        "startDate": "2026-06-20",
+        "endDate": "2026-06-20",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "79",
+        "title": "New York Protest #2",
+        "startDate": "2026-06-14",
+        "endDate": "2026-06-14",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "78",
+        "title": "New York Protest #1",
+        "startDate": "2026-06-06",
+        "endDate": "2026-06-06",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 7,
+    "protestCount": 7,
+    "markerStatus": "confirmed"
+  },
+  {
+    "id": "vienna-austria",
+    "title": "Vienna",
+    "city": "Vienna",
+    "country": "Austria",
+    "latitude": 48.2082,
+    "longitude": 16.3738,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "154",
+        "title": "Vienna Protest #8",
+        "startDate": "2026-07-26",
+        "endDate": "2026-07-26",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Stephansplatz",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "153",
+        "title": "Vienna Protest #7",
+        "startDate": "2026-07-19",
+        "endDate": "2026-07-19",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "150",
+        "location": "Stephansplatz",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "152",
+        "title": "Vienna Protest #6",
+        "startDate": "2026-07-12",
+        "endDate": "2026-07-12",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "250",
+        "location": "Stephansplatz",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "151",
+        "title": "Vienna Protest #5",
+        "startDate": "2026-07-03",
+        "endDate": "2026-07-03",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "100",
+        "location": "Heldenplatz / Maria Theresa Platz",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "150",
+        "title": "Vienna Protest #4",
+        "startDate": "2026-06-28",
+        "endDate": "2026-06-28",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "200",
+        "location": "Heldenplatz / Maria Theresa Platz",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "149",
+        "title": "Vienna Protest #3",
+        "startDate": "2026-06-21",
+        "endDate": "2026-06-21",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "500",
+        "location": "Heldenplatz / Maria Theresa Platz",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "148",
+        "title": "Vienna Protest #2",
+        "startDate": "2026-06-14",
+        "endDate": "2026-06-14",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "650",
+        "location": "Heldenplatz / Maria Theresa Platz",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "147",
+        "title": "Vienna Protest #1",
+        "startDate": "2026-06-06",
+        "endDate": "2026-06-06",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": "750",
+        "location": "Embassy of Albania",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 8,
+    "protestCount": 8,
+    "markerStatus": "confirmed"
+  },
+  {
+    "id": "london-united-kingdom",
+    "title": "London",
+    "city": "London",
+    "country": "United Kingdom",
+    "latitude": 51.5072,
+    "longitude": -0.1276,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "60",
+        "title": "London Protest #10",
+        "startDate": "2026-07-26",
+        "endDate": "2026-07-26",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "59",
+        "title": "London Protest #9",
+        "startDate": "2026-07-19",
+        "endDate": "2026-07-19",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "58",
+        "title": "London Protest #8",
+        "startDate": "2026-07-12",
+        "endDate": "2026-07-12",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "57",
+        "title": "London Protest #7",
+        "startDate": "2026-07-05",
+        "endDate": "2026-07-05",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "56",
+        "title": "London Protest #6",
+        "startDate": "2026-06-28",
+        "endDate": "2026-06-28",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "55",
+        "title": "London Protest #5",
+        "startDate": "2026-06-20",
+        "endDate": "2026-06-20",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "54",
+        "title": "London Protest #4",
+        "startDate": "2026-06-14",
+        "endDate": "2026-06-14",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "53",
+        "title": "London Protest #3",
+        "startDate": "2026-06-13",
+        "endDate": "2026-06-13",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "52",
+        "title": "London Protest #2",
+        "startDate": "2026-06-07",
+        "endDate": "2026-06-07",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "51",
+        "title": "London Protest #1",
+        "startDate": "2026-06-06",
+        "endDate": "2026-06-06",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 10,
+    "protestCount": 10,
+    "markerStatus": "confirmed"
+  },
+  {
+    "id": "washington-dc-usa",
+    "title": "Washington DC",
+    "city": "Washington DC",
+    "country": "United States",
+    "latitude": 38.9072,
+    "longitude": -77.0369,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "164",
+        "title": "Washington DC Protest #6",
+        "startDate": "2026-07-25",
+        "endDate": "2026-07-25",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "163",
+        "title": "Washington DC Protest #5",
+        "startDate": "2026-07-18",
+        "endDate": "2026-07-18",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "162",
+        "title": "Washington DC Protest #4",
+        "startDate": "2026-06-27",
+        "endDate": "2026-06-27",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "161",
+        "title": "Washington DC Protest #3",
+        "startDate": "2026-06-20",
+        "endDate": "2026-06-20",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "160",
+        "title": "Washington DC Protest #2",
+        "startDate": "2026-06-13",
+        "endDate": "2026-06-13",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "159",
+        "title": "Washington DC Protest #1",
+        "startDate": "2026-06-06",
+        "endDate": "2026-06-06",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 6,
+    "protestCount": 6,
+    "markerStatus": "confirmed"
+  },
+  {
+    "id": "stuttgart-germany",
+    "title": "Stuttgart",
+    "city": "Stuttgart",
+    "country": "Germany",
+    "latitude": 48.7758,
+    "longitude": 9.1829,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "protests": [
+      {
+        "id": "110",
+        "title": "Stuttgart Protest #7",
+        "startDate": "2026-07-26",
+        "endDate": "2026-07-26",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "109",
+        "title": "Stuttgart Protest #6",
+        "startDate": "2026-07-19",
+        "endDate": "2026-07-19",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "108",
+        "title": "Stuttgart Protest #5",
+        "startDate": "2026-07-12",
+        "endDate": "2026-07-12",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "107",
+        "title": "Stuttgart Protest #4",
+        "startDate": "2026-06-28",
+        "endDate": "2026-06-28",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "106",
+        "title": "Stuttgart Protest #3",
+        "startDate": "2026-06-21",
+        "endDate": "2026-06-21",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "105",
+        "title": "Stuttgart Protest #2",
+        "startDate": "2026-06-14",
+        "endDate": "2026-06-14",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "104",
+        "title": "Stuttgart Protest #1",
+        "startDate": "2026-06-07",
+        "endDate": "2026-06-07",
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "Major clash with police",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 7,
+    "protestCount": 7,
     "markerStatus": "confirmed"
   }
 ]
