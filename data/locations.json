@@ -333,7 +333,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "95",
+        "id": "94",
         "title": "Pogradec solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
@@ -365,7 +365,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "98",
+        "id": "97",
         "title": "Rrjoll resort-site protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
@@ -397,7 +397,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "99",
+        "id": "98",
         "title": "Rozafa Castle protest",
         "startDate": "2026-06-08",
         "endDate": "2026-06-08",
@@ -429,11 +429,11 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "143",
-        "title": "Tirana Protest #55",
-        "startDate": "2026-07-26",
-        "endDate": "2026-07-31",
-        "dayCount": 6,
+        "id": "138",
+        "title": "Tirana Last Day of Parliament",
+        "startDate": "2026-07-25",
+        "endDate": "2026-07-25",
+        "dayCount": 1,
         "status": "planned",
         "importance": "normal",
         "participants": null,
@@ -443,27 +443,13 @@
         "sourceUrl": ""
       },
       {
-        "id": "142",
-        "title": "Tirana Last Day of Parliament",
-        "startDate": "2026-07-25",
-        "endDate": "2026-07-25",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "major",
-        "participants": null,
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "141",
+        "id": "137",
         "title": "Protest in Albania",
         "startDate": "2026-07-12",
         "endDate": "2026-07-24",
         "dayCount": 13,
         "status": "completed",
-        "importance": "normal",
+        "importance": "major",
         "participants": null,
         "location": "Central Tirana",
         "description": "",
@@ -471,7 +457,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "140",
+        "id": "136",
         "title": "Forty-second consecutive nationwide protest",
         "startDate": "2026-07-11",
         "endDate": "2026-07-11",
@@ -485,7 +471,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "139",
+        "id": "135",
         "title": "Concert-funding protest",
         "startDate": "2026-07-09",
         "endDate": "2026-07-09",
@@ -499,7 +485,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "138",
+        "id": "134",
         "title": "Continuing daily Tirana protests",
         "startDate": "2026-07-05",
         "endDate": "2026-07-10",
@@ -513,7 +499,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "137",
+        "id": "133",
         "title": "Thirty-fifth nationwide and diaspora mobilization",
         "startDate": "2026-07-04",
         "endDate": "2026-07-04",
@@ -527,7 +513,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "136",
+        "id": "132",
         "title": "Thirty-fourth consecutive protest",
         "startDate": "2026-07-03",
         "endDate": "2026-07-03",
@@ -541,21 +527,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "134",
-        "title": "Parliament clashes",
-        "startDate": "2026-07-02",
-        "endDate": "2026-07-02",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "major",
-        "participants": null,
-        "location": "Parliament of Albania",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "135",
+        "id": "131",
         "title": "Police-station solidarity march",
         "startDate": "2026-07-02",
         "endDate": "2026-07-02",
@@ -569,7 +541,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "132",
+        "id": "130",
         "title": "SPAK protest and submission",
         "startDate": "2026-07-01",
         "endDate": "2026-07-01",
@@ -583,21 +555,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "133",
-        "title": "Regular evening protest",
-        "startDate": "2026-07-01",
-        "endDate": "2026-07-01",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "Central Tirana",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "130",
+        "id": "129",
         "title": "Parliament plenary-session protest",
         "startDate": "2026-06-30",
         "endDate": "2026-06-30",
@@ -611,21 +569,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "131",
-        "title": "Thirty-first evening protest",
-        "startDate": "2026-06-30",
-        "endDate": "2026-06-30",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "Skanderbeg Square and prime minister's office",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "129",
+        "id": "128",
         "title": "One-month anniversary protest",
         "startDate": "2026-06-29",
         "endDate": "2026-06-29",
@@ -639,7 +583,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "128",
+        "id": "127",
         "title": "Twenty-ninth consecutive protest",
         "startDate": "2026-06-28",
         "endDate": "2026-06-28",
@@ -653,7 +597,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "127",
+        "id": "126",
         "title": "Twenty-eighth consecutive nationwide protest",
         "startDate": "2026-06-27",
         "endDate": "2026-06-27",
@@ -667,7 +611,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "126",
+        "id": "125",
         "title": "Five-point platform protests",
         "startDate": "2026-06-25",
         "endDate": "2026-06-26",
@@ -681,7 +625,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "125",
+        "id": "124",
         "title": "Trade-union protest",
         "startDate": "2026-06-23",
         "endDate": "2026-06-23",
@@ -695,29 +639,15 @@
         "sourceUrl": ""
       },
       {
-        "id": "124",
+        "id": "123",
         "title": "Twenty-first consecutive nationwide protest",
         "startDate": "2026-06-20",
-        "endDate": "2026-06-20",
-        "dayCount": 1,
+        "endDate": "2026-06-22",
+        "dayCount": 3,
         "status": "completed",
         "importance": "major",
         "participants": "25000+",
         "location": "Dëshmorët e Kombit Boulevard",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "123",
-        "title": "Parliament protest",
-        "startDate": "2026-06-18",
-        "endDate": "2026-06-18",
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "major",
-        "participants": null,
-        "location": "Parliament of Albania",
         "description": "",
         "source": "",
         "sourceUrl": ""
@@ -740,8 +670,8 @@
         "id": "121",
         "title": "Tirana highway and airport march",
         "startDate": "2026-06-14",
-        "endDate": "2026-06-15",
-        "dayCount": 2,
+        "endDate": "2026-06-14",
+        "dayCount": 1,
         "status": "completed",
         "importance": "major",
         "participants": null,
@@ -768,8 +698,8 @@
         "id": "119",
         "title": "Prizren 1878, Tirana 2026 nationwide gathering",
         "startDate": "2026-06-10",
-        "endDate": "2026-06-10",
-        "dayCount": 1,
+        "endDate": "2026-06-12",
+        "dayCount": 3,
         "status": "completed",
         "importance": "major",
         "participants": null,
@@ -835,8 +765,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 29,
-    "protestCount": 63,
+    "protestRecordCount": 24,
+    "protestCount": 56,
     "markerStatus": "confirmed"
   },
   {
@@ -853,7 +783,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "158",
+        "id": "153",
         "title": "Vlorë solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
@@ -867,7 +797,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "157",
+        "id": "152",
         "title": "Portonovo project-site protest",
         "startDate": "2026-05-30",
         "endDate": "2026-05-30",
@@ -881,7 +811,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "156",
+        "id": "151",
         "title": "Narta Lagoon and Pishë Poro–Narta beach protest",
         "startDate": "2026-05-23",
         "endDate": "2026-05-23",
@@ -895,7 +825,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "155",
+        "id": "150",
         "title": "Akërni construction-site demonstration",
         "startDate": "2026-05-16",
         "endDate": "2026-05-16",
@@ -927,7 +857,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "101",
+        "id": "100",
         "title": "Sofia solidarity protest",
         "startDate": "2026-06-08",
         "endDate": "2026-06-08",
@@ -1553,7 +1483,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "94",
+        "id": "93",
         "title": "Pisa diaspora protest",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
@@ -1585,7 +1515,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "97",
+        "id": "96",
         "title": "Rome diaspora protest",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
@@ -1617,7 +1547,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "96",
+        "id": "95",
         "title": "Pristina embassy solidarity protest",
         "startDate": "2026-06-04",
         "endDate": "2026-06-04",
@@ -1650,6 +1580,20 @@
     "protests": [
       {
         "id": "114",
+        "title": "The Hague Protest Finance",
+        "startDate": "2026-07-29",
+        "endDate": "2026-07-29",
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "113",
         "title": "Amsterdam Protest #1",
         "startDate": "2026-06-20",
         "endDate": "2026-06-20",
@@ -1663,7 +1607,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "113",
+        "id": "112",
         "title": "Hague Protest #2",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
@@ -1677,7 +1621,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "111",
+        "id": "110",
         "title": "The Hague diaspora protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
@@ -1691,7 +1635,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "112",
+        "id": "111",
         "title": "Hague Protest #1",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
@@ -1705,9 +1649,9 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 4,
-    "protestCount": 4,
-    "markerStatus": "completed"
+    "protestRecordCount": 5,
+    "protestCount": 5,
+    "markerStatus": "confirmed"
   },
   {
     "id": "skopje-north-macedonia",
@@ -1723,7 +1667,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "100",
+        "id": "99",
         "title": "Skopje solidarity protest",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
@@ -1755,7 +1699,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "103",
+        "id": "102",
         "title": "Second Stockholm protest",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
@@ -1769,7 +1713,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "102",
+        "id": "101",
         "title": "Save Vjosa-Narta protest",
         "startDate": "2026-06-05",
         "endDate": "2026-06-05",
@@ -1847,7 +1791,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "165",
+        "id": "160",
         "title": "Waterbury diaspora protest",
         "startDate": "2026-06-28",
         "endDate": "2026-06-28",
@@ -2155,7 +2099,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "146",
+        "id": "141",
         "title": "Toronto Protest #1",
         "startDate": "2026-06-10",
         "endDate": "2026-06-10",
@@ -2169,7 +2113,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "145",
+        "id": "140",
         "title": "Toronto diaspora protest",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
@@ -2527,7 +2471,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "144",
+        "id": "139",
         "title": "Torino Protest #1",
         "startDate": "2026-06-10",
         "endDate": "2026-06-10",
@@ -2698,20 +2642,6 @@
     "protests": [
       {
         "id": "92",
-        "title": "Philly Protest",
-        "startDate": "2026-07-26",
-        "endDate": "2026-07-26",
-        "dayCount": 1,
-        "status": "planned",
-        "importance": "normal",
-        "participants": null,
-        "location": "City Hall",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
-        "id": "93",
         "title": "Philadelphia Protest #5",
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
@@ -2719,7 +2649,7 @@
         "status": "planned",
         "importance": "normal",
         "participants": null,
-        "location": "",
+        "location": "City Hall",
         "description": "",
         "source": "",
         "sourceUrl": ""
@@ -2781,8 +2711,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 6,
-    "protestCount": 6,
+    "protestRecordCount": 5,
+    "protestCount": 5,
     "markerStatus": "confirmed"
   },
   {
@@ -2915,7 +2845,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "154",
+        "id": "149",
         "title": "Vienna Protest #8",
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
@@ -2929,7 +2859,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "153",
+        "id": "148",
         "title": "Vienna Protest #7",
         "startDate": "2026-07-19",
         "endDate": "2026-07-19",
@@ -2943,7 +2873,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "152",
+        "id": "147",
         "title": "Vienna Protest #6",
         "startDate": "2026-07-12",
         "endDate": "2026-07-12",
@@ -2957,7 +2887,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "151",
+        "id": "146",
         "title": "Vienna Protest #5",
         "startDate": "2026-07-03",
         "endDate": "2026-07-03",
@@ -2971,7 +2901,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "150",
+        "id": "145",
         "title": "Vienna Protest #4",
         "startDate": "2026-06-28",
         "endDate": "2026-06-28",
@@ -2985,7 +2915,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "149",
+        "id": "144",
         "title": "Vienna Protest #3",
         "startDate": "2026-06-21",
         "endDate": "2026-06-21",
@@ -2999,7 +2929,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "148",
+        "id": "143",
         "title": "Vienna Protest #2",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
@@ -3013,7 +2943,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "147",
+        "id": "142",
         "title": "Vienna Protest #1",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
@@ -3203,7 +3133,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "164",
+        "id": "159",
         "title": "Washington DC Protest #6",
         "startDate": "2026-07-25",
         "endDate": "2026-07-25",
@@ -3217,7 +3147,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "163",
+        "id": "158",
         "title": "Washington DC Protest #5",
         "startDate": "2026-07-18",
         "endDate": "2026-07-18",
@@ -3231,7 +3161,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "162",
+        "id": "157",
         "title": "Washington DC Protest #4",
         "startDate": "2026-06-27",
         "endDate": "2026-06-27",
@@ -3245,7 +3175,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "161",
+        "id": "156",
         "title": "Washington DC Protest #3",
         "startDate": "2026-06-20",
         "endDate": "2026-06-20",
@@ -3259,7 +3189,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "160",
+        "id": "155",
         "title": "Washington DC Protest #2",
         "startDate": "2026-06-13",
         "endDate": "2026-06-13",
@@ -3273,7 +3203,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "159",
+        "id": "154",
         "title": "Washington DC Protest #1",
         "startDate": "2026-06-06",
         "endDate": "2026-06-06",
@@ -3305,7 +3235,7 @@
     "facebookUrl": "",
     "protests": [
       {
-        "id": "110",
+        "id": "109",
         "title": "Stuttgart Protest #7",
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
@@ -3319,7 +3249,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "109",
+        "id": "108",
         "title": "Stuttgart Protest #6",
         "startDate": "2026-07-19",
         "endDate": "2026-07-19",
@@ -3333,7 +3263,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "108",
+        "id": "107",
         "title": "Stuttgart Protest #5",
         "startDate": "2026-07-12",
         "endDate": "2026-07-12",
@@ -3347,7 +3277,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "107",
+        "id": "106",
         "title": "Stuttgart Protest #4",
         "startDate": "2026-06-28",
         "endDate": "2026-06-28",
@@ -3361,7 +3291,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "106",
+        "id": "105",
         "title": "Stuttgart Protest #3",
         "startDate": "2026-06-21",
         "endDate": "2026-06-21",
@@ -3375,7 +3305,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "105",
+        "id": "104",
         "title": "Stuttgart Protest #2",
         "startDate": "2026-06-14",
         "endDate": "2026-06-14",
@@ -3389,7 +3319,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "104",
+        "id": "103",
         "title": "Stuttgart Protest #1",
         "startDate": "2026-06-07",
         "endDate": "2026-06-07",
