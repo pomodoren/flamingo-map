@@ -936,7 +936,7 @@
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
         "dayCount": 1,
-        "status": "completed",
+        "status": "planned",
         "importance": "normal",
         "participants": null,
         "location": "Stephanplatz",
@@ -975,7 +975,7 @@
     ],
     "protestRecordCount": 3,
     "protestCount": 3,
-    "markerStatus": "completed"
+    "markerStatus": "confirmed"
   },
   {
     "id": "brussels-belgium",
@@ -1114,7 +1114,7 @@
     "longitude": 13.405,
     "type": "protest-city",
     "chapterActive": false,
-    "cityUrl": "",
+    "cityUrl": "https://linktr.ee/flamingo.berlin",
     "instagramUrl": "https://www.instagram.com/flamingo_berlin",
     "facebookUrl": "",
     "protests": [
@@ -1124,7 +1124,7 @@
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
         "dayCount": 1,
-        "status": "completed",
+        "status": "planned",
         "importance": "normal",
         "participants": null,
         "location": "Near the Embassy of Albania",
@@ -1233,7 +1233,7 @@
     ],
     "protestRecordCount": 8,
     "protestCount": 8,
-    "markerStatus": "major"
+    "markerStatus": "confirmed"
   },
   {
     "id": "cologne-germany",
@@ -1382,7 +1382,7 @@
         "startDate": "2026-07-25",
         "endDate": "2026-07-25",
         "dayCount": 1,
-        "status": "completed",
+        "status": "planned",
         "importance": "major",
         "participants": null,
         "location": "",
@@ -1491,7 +1491,7 @@
     ],
     "protestRecordCount": 8,
     "protestCount": 8,
-    "markerStatus": "major"
+    "markerStatus": "confirmed"
   },
   {
     "id": "nuremberg-germany",
@@ -1768,7 +1768,7 @@
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
         "dayCount": 1,
-        "status": "completed",
+        "status": "planned",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -1793,7 +1793,7 @@
     ],
     "protestRecordCount": 2,
     "protestCount": 2,
-    "markerStatus": "major"
+    "markerStatus": "confirmed"
   },
   {
     "id": "pisa-italy",
@@ -2066,7 +2066,7 @@
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
         "dayCount": 1,
-        "status": "completed",
+        "status": "planned",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -2119,7 +2119,7 @@
     ],
     "protestRecordCount": 4,
     "protestCount": 4,
-    "markerStatus": "major"
+    "markerStatus": "confirmed"
   },
   {
     "id": "new-york-city-united-states",
@@ -2140,7 +2140,7 @@
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
         "dayCount": 1,
-        "status": "completed",
+        "status": "planned",
         "importance": "normal",
         "participants": null,
         "location": "4pm time",
@@ -2179,7 +2179,7 @@
     ],
     "protestRecordCount": 3,
     "protestCount": 3,
-    "markerStatus": "major"
+    "markerStatus": "confirmed"
   },
   {
     "id": "washington-d-c-united-states",
@@ -2264,7 +2264,7 @@
         "startDate": "2026-07-25",
         "endDate": "2026-07-25",
         "dayCount": 1,
-        "status": "completed",
+        "status": "planned",
         "importance": "normal",
         "participants": null,
         "location": "Vorplatz DSW21-Kundencenter",
@@ -2275,7 +2275,7 @@
     ],
     "protestRecordCount": 1,
     "protestCount": 1,
-    "markerStatus": "completed"
+    "markerStatus": "confirmed"
   },
   {
     "id": "philadelphia-usa",
@@ -2296,7 +2296,7 @@
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
         "dayCount": 1,
-        "status": "completed",
+        "status": "planned",
         "importance": "normal",
         "participants": null,
         "location": "City Hall",
@@ -2307,7 +2307,7 @@
     ],
     "protestRecordCount": 1,
     "protestCount": 1,
-    "markerStatus": "completed"
+    "markerStatus": "confirmed"
   },
   {
     "id": "frankfurt-germany",
@@ -2328,7 +2328,7 @@
         "startDate": "2026-07-25",
         "endDate": "2026-07-25",
         "dayCount": 1,
-        "status": "completed",
+        "status": "planned",
         "importance": "normal",
         "participants": null,
         "location": "Carlo Schmidt Platz",
@@ -2339,6 +2339,6 @@
     ],
     "protestRecordCount": 1,
     "protestCount": 1,
-    "markerStatus": "completed"
+    "markerStatus": "confirmed"
   }
 ]
