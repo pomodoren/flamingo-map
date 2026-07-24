@@ -48,8 +48,8 @@
         "id": "13",
         "title": "Durrës solidarity protest",
         "startDate": "2026-06-04",
-        "endDate": "2026-06-09",
-        "dayCount": 6,
+        "endDate": "2026-06-04",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -60,7 +60,7 @@
       }
     ],
     "protestRecordCount": 1,
-    "protestCount": 6,
+    "protestCount": 1,
     "markerStatus": "completed"
   },
   {
@@ -80,8 +80,8 @@
         "id": "12",
         "title": "Elbasan solidarity protests",
         "startDate": "2026-06-04",
-        "endDate": "2026-06-09",
-        "dayCount": 6,
+        "endDate": "2026-06-04",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -92,7 +92,7 @@
       }
     ],
     "protestRecordCount": 1,
-    "protestCount": 6,
+    "protestCount": 1,
     "markerStatus": "completed"
   },
   {
@@ -112,8 +112,8 @@
         "id": "9",
         "title": "Fier solidarity protest",
         "startDate": "2026-06-04",
-        "endDate": "2026-06-09",
-        "dayCount": 6,
+        "endDate": "2026-06-04",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -124,7 +124,7 @@
       }
     ],
     "protestRecordCount": 1,
-    "protestCount": 6,
+    "protestCount": 1,
     "markerStatus": "completed"
   },
   {
@@ -144,8 +144,8 @@
         "id": "15",
         "title": "Gjirokastër solidarity protests",
         "startDate": "2026-06-04",
-        "endDate": "2026-06-09",
-        "dayCount": 6,
+        "endDate": "2026-06-04",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -156,7 +156,7 @@
       }
     ],
     "protestRecordCount": 1,
-    "protestCount": 6,
+    "protestCount": 1,
     "markerStatus": "completed"
   },
   {
@@ -208,8 +208,8 @@
         "id": "8",
         "title": "Korçë solidarity protest",
         "startDate": "2026-06-04",
-        "endDate": "2026-06-09",
-        "dayCount": 6,
+        "endDate": "2026-06-04",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -220,7 +220,7 @@
       }
     ],
     "protestRecordCount": 1,
-    "protestCount": 6,
+    "protestCount": 1,
     "markerStatus": "completed"
   },
   {
@@ -240,8 +240,8 @@
         "id": "10",
         "title": "Kukës solidarity protest",
         "startDate": "2026-06-04",
-        "endDate": "2026-06-09",
-        "dayCount": 6,
+        "endDate": "2026-06-04",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -252,7 +252,7 @@
       }
     ],
     "protestRecordCount": 1,
-    "protestCount": 6,
+    "protestCount": 1,
     "markerStatus": "completed"
   },
   {
@@ -336,8 +336,8 @@
         "id": "14",
         "title": "Pogradec solidarity protest",
         "startDate": "2026-06-04",
-        "endDate": "2026-06-09",
-        "dayCount": 6,
+        "endDate": "2026-06-04",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -348,7 +348,7 @@
       }
     ],
     "protestRecordCount": 1,
-    "protestCount": 6,
+    "protestCount": 1,
     "markerStatus": "completed"
   },
   {
@@ -828,8 +828,8 @@
         "id": "11",
         "title": "Vlorë solidarity protest",
         "startDate": "2026-06-04",
-        "endDate": "2026-06-09",
-        "dayCount": 6,
+        "endDate": "2026-06-04",
+        "dayCount": 1,
         "status": "completed",
         "importance": "normal",
         "participants": null,
@@ -882,7 +882,7 @@
       }
     ],
     "protestRecordCount": 4,
-    "protestCount": 9,
+    "protestCount": 4,
     "markerStatus": "major"
   },
   {
@@ -936,7 +936,7 @@
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Stephanplatz",
@@ -975,7 +975,7 @@
     ],
     "protestRecordCount": 3,
     "protestCount": 3,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "brussels-belgium",
@@ -1124,7 +1124,7 @@
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Near the Embassy of Albania",
@@ -1233,7 +1233,7 @@
     ],
     "protestRecordCount": 8,
     "protestCount": 8,
-    "markerStatus": "confirmed"
+    "markerStatus": "major"
   },
   {
     "id": "cologne-germany",
@@ -1382,7 +1382,7 @@
         "startDate": "2026-07-25",
         "endDate": "2026-07-25",
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "major",
         "participants": null,
         "location": "",
@@ -1491,7 +1491,7 @@
     ],
     "protestRecordCount": 8,
     "protestCount": 8,
-    "markerStatus": "confirmed"
+    "markerStatus": "major"
   },
   {
     "id": "nuremberg-germany",
@@ -1768,7 +1768,7 @@
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -1793,7 +1793,7 @@
     ],
     "protestRecordCount": 2,
     "protestCount": 2,
-    "markerStatus": "confirmed"
+    "markerStatus": "major"
   },
   {
     "id": "pisa-italy",
@@ -2057,7 +2057,7 @@
     "type": "protest-city",
     "chapterActive": false,
     "cityUrl": "",
-    "instagramUrl": "",
+    "instagramUrl": "https://www.instagram.com/protesta_shqiptare_londer/",
     "facebookUrl": "",
     "protests": [
       {
@@ -2066,7 +2066,7 @@
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -2119,7 +2119,7 @@
     ],
     "protestRecordCount": 4,
     "protestCount": 4,
-    "markerStatus": "confirmed"
+    "markerStatus": "major"
   },
   {
     "id": "new-york-city-united-states",
@@ -2140,7 +2140,7 @@
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "4pm time",
@@ -2179,7 +2179,7 @@
     ],
     "protestRecordCount": 3,
     "protestCount": 3,
-    "markerStatus": "confirmed"
+    "markerStatus": "major"
   },
   {
     "id": "washington-d-c-united-states",
@@ -2264,7 +2264,7 @@
         "startDate": "2026-07-25",
         "endDate": "2026-07-25",
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Vorplatz DSW21-Kundencenter",
@@ -2275,7 +2275,7 @@
     ],
     "protestRecordCount": 1,
     "protestCount": 1,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "philadelphia-usa",
@@ -2296,7 +2296,7 @@
         "startDate": "2026-07-26",
         "endDate": "2026-07-26",
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "City Hall",
@@ -2307,7 +2307,7 @@
     ],
     "protestRecordCount": 1,
     "protestCount": 1,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   },
   {
     "id": "frankfurt-germany",
@@ -2328,7 +2328,7 @@
         "startDate": "2026-07-25",
         "endDate": "2026-07-25",
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Carlo Schmidt Platz",
@@ -2339,6 +2339,6 @@
     ],
     "protestRecordCount": 1,
     "protestCount": 1,
-    "markerStatus": "confirmed"
+    "markerStatus": "completed"
   }
 ]
