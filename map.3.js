@@ -35,18 +35,13 @@ const statusFilters = Array.from(
 );
 
 
-const mediaGalleryElement =
-  document.getElementById("media-gallery");
+const citySearchElement =
+  document.getElementById("city-search");
 
-const mediaGalleryTitleElement =
-  document.getElementById("media-gallery-title");
-
-const mediaGalleryListElement =
-  document.getElementById("media-gallery-list");
-
-const mediaGalleryCloseElement =
-  document.getElementById("media-gallery-close");
-
+const citySearchResultsElement =
+  document.getElementById(
+    "city-search-results"
+  );
 
 /* =========================================================
    Dedicated mobile popup
@@ -96,6 +91,15 @@ document.body.appendChild(mobilePopupElement);
 const mobilePopupContentElement = document.getElementById(
   "mobile-popup-content"
 );
+
+/* =========================================================
+   Popup view state
+   ========================================================= */
+
+// The city sheet (mobile and desktop) has two views that swap
+// in place: "list" (protests) and "gallery" (city photos).
+let activePopupFeature = null;
+let activePopupView = "list";
 
 /* =========================================================
    OpenLayers map
@@ -838,6 +842,23 @@ function buildPopupHtml(
   const cityLinks =
     buildCityLinks(feature, city);
 
+  const galleryUrl = getDriveGalleryUrl({
+    driveGalleryUrl: feature.get("driveGalleryUrl"),
+  });
+
+  const viewPhotosButton = galleryUrl
+    ? `
+      <button
+        type="button"
+        class="popup-photos-button"
+        data-view-photos
+      >
+        <span aria-hidden="true">🖼</span>
+        <span>Shiko fotot</span>
+      </button>
+    `
+    : "";
+
   return `
     <p class="popup-type">
       Qytet proteste
@@ -866,7 +887,10 @@ function buildPopupHtml(
         }
       </div>
 
-      ${cityLinks}
+      <div class="popup-city-actions">
+        ${cityLinks}
+        ${viewPhotosButton}
+      </div>
     </div>
 
     <p class="popup-count">
@@ -891,6 +915,68 @@ function buildPopupHtml(
   `;
 }
 
+function buildGalleryHtml(feature, mobile) {
+  const city = escapeHtml(
+    feature.get("city") ||
+    feature.get("title") ||
+    "Qytet i panjohur"
+  );
+
+  const galleryUrl = getDriveGalleryUrl({
+    driveGalleryUrl: feature.get("driveGalleryUrl"),
+  });
+
+  return `
+    <div class="popup-gallery-header">
+      <button
+        type="button"
+        class="popup-back-button"
+        data-back-to-list
+        aria-label="Kthehu te lista e protestave"
+      >
+        <span aria-hidden="true">‹</span>
+        <span>Kthehu</span>
+      </button>
+
+      <h3
+        ${
+          mobile
+            ? 'id="mobile-popup-title"'
+            : ""
+        }
+      >
+        Fotot · ${city}
+      </h3>
+    </div>
+
+    <div class="popup-gallery-body">
+      ${
+        galleryUrl
+          ? `
+            <iframe
+              class="drive-gallery-frame"
+              src="${escapeHtml(galleryUrl)}"
+              title="Fotot e protestave në ${city}"
+              loading="lazy"
+              allowfullscreen
+            ></iframe>
+          `
+          : `
+            <p class="upcoming-empty">
+              Nuk ka foto për këtë qytet ende.
+            </p>
+          `
+      }
+    </div>
+  `;
+}
+
+function renderPopupContent(feature, mobile, view) {
+  return view === "gallery"
+    ? buildGalleryHtml(feature, mobile)
+    : buildPopupHtml(feature, mobile);
+}
+
 /* =========================================================
    Popup opening and closing
    ========================================================= */
@@ -906,8 +992,11 @@ function openMobilePopup(feature) {
     popupElement.hidden = true;
   }
 
+  activePopupFeature = feature;
+  activePopupView = "list";
+
   mobilePopupContentElement.innerHTML =
-    buildPopupHtml(feature, true);
+    renderPopupContent(feature, true, "list");
 
   mobilePopupElement.hidden = false;
 
@@ -941,8 +1030,11 @@ function openDesktopPopup(feature) {
     return;
   }
 
+  activePopupFeature = feature;
+  activePopupView = "list";
+
   popupContentElement.innerHTML =
-    buildPopupHtml(feature, false);
+    renderPopupContent(feature, false, "list");
 
   popupElement.hidden = false;
 
@@ -971,6 +1063,25 @@ function openPopup(feature) {
   openDesktopPopup(feature);
 }
 
+function panToFeature(feature) {
+  const coordinates = feature
+    .getGeometry()
+    .getCoordinates();
+
+  map.getView().animate({
+    center: coordinates,
+
+    zoom: Math.max(
+      map.getView().getZoom() || 4,
+      8
+    ),
+
+    duration: 500,
+  });
+
+  openPopup(feature);
+}
+
 function closeMobilePopup() {
   mobilePopupElement.classList.remove(
     "is-open"
@@ -989,13 +1100,55 @@ function closeMobilePopup() {
 
 function closePopup() {
   popupOverlay.setPosition(undefined);
-  closeMediaGallery();
 
   if (popupElement) {
     popupElement.hidden = true;
   }
 
   closeMobilePopup();
+
+  activePopupFeature = null;
+  activePopupView = "list";
+}
+
+function setPopupView(view) {
+  if (!activePopupFeature) {
+    return;
+  }
+
+  activePopupView = view;
+
+  const usingMobilePopup =
+    !mobilePopupElement.hidden;
+
+  const html = renderPopupContent(
+    activePopupFeature,
+    usingMobilePopup,
+    view
+  );
+
+  if (usingMobilePopup && mobilePopupContentElement) {
+    mobilePopupContentElement.innerHTML = html;
+    focusPopupViewHeading(mobilePopupContentElement);
+    return;
+  }
+
+  if (popupContentElement && popupElement && !popupElement.hidden) {
+    popupContentElement.innerHTML = html;
+    focusPopupViewHeading(popupContentElement);
+  }
+}
+
+function focusPopupViewHeading(container) {
+  const target =
+    container.querySelector(
+      ".popup-back-button"
+    ) ||
+    container.querySelector(
+      "[data-view-photos]"
+    );
+
+  target?.focus({ preventScroll: true });
 }
 
 /* =========================================================
@@ -1131,6 +1284,174 @@ function fitToVisibleFeatures() {
     maxZoom: 11,
     duration: 350,
   });
+}
+
+/* =========================================================
+   City search (jump to a city)
+   ========================================================= */
+
+const MAX_CITY_SEARCH_RESULTS = 8;
+
+let citySearchResults = [];
+let citySearchActiveIndex = -1;
+
+function getSearchableCities() {
+  return source
+    .getFeatures()
+    .filter(
+      feature => (feature.get("protests") || []).length > 0
+    );
+}
+
+function matchesCityQuery(feature, query) {
+  const haystack = [
+    feature.get("city"),
+    feature.get("title"),
+    feature.get("country"),
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  return haystack.includes(query);
+}
+
+function hideCitySearchResults() {
+  if (!citySearchResultsElement) {
+    return;
+  }
+
+  citySearchResultsElement.hidden = true;
+  citySearchResultsElement.innerHTML = "";
+  citySearchResults = [];
+  citySearchActiveIndex = -1;
+
+  citySearchElement?.setAttribute(
+    "aria-expanded",
+    "false"
+  );
+
+  citySearchElement?.removeAttribute(
+    "aria-activedescendant"
+  );
+}
+
+function renderCitySearchResults(features) {
+  if (!citySearchResultsElement) {
+    return;
+  }
+
+  citySearchResults = features;
+  citySearchActiveIndex = -1;
+
+  if (features.length === 0) {
+    citySearchResultsElement.innerHTML = `
+      <li class="city-search-empty">
+        Nuk u gjet asnjë qytet.
+      </li>
+    `;
+  } else {
+    citySearchResultsElement.innerHTML = features
+      .map((feature, index) => {
+        const city = escapeHtml(
+          feature.get("city") ||
+          feature.get("title") ||
+          "Qytet i panjohur"
+        );
+
+        const country = escapeHtml(
+          feature.get("country")
+        );
+
+        return `
+          <li role="presentation">
+            <button
+              type="button"
+              class="city-search-result"
+              role="option"
+              id="city-search-result-${index}"
+              data-city-search-index="${index}"
+            >
+              <span class="city-search-result-name">
+                ${city}
+              </span>
+
+              ${
+                country
+                  ? `
+                    <span class="city-search-result-meta">
+                      ${country}
+                    </span>
+                  `
+                  : ""
+              }
+            </button>
+          </li>
+        `;
+      })
+      .join("");
+  }
+
+  citySearchResultsElement.hidden = false;
+
+  citySearchElement?.setAttribute(
+    "aria-expanded",
+    "true"
+  );
+}
+
+function setCitySearchActiveIndex(index) {
+  if (!citySearchResultsElement) {
+    return;
+  }
+
+  const options =
+    citySearchResultsElement.querySelectorAll(
+      ".city-search-result"
+    );
+
+  options.forEach(option =>
+    option.classList.remove("is-active")
+  );
+
+  citySearchActiveIndex = index;
+
+  const activeOption = options[index];
+
+  if (!activeOption) {
+    citySearchElement?.removeAttribute(
+      "aria-activedescendant"
+    );
+    return;
+  }
+
+  activeOption.classList.add("is-active");
+
+  activeOption.scrollIntoView({
+    block: "nearest",
+  });
+
+  citySearchElement?.setAttribute(
+    "aria-activedescendant",
+    activeOption.id
+  );
+}
+
+function selectCitySearchResult(index) {
+  const feature = citySearchResults[index];
+
+  if (!feature) {
+    return;
+  }
+
+  panToFeature(feature);
+
+  if (citySearchElement) {
+    citySearchElement.value = "";
+  }
+
+  hideCitySearchResults();
+  citySearchElement?.blur();
 }
 
 /* =========================================================
@@ -1363,28 +1684,7 @@ function renderUpcomingProtests() {
             return;
           }
 
-          const feature =
-            protest.feature;
-
-          const coordinates =
-            feature
-              .getGeometry()
-              .getCoordinates();
-
-          map.getView().animate({
-            center: coordinates,
-
-            zoom: Math.max(
-              map
-                .getView()
-                .getZoom() || 4,
-              8
-            ),
-
-            duration: 500,
-          });
-
-          openPopup(feature);
+          panToFeature(protest.feature);
         }
       );
     });
@@ -1581,16 +1881,39 @@ popupCloserElement?.addEventListener(
   closePopup
 );
 
+popupElement?.addEventListener(
+  "click",
+  event => {
+    if (event.target.closest("[data-view-photos]")) {
+      setPopupView("gallery");
+      return;
+    }
+
+    if (event.target.closest("[data-back-to-list]")) {
+      setPopupView("list");
+    }
+  }
+);
+
 mobilePopupElement.addEventListener(
   "click",
   event => {
-    const closeTarget =
+    if (
       event.target.closest(
         "[data-mobile-popup-close]"
-      );
+      )
+    ) {
+      closePopup();
+      return;
+    }
 
-    if (closeTarget) {
-      closeMobilePopup();
+    if (event.target.closest("[data-view-photos]")) {
+      setPopupView("gallery");
+      return;
+    }
+
+    if (event.target.closest("[data-back-to-list]")) {
+      setPopupView("list");
     }
   }
 );
@@ -1621,6 +1944,107 @@ searchElement?.addEventListener(
   event => {
     if (event.key === "Enter") {
       fitToVisibleFeatures();
+    }
+  }
+);
+
+citySearchElement?.addEventListener(
+  "input",
+  () => {
+    const query = citySearchElement.value
+      .trim()
+      .toLowerCase();
+
+    if (!query) {
+      hideCitySearchResults();
+      return;
+    }
+
+    const matches = getSearchableCities()
+      .filter(feature =>
+        matchesCityQuery(feature, query)
+      )
+      .slice(0, MAX_CITY_SEARCH_RESULTS);
+
+    renderCitySearchResults(matches);
+  }
+);
+
+citySearchElement?.addEventListener(
+  "keydown",
+  event => {
+    if (citySearchResultsElement?.hidden) {
+      return;
+    }
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+
+      const nextIndex =
+        citySearchActiveIndex + 1 >=
+        citySearchResults.length
+          ? 0
+          : citySearchActiveIndex + 1;
+
+      setCitySearchActiveIndex(nextIndex);
+      return;
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+
+      const nextIndex =
+        citySearchActiveIndex - 1 < 0
+          ? citySearchResults.length - 1
+          : citySearchActiveIndex - 1;
+
+      setCitySearchActiveIndex(nextIndex);
+      return;
+    }
+
+    if (event.key === "Enter") {
+      event.preventDefault();
+
+      selectCitySearchResult(
+        citySearchActiveIndex >= 0
+          ? citySearchActiveIndex
+          : 0
+      );
+      return;
+    }
+
+    if (event.key === "Escape") {
+      hideCitySearchResults();
+    }
+  }
+);
+
+citySearchResultsElement?.addEventListener(
+  "click",
+  event => {
+    const target = event.target.closest(
+      "[data-city-search-index]"
+    );
+
+    if (!target) {
+      return;
+    }
+
+    selectCitySearchResult(
+      Number(target.dataset.citySearchIndex)
+    );
+  }
+);
+
+document.addEventListener(
+  "click",
+  event => {
+    if (
+      citySearchResultsElement &&
+      !citySearchResultsElement.hidden &&
+      !event.target.closest(".city-search")
+    ) {
+      hideCitySearchResults();
     }
   }
 );
@@ -1663,16 +2087,8 @@ map.on(
 
     if (feature) {
       openPopup(feature);
-      openMediaGallery({
-        id: feature.get("id"),
-        city: feature.get("city"),
-        title: feature.get("title"),
-        country: feature.get("country"),
-        driveGalleryUrl: feature.get("driveGalleryUrl") || "",
-      });
     } else {
       closePopup();
-      closeMediaGallery();
     }
   }
 );
@@ -1783,60 +2199,3 @@ function getDriveGalleryUrl(city) {
     : "";
 }
 
-function openMediaGallery(city) {
-  const viewerUrl = getDriveGalleryUrl(city);
-
-  if (!viewerUrl) {
-    closeMediaGallery();
-    return;
-  }
-
-  if (
-    !mediaGalleryElement ||
-    !mediaGalleryTitleElement ||
-    !mediaGalleryListElement
-  ) {
-    return;
-  }
-
-  const cityName =
-    city.city ||
-    city.title ||
-    "Flamingo";
-
-  mediaGalleryTitleElement.textContent =
-    `Fotot · ${cityName}`;
-
-  mediaGalleryListElement.innerHTML = `
-    <iframe
-      class="drive-gallery-frame"
-      src="${escapeHtml(viewerUrl)}"
-      title="Fotot e protestave në ${escapeHtml(cityName)}"
-      loading="lazy"
-      allowfullscreen
-    ></iframe>
-  `;
-
-  mediaGalleryElement.hidden = false;
-
-  requestAnimationFrame(() => {
-    mediaGalleryElement.classList.add("is-open");
-  });
-}
-
-function closeMediaGallery() {
-  if (mediaGalleryElement) {
-    mediaGalleryElement.classList.remove("is-open");
-    mediaGalleryElement.hidden = true;
-  }
-
-  if (mediaGalleryListElement) {
-    // Removing the iframe stops Drive from continuing to load in the background.
-    mediaGalleryListElement.innerHTML = "";
-  }
-}
-
-mediaGalleryCloseElement?.addEventListener(
-  "click",
-  closeMediaGallery
-);
