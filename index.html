@@ -248,41 +248,68 @@
         </div>
       </section>
 
-      <section
-        id="media-gallery"
-        class="media-gallery"
-        hidden
-        aria-label="Galeria e qytetit nga Google Drive"
+      <!-- Detajet e qytetit -->
+      <dialog
+        id="city-details-dialog"
+        class="city-details-dialog"
+        aria-labelledby="city-details-dialog-title"
       >
-        <div class="media-gallery-header">
-          <strong id="media-gallery-title">Fotot e qytetit</strong>
+        <section class="city-details-dialog-panel">
+          <div
+            class="city-details-dialog-handle"
+            aria-hidden="true"
+          ></div>
 
-          <button
-            id="media-gallery-close"
-            class="media-gallery-close"
-            type="button"
-            aria-label="Mbyll galerinë e qytetit"
+          <div
+            id="city-details-dialog-content"
+            class="city-details-dialog-content"
+          ></div>
+
+          <section
+            id="city-details-gallery"
+            class="city-details-gallery"
+            hidden
+            aria-labelledby="city-details-gallery-title"
           >
-            ×
-          </button>
-        </div>
+            <header class="city-details-gallery-header">
+              <button
+                class="city-details-gallery-back"
+                type="button"
+                data-city-gallery-back
+              >
+                <span aria-hidden="true">←</span>
+                Kthehu
+              </button>
 
-        <div id="media-gallery-list" class="media-gallery-list"></div>
-      </section>
+              <strong id="city-details-gallery-title">Fotot</strong>
 
-      <!-- Dritarja e informacionit -->
-      <div id="popup" class="ol-popup" hidden>
-        <button
-          id="popup-closer"
-          class="popup-closer"
-          type="button"
-          aria-label="Mbyll detajet e protestës"
-        >
-          ×
-        </button>
+              <a
+                id="city-details-gallery-external"
+                class="city-details-gallery-external"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Hape në Drive
+                <span aria-hidden="true">↗</span>
+              </a>
 
-        <div id="popup-content"></div>
-      </div>
+              <button
+                class="popup-closer city-details-view-close"
+                type="button"
+                aria-label="Mbyll galerinë dhe detajet e qytetit"
+                data-city-details-dialog-close
+              >
+                ×
+              </button>
+            </header>
+
+            <div
+              id="city-details-gallery-frame"
+              class="city-details-gallery-frame"
+            ></div>
+          </section>
+        </section>
+      </dialog>
 
       <!-- Mesazhet -->
       <div

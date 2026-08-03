@@ -7,10 +7,24 @@ import { calculateProtestStatistics } from "./js/protest-stats.js";
    ========================================================= */
 
 const mapElement = document.getElementById("map");
-
-const popupElement = document.getElementById("popup");
-const popupContentElement = document.getElementById("popup-content");
-const popupCloserElement = document.getElementById("popup-closer");
+const cityDetailsDialogElement = document.getElementById(
+  "city-details-dialog"
+);
+const cityDetailsDialogContentElement = document.getElementById(
+  "city-details-dialog-content"
+);
+const cityDetailsGalleryElement = document.getElementById(
+  "city-details-gallery"
+);
+const cityDetailsGalleryTitleElement = document.getElementById(
+  "city-details-gallery-title"
+);
+const cityDetailsGalleryFrameElement = document.getElementById(
+  "city-details-gallery-frame"
+);
+const cityDetailsGalleryExternalElement = document.getElementById(
+  "city-details-gallery-external"
+);
 
 const messageElement = document.getElementById("map-message");
 const searchElement = document.getElementById("search");
@@ -34,68 +48,8 @@ const statusFilters = Array.from(
   document.querySelectorAll(".status-filter")
 );
 
-
-const mediaGalleryElement =
-  document.getElementById("media-gallery");
-
-const mediaGalleryTitleElement =
-  document.getElementById("media-gallery-title");
-
-const mediaGalleryListElement =
-  document.getElementById("media-gallery-list");
-
-const mediaGalleryCloseElement =
-  document.getElementById("media-gallery-close");
-
-
-/* =========================================================
-   Dedicated mobile popup
-   ========================================================= */
-
-const mobilePopupElement = document.createElement("div");
-
-mobilePopupElement.id = "mobile-popup";
-mobilePopupElement.className = "mobile-popup";
-mobilePopupElement.hidden = true;
-
-mobilePopupElement.innerHTML = `
-  <div
-    class="mobile-popup-backdrop"
-    data-mobile-popup-close
-  ></div>
-
-  <section
-    class="mobile-popup-sheet"
-    role="dialog"
-    aria-modal="true"
-    aria-labelledby="mobile-popup-title"
-  >
-    <div
-      class="mobile-popup-handle"
-      aria-hidden="true"
-    ></div>
-
-    <button
-      class="popup-closer mobile-popup-closer"
-      type="button"
-      aria-label="Mbyll detajet e qytetit"
-      data-mobile-popup-close
-    >
-      ×
-    </button>
-
-    <div
-      id="mobile-popup-content"
-      class="mobile-popup-content"
-    ></div>
-  </section>
-`;
-
-document.body.appendChild(mobilePopupElement);
-
-const mobilePopupContentElement = document.getElementById(
-  "mobile-popup-content"
-);
+let cityDetailsDialogTrigger = null;
+let activeCityDetails = null;
 
 /* =========================================================
    OpenLayers map
@@ -285,33 +239,8 @@ const map = new ol.Map({
 });
 
 /* =========================================================
-   Desktop OpenLayers popup
-   ========================================================= */
-
-const popupOverlay = new ol.Overlay({
-  element: popupElement,
-  positioning: "bottom-center",
-  stopEvent: true,
-  offset: [0, -12],
-
-  autoPan: {
-    animation: {
-      duration: 200,
-    },
-  },
-});
-
-map.addOverlay(popupOverlay);
-
-/* =========================================================
    Utilities
    ========================================================= */
-
-function isMobileViewport() {
-  return window.matchMedia(
-    "(max-width: 700px)"
-  ).matches;
-}
 
 function escapeHtml(value) {
   return String(value || "").replace(
@@ -406,10 +335,17 @@ function buildCityLinks(feature, city) {
     feature.get("facebookUrl")
   );
 
+  const hasGallery = Boolean(
+    getDriveGalleryUrl({
+      driveGalleryUrl: feature.get("driveGalleryUrl"),
+    })
+  );
+
   if (
     !cityUrl &&
     !instagramUrl &&
-    !facebookUrl
+    !facebookUrl &&
+    !hasGallery
   ) {
     return "";
   }
@@ -500,6 +436,28 @@ function buildCityLinks(feature, city) {
 
               <span>Facebook</span>
             </a>
+          `
+          : ""
+      }
+
+      ${
+        hasGallery
+          ? `
+            <button
+              class="social-link social-gallery"
+              type="button"
+              data-city-gallery-open
+              aria-label="Shiko fotot nga protestat në ${city}"
+              title="Shiko fotot"
+            >
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M7 4h12a2 2 0 0 1 2 2v10"></path>
+                <rect x="3" y="7" width="16" height="13" rx="2"></rect>
+                <circle cx="8.5" cy="11.5" r="1.5"></circle>
+                <path d="m5 18 4-4 3 3 2-2 3 3"></path>
+              </svg>
+              <span>Shiko fotot</span>
+            </button>
           `
           : ""
       }
@@ -807,10 +765,7 @@ function isProtestToday(protest) {
   );
 }
 
-function buildPopupHtml(
-  feature,
-  mobile = false
-) {
+function buildPopupHtml(feature) {
   const city = escapeHtml(
     feature.get("city") ||
     feature.get("title") ||
@@ -839,19 +794,24 @@ function buildPopupHtml(
     buildCityLinks(feature, city);
 
   return `
-    <p class="popup-type">
-      Qytet proteste
-    </p>
+    <div class="city-details-view-header">
+      <p class="popup-type">
+        Qytet proteste
+      </p>
+
+      <button
+        class="popup-closer city-details-view-close"
+        type="button"
+        aria-label="Mbyll detajet e qytetit"
+        data-city-details-dialog-close
+      >
+        ×
+      </button>
+    </div>
 
     <div class="popup-city-header">
       <div>
-        <h3
-          ${
-            mobile
-              ? 'id="mobile-popup-title"'
-              : ""
-          }
-        >
+        <h3 id="city-details-dialog-title">
           ${city}
         </h3>
 
@@ -895,107 +855,62 @@ function buildPopupHtml(
    Popup opening and closing
    ========================================================= */
 
-function openMobilePopup(feature) {
-  if (!mobilePopupContentElement) {
-    return;
-  }
-
-  popupOverlay.setPosition(undefined);
-
-  if (popupElement) {
-    popupElement.hidden = true;
-  }
-
-  mobilePopupContentElement.innerHTML =
-    buildPopupHtml(feature, true);
-
-  mobilePopupElement.hidden = false;
-
-  requestAnimationFrame(() => {
-    mobilePopupElement.classList.add(
-      "is-open"
-    );
-
-    document.body.classList.add(
-      "mobile-popup-open"
-    );
-
-    const closeButton =
-      mobilePopupElement.querySelector(
-        ".mobile-popup-closer"
-      );
-
-    closeButton?.focus({
-      preventScroll: true,
-    });
-  });
-}
-
-function openDesktopPopup(feature) {
-  closeMobilePopup();
-
+function openCityDetailsDialog(feature) {
   if (
-    !popupContentElement ||
-    !popupElement
+    !(cityDetailsDialogElement instanceof HTMLDialogElement) ||
+    !cityDetailsDialogContentElement
   ) {
     return;
   }
 
-  popupContentElement.innerHTML =
-    buildPopupHtml(feature, false);
+  closeMediaGallery();
 
-  popupElement.hidden = false;
+  activeCityDetails = {
+    city: feature.get("city"),
+    title: feature.get("title"),
+    driveGalleryUrl: feature.get("driveGalleryUrl") || "",
+  };
 
-  popupOverlay.setPositioning(
-    "bottom-center"
-  );
+  cityDetailsDialogContentElement.innerHTML =
+    buildPopupHtml(feature);
 
-  popupOverlay.setOffset([
-    0,
-    -12,
-  ]);
+  cityDetailsDialogTrigger =
+    document.activeElement instanceof HTMLElement
+      ? document.activeElement
+      : null;
 
-  popupOverlay.setPosition(
-    feature
-      .getGeometry()
-      .getCoordinates()
-  );
+  if (!cityDetailsDialogElement.open) {
+    cityDetailsDialogElement.showModal();
+  }
+
+  requestAnimationFrame(() => {
+    cityDetailsDialogElement.classList.add(
+      "is-open"
+    );
+  });
 }
 
 function openPopup(feature) {
-  if (isMobileViewport()) {
-    openMobilePopup(feature);
+  openCityDetailsDialog(feature);
+}
+
+function closeCityDetailsDialog() {
+  if (!(cityDetailsDialogElement instanceof HTMLDialogElement)) {
     return;
   }
 
-  openDesktopPopup(feature);
-}
-
-function closeMobilePopup() {
-  mobilePopupElement.classList.remove(
+  cityDetailsDialogElement.classList.remove(
     "is-open"
   );
 
-  mobilePopupElement.hidden = true;
-
-  if (mobilePopupContentElement) {
-    mobilePopupContentElement.innerHTML = "";
+  if (cityDetailsDialogElement.open) {
+    cityDetailsDialogElement.close();
   }
-
-  document.body.classList.remove(
-    "mobile-popup-open"
-  );
 }
 
 function closePopup() {
-  popupOverlay.setPosition(undefined);
   closeMediaGallery();
-
-  if (popupElement) {
-    popupElement.hidden = true;
-  }
-
-  closeMobilePopup();
+  closeCityDetailsDialog();
 }
 
 /* =========================================================
@@ -1576,31 +1491,64 @@ closePanelElement?.addEventListener(
   () => setSidebar(false)
 );
 
-popupCloserElement?.addEventListener(
-  "click",
-  closePopup
-);
-
-mobilePopupElement.addEventListener(
+cityDetailsDialogElement?.addEventListener(
   "click",
   event => {
     const closeTarget =
-      event.target.closest(
-        "[data-mobile-popup-close]"
-      );
+      event.target instanceof Element
+        ? event.target.closest(
+            "[data-city-details-dialog-close]"
+          )
+        : null;
 
-    if (closeTarget) {
-      closeMobilePopup();
+    const galleryOpenTarget =
+      event.target instanceof Element
+        ? event.target.closest("[data-city-gallery-open]")
+        : null;
+
+    const galleryBackTarget =
+      event.target instanceof Element
+        ? event.target.closest("[data-city-gallery-back]")
+        : null;
+
+    if (galleryOpenTarget) {
+      openMediaGallery(activeCityDetails);
+      return;
+    }
+
+    if (galleryBackTarget) {
+      closeMediaGallery({ restoreFocus: true });
+      return;
+    }
+
+    if (
+      closeTarget ||
+      event.target === cityDetailsDialogElement
+    ) {
+      closeCityDetailsDialog();
     }
   }
 );
 
-document.addEventListener(
-  "keydown",
-  event => {
-    if (event.key === "Escape") {
-      closePopup();
+cityDetailsDialogElement?.addEventListener(
+  "close",
+  () => {
+    cityDetailsDialogElement.classList.remove(
+      "is-open"
+    );
+
+    if (cityDetailsDialogContentElement) {
+      cityDetailsDialogContentElement.innerHTML = "";
     }
+
+    closeMediaGallery();
+    activeCityDetails = null;
+
+    cityDetailsDialogTrigger?.focus({
+      preventScroll: true,
+    });
+
+    cityDetailsDialogTrigger = null;
   }
 );
 
@@ -1663,16 +1611,8 @@ map.on(
 
     if (feature) {
       openPopup(feature);
-      openMediaGallery({
-        id: feature.get("id"),
-        city: feature.get("city"),
-        title: feature.get("title"),
-        country: feature.get("country"),
-        driveGalleryUrl: feature.get("driveGalleryUrl") || "",
-      });
     } else {
       closePopup();
-      closeMediaGallery();
     }
   }
 );
@@ -1709,18 +1649,6 @@ window.addEventListener(
   "resize",
   () => {
     map.updateSize();
-
-    if (isMobileViewport()) {
-      popupOverlay.setPosition(
-        undefined
-      );
-
-      if (popupElement) {
-        popupElement.hidden = true;
-      }
-    } else {
-      closeMobilePopup();
-    }
   }
 );
 
@@ -1792,9 +1720,10 @@ function openMediaGallery(city) {
   }
 
   if (
-    !mediaGalleryElement ||
-    !mediaGalleryTitleElement ||
-    !mediaGalleryListElement
+    !cityDetailsGalleryElement ||
+    !cityDetailsGalleryTitleElement ||
+    !cityDetailsGalleryFrameElement ||
+    !cityDetailsDialogContentElement
   ) {
     return;
   }
@@ -1804,39 +1733,64 @@ function openMediaGallery(city) {
     city.title ||
     "Flamingo";
 
-  mediaGalleryTitleElement.textContent =
+  cityDetailsGalleryTitleElement.textContent =
     `Fotot · ${cityName}`;
 
-  mediaGalleryListElement.innerHTML = `
+  cityDetailsGalleryFrameElement.innerHTML = `
     <iframe
       class="drive-gallery-frame"
       src="${escapeHtml(viewerUrl)}"
       title="Fotot e protestave në ${escapeHtml(cityName)}"
-      loading="lazy"
+      loading="eager"
       allowfullscreen
     ></iframe>
   `;
 
-  mediaGalleryElement.hidden = false;
+  const externalUrl = safeUrl(
+    city.driveGalleryUrl || city.drive_gallery_url || ""
+  );
 
-  requestAnimationFrame(() => {
-    mediaGalleryElement.classList.add("is-open");
-  });
-}
-
-function closeMediaGallery() {
-  if (mediaGalleryElement) {
-    mediaGalleryElement.classList.remove("is-open");
-    mediaGalleryElement.hidden = true;
+  if (cityDetailsGalleryExternalElement) {
+    cityDetailsGalleryExternalElement.hidden = !externalUrl;
+    cityDetailsGalleryExternalElement.href = externalUrl || "#";
   }
 
-  if (mediaGalleryListElement) {
+  cityDetailsDialogContentElement.hidden = true;
+  cityDetailsGalleryElement.hidden = false;
+  cityDetailsDialogElement?.classList.add("is-gallery-view");
+  cityDetailsDialogElement?.setAttribute(
+    "aria-labelledby",
+    "city-details-gallery-title"
+  );
+
+  cityDetailsGalleryElement
+    .querySelector("[data-city-gallery-back]")
+    ?.focus({ preventScroll: true });
+}
+
+function closeMediaGallery({ restoreFocus = false } = {}) {
+  if (cityDetailsGalleryElement) {
+    cityDetailsGalleryElement.hidden = true;
+  }
+
+  if (cityDetailsGalleryFrameElement) {
     // Removing the iframe stops Drive from continuing to load in the background.
-    mediaGalleryListElement.innerHTML = "";
+    cityDetailsGalleryFrameElement.innerHTML = "";
+  }
+
+  if (cityDetailsDialogContentElement) {
+    cityDetailsDialogContentElement.hidden = false;
+  }
+
+  cityDetailsDialogElement?.classList.remove("is-gallery-view");
+  cityDetailsDialogElement?.setAttribute(
+    "aria-labelledby",
+    "city-details-dialog-title"
+  );
+
+  if (restoreFocus) {
+    cityDetailsDialogContentElement
+      ?.querySelector("[data-city-gallery-open]")
+      ?.focus({ preventScroll: true });
   }
 }
-
-mediaGalleryCloseElement?.addEventListener(
-  "click",
-  closeMediaGallery
-);
