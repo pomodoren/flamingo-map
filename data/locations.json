@@ -443,12 +443,40 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "266",
+        "title": "Tirana Proteston!",
+        "startDate": "2026-08-05",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "265",
+        "title": "Tirana Proteston!",
+        "startDate": "2026-08-04",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "261",
         "title": "Tirana Proteston!",
         "startDate": "2026-08-03",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -891,8 +919,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 32,
-    "protestCount": 66,
+    "protestRecordCount": 34,
+    "protestCount": 68,
     "markerStatus": "confirmed"
   },
   {
@@ -5251,6 +5279,53 @@
     ],
     "protestRecordCount": 1,
     "protestCount": 1,
+    "markerStatus": "completed"
+  },
+  {
+    "id": "bari-italy",
+    "title": "Bari",
+    "city": "Bari",
+    "country": "Italy",
+    "latitude": 41.1115,
+    "longitude": 16.8554,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "drive_gallery_url": "",
+    "protests": [
+      {
+        "id": "268",
+        "title": "Bari Proteston #2",
+        "startDate": "2026-06-22",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Corso Vittorio Emanuele II",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "267",
+        "title": "Bari Proteston",
+        "startDate": "2026-06-16",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Piazza Ferrarese",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 2,
+    "protestCount": 2,
     "markerStatus": "completed"
   }
 ]
