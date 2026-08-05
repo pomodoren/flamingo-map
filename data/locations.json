@@ -5383,5 +5383,52 @@
     "protestRecordCount": 2,
     "protestCount": 2,
     "markerStatus": "completed"
+  },
+  {
+    "id": "parma-italy",
+    "title": "Parma",
+    "city": "Parma",
+    "country": "Italy",
+    "latitude": 44.801472,
+    "longitude": 10.328,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "drive_gallery_url": "",
+    "protests": [
+      {
+        "id": "274",
+        "title": "Parma Protest #2",
+        "startDate": "2026-06-28",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "273",
+        "title": "Parma Protest #1",
+        "startDate": "2026-06-14",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 2,
+    "protestCount": 2,
+    "markerStatus": "completed"
   }
 ]
