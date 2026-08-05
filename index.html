@@ -35,6 +35,33 @@
         aria-label="Hartë interaktive e protestave të Flamingo Revolution"
       ></div>
 
+      <!-- Kërkim i shpejtë i qytetit -->
+      <div class="city-search" role="search">
+        <div class="city-search-box">
+          <span class="city-search-icon" aria-hidden="true">⌕</span>
+
+          <input
+            id="city-search"
+            type="text"
+            placeholder="Shko te një qytet…"
+            autocomplete="off"
+            role="combobox"
+            aria-expanded="false"
+            aria-haspopup="listbox"
+            aria-controls="city-search-results"
+            aria-autocomplete="list"
+            aria-label="Kërko dhe shko te një qytet"
+          />
+        </div>
+
+        <ul
+          id="city-search-results"
+          class="city-search-results"
+          role="listbox"
+          hidden
+        ></ul>
+      </div>
+
       <!-- Paneli anësor -->
       <aside
         id="map-panel"
