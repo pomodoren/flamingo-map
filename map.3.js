@@ -48,6 +48,14 @@ const statusFilters = Array.from(
   document.querySelectorAll(".status-filter")
 );
 
+const citySearchElement =
+  document.getElementById("city-search");
+
+const citySearchResultsElement =
+  document.getElementById(
+    "city-search-results"
+  );
+
 let cityDetailsDialogTrigger = null;
 let activeCityDetails = null;
 
@@ -1049,6 +1057,193 @@ function fitToVisibleFeatures() {
 }
 
 /* =========================================================
+   City search (jump to a city)
+   ========================================================= */
+
+const MAX_CITY_SEARCH_RESULTS = 8;
+
+let citySearchResults = [];
+let citySearchActiveIndex = -1;
+
+function getSearchableCities() {
+  return source
+    .getFeatures()
+    .filter(
+      feature => (feature.get("protests") || []).length > 0
+    );
+}
+
+function matchesCityQuery(feature, query) {
+  const haystack = [
+    feature.get("city"),
+    feature.get("title"),
+    feature.get("country"),
+  ]
+    .filter(Boolean)
+    .join(" ")
+    .toLowerCase();
+
+  return haystack.includes(query);
+}
+
+function hideCitySearchResults() {
+  if (!citySearchResultsElement) {
+    return;
+  }
+
+  citySearchResultsElement.hidden = true;
+  citySearchResultsElement.innerHTML = "";
+  citySearchResults = [];
+  citySearchActiveIndex = -1;
+
+  citySearchElement?.setAttribute(
+    "aria-expanded",
+    "false"
+  );
+
+  citySearchElement?.removeAttribute(
+    "aria-activedescendant"
+  );
+}
+
+function renderCitySearchResults(features) {
+  if (!citySearchResultsElement) {
+    return;
+  }
+
+  citySearchResults = features;
+  citySearchActiveIndex = -1;
+
+  if (features.length === 0) {
+    citySearchResultsElement.innerHTML = `
+      <li class="city-search-empty">
+        Nuk u gjet asnjë qytet.
+      </li>
+    `;
+  } else {
+    citySearchResultsElement.innerHTML = features
+      .map((feature, index) => {
+        const city = escapeHtml(
+          feature.get("city") ||
+          feature.get("title") ||
+          "Qytet i panjohur"
+        );
+
+        const country = escapeHtml(
+          feature.get("country")
+        );
+
+        return `
+          <li role="presentation">
+            <button
+              type="button"
+              class="city-search-result"
+              role="option"
+              id="city-search-result-${index}"
+              data-city-search-index="${index}"
+            >
+              <span class="city-search-result-name">
+                ${city}
+              </span>
+
+              ${
+                country
+                  ? `
+                    <span class="city-search-result-meta">
+                      ${country}
+                    </span>
+                  `
+                  : ""
+              }
+            </button>
+          </li>
+        `;
+      })
+      .join("");
+  }
+
+  citySearchResultsElement.hidden = false;
+
+  citySearchElement?.setAttribute(
+    "aria-expanded",
+    "true"
+  );
+}
+
+function setCitySearchActiveIndex(index) {
+  if (!citySearchResultsElement) {
+    return;
+  }
+
+  const options =
+    citySearchResultsElement.querySelectorAll(
+      ".city-search-result"
+    );
+
+  options.forEach(option =>
+    option.classList.remove("is-active")
+  );
+
+  citySearchActiveIndex = index;
+
+  const activeOption = options[index];
+
+  if (!activeOption) {
+    citySearchElement?.removeAttribute(
+      "aria-activedescendant"
+    );
+    return;
+  }
+
+  activeOption.classList.add("is-active");
+
+  activeOption.scrollIntoView({
+    block: "nearest",
+  });
+
+  citySearchElement?.setAttribute(
+    "aria-activedescendant",
+    activeOption.id
+  );
+}
+
+function panToCitySearchFeature(feature) {
+  const coordinates = feature
+    .getGeometry()
+    .getCoordinates();
+
+  map.getView().animate({
+    center: coordinates,
+
+    zoom: Math.max(
+      map.getView().getZoom() || 4,
+      8
+    ),
+
+    duration: 500,
+  });
+
+  openPopup(feature);
+}
+
+function selectCitySearchResult(index) {
+  const feature = citySearchResults[index];
+
+  if (!feature) {
+    return;
+  }
+
+  panToCitySearchFeature(feature);
+
+  if (citySearchElement) {
+    citySearchElement.value = "";
+  }
+
+  hideCitySearchResults();
+  citySearchElement?.blur();
+}
+
+/* =========================================================
    Statistics
    ========================================================= */
 
@@ -1569,6 +1764,107 @@ searchElement?.addEventListener(
   event => {
     if (event.key === "Enter") {
       fitToVisibleFeatures();
+    }
+  }
+);
+
+citySearchElement?.addEventListener(
+  "input",
+  () => {
+    const query = citySearchElement.value
+      .trim()
+      .toLowerCase();
+
+    if (!query) {
+      hideCitySearchResults();
+      return;
+    }
+
+    const matches = getSearchableCities()
+      .filter(feature =>
+        matchesCityQuery(feature, query)
+      )
+      .slice(0, MAX_CITY_SEARCH_RESULTS);
+
+    renderCitySearchResults(matches);
+  }
+);
+
+citySearchElement?.addEventListener(
+  "keydown",
+  event => {
+    if (citySearchResultsElement?.hidden) {
+      return;
+    }
+
+    if (event.key === "ArrowDown") {
+      event.preventDefault();
+
+      const nextIndex =
+        citySearchActiveIndex + 1 >=
+        citySearchResults.length
+          ? 0
+          : citySearchActiveIndex + 1;
+
+      setCitySearchActiveIndex(nextIndex);
+      return;
+    }
+
+    if (event.key === "ArrowUp") {
+      event.preventDefault();
+
+      const nextIndex =
+        citySearchActiveIndex - 1 < 0
+          ? citySearchResults.length - 1
+          : citySearchActiveIndex - 1;
+
+      setCitySearchActiveIndex(nextIndex);
+      return;
+    }
+
+    if (event.key === "Enter") {
+      event.preventDefault();
+
+      selectCitySearchResult(
+        citySearchActiveIndex >= 0
+          ? citySearchActiveIndex
+          : 0
+      );
+      return;
+    }
+
+    if (event.key === "Escape") {
+      hideCitySearchResults();
+    }
+  }
+);
+
+citySearchResultsElement?.addEventListener(
+  "click",
+  event => {
+    const target = event.target.closest(
+      "[data-city-search-index]"
+    );
+
+    if (!target) {
+      return;
+    }
+
+    selectCitySearchResult(
+      Number(target.dataset.citySearchIndex)
+    );
+  }
+);
+
+document.addEventListener(
+  "click",
+  event => {
+    if (
+      citySearchResultsElement &&
+      !citySearchResultsElement.hidden &&
+      !event.target.closest(".city-search")
+    ) {
+      hideCitySearchResults();
     }
   }
 );
