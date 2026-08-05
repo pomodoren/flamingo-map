@@ -8,10 +8,11 @@ function normalizeStatus(value) {
 export function calculateProtestStatistics(features) {
   const stats = {
     cities: features.length,
-    protestDays: 0,
-    confirmedDays: 0,
-    tentativeDays: 0,
-    completedDays: 0,
+    // Days already confirmed/active/tentative/completed — the headline
+    // number. Planned days are tracked separately below so they don't
+    // inflate it, matching how the map markers split "actual" vs "planned".
+    actualDays: 0,
+    plannedDays: 0,
     majorDays: 0,
   };
 
@@ -22,14 +23,10 @@ export function calculateProtestStatistics(features) {
       const days = getProtestDayCount(protest);
       const status = normalizeStatus(protest.status);
 
-      stats.protestDays += days;
-
-      if (["confirmed", "planned", "active"].includes(status)) {
-        stats.confirmedDays += days;
-      } else if (status === "tentative") {
-        stats.tentativeDays += days;
-      } else if (status === "completed") {
-        stats.completedDays += days;
+      if (status === "planned") {
+        stats.plannedDays += days;
+      } else {
+        stats.actualDays += days;
       }
 
       if (protest.importance === "major" || protest.major === true) {
