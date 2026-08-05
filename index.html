@@ -85,16 +85,6 @@
           </button>
         </div>
 
-        <!-- Kërkimi -->
-        <section class="panel-section">
-          <input
-            id="search"
-            type="search"
-            placeholder="Kërko qytet ose protestë"
-            autocomplete="off"
-          />
-        </section>
-
         <!-- Filtrat sipas statusit -->
         <section class="panel-section">
           <h2>Statusi</h2>
@@ -132,39 +122,54 @@
 
           <div class="stats-list">
             <div class="stat-row">
-              <span class="stat-label"> Protesta </span>
+              <span class="stat-label">
+                <span class="status-dot status-completed" aria-hidden="true"></span>
+                Ditë protestash
+              </span>
 
               <strong id="protest-count" class="stat-value">0</strong>
             </div>
 
             <div class="stat-row">
-              <span class="stat-label"> Të përfunduara </span>
+              <span class="stat-label">
+                <span class="status-dot status-planned" aria-hidden="true"></span>
+                Të planifikuara
+              </span>
 
-              <strong id="completed-count" class="stat-value stat-completed">
+              <strong id="planned-count" class="stat-value stat-planned">
                 0
               </strong>
             </div>
 
             <div class="stat-row">
-              <span class="stat-label"> Tubime të mëdha </span>
+              <span class="stat-label">
+                <span class="status-dot status-major" aria-hidden="true"></span>
+                Tubime të mëdha
+              </span>
 
               <strong id="major-count" class="stat-value stat-major">
                 0
               </strong>
             </div>
+
             <div class="stat-row">
-              <span class="stat-label"> Qytete </span>
+              <span class="stat-label">Qytete</span>
 
               <strong id="visible-count" class="stat-value">0</strong>
             </div>
           </div>
+
+          <p class="stats-note">
+            Ditët e planifikuara shfaqen veç dhe nuk llogariten te "Ditë
+            protestash".
+          </p>
         </section>
 
         <!-- Legjenda -->
-        <section class="panel-section panel-section-compact">
+        <section class="panel-section">
           <h2>Legjenda</h2>
 
-          <div class="circle-legend circle-legend-compact">
+          <div class="circle-legend">
             <div class="circle-legend-item">
               <span
                 class="circle-example circle-small confirmed"
@@ -189,11 +194,20 @@
               >
               <span>Tubim i madh</span>
             </div>
+
+            <div class="circle-legend-item">
+              <span
+                class="circle-example circle-medium confirmed"
+                aria-hidden="true"
+                >3<sup class="circle-example-sup">+2</sup></span
+              >
+              <span>Ekzistuese + protesta të planifikuara</span>
+            </div>
           </div>
 
-          <p class="legend-note" style="color: grey">
+          <p class="legend-note">
             Numri dhe madhësia e rrethit tregojnë ditët e protestave në atë
-            qytet.
+            qytet; numri i vogël sipër tregon ditët e planifikuara që vijnë.
           </p>
         </section>
 
@@ -201,7 +215,7 @@
         <section class="panel-section panel-footer">
           <h2>Informacion mbi të dhënat</h2>
 
-          <div style="color: grey">
+          <div class="panel-footer-text">
             <p>
               Informacioni për protestat mirëmbahet nga komunitetet lokale të
               Flamingo Revolution.
@@ -250,7 +264,14 @@
           <div>
             <p class="upcoming-eyebrow">Në vazhdim</p>
 
-            <h2>Protestat e ardhshme</h2>
+            <h2>
+              Protestat e ardhshme
+              <span
+                id="upcoming-count"
+                class="upcoming-count-badge"
+                aria-live="polite"
+              >0</span>
+            </h2>
           </div>
 
           <button
@@ -349,6 +370,6 @@
     </main>
 
     <script src="https://cdn.jsdelivr.net/npm/ol@10.9.0/dist/ol.js"></script>
-    <script type="module" src="map.3.js"></script>
+    <script type="module" src="map.js"></script>
   </body>
 </html>
