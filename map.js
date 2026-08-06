@@ -18,12 +18,15 @@ import {
   statusFilters,
   citySearchElement,
   citySearchResultsElement,
+  openSubmitDialogButton,
+  submitProtestDialogElement,
 } from "./js/dom-refs.js";
 import { source, locationLayer, map } from "./js/map-instance.js";
 import { getFilteredProtests, clearMarkerStyleCache } from "./js/marker-style.js";
 import { buildPopupHtml } from "./js/popup.js";
 import { openMediaGallery, closeMediaGallery } from "./js/media-gallery.js";
 import { renderUpcomingProtests } from "./js/upcoming.js";
+import { openSubmitDialog, closeSubmitDialog } from "./js/submit-dialog.js";
 import {
   MAX_CITY_SEARCH_RESULTS,
   citySearchResults,
@@ -450,6 +453,39 @@ cityDetailsDialogElement?.addEventListener(
     });
 
     cityDetailsDialogTrigger = null;
+  }
+);
+
+openSubmitDialogButton?.addEventListener(
+  "click",
+  openSubmitDialog
+);
+
+submitProtestDialogElement?.addEventListener(
+  "click",
+  event => {
+    const closeTarget =
+      event.target instanceof Element
+        ? event.target.closest(
+            "[data-submit-dialog-close]"
+          )
+        : null;
+
+    if (
+      closeTarget ||
+      event.target === submitProtestDialogElement
+    ) {
+      closeSubmitDialog();
+    }
+  }
+);
+
+submitProtestDialogElement?.addEventListener(
+  "close",
+  () => {
+    submitProtestDialogElement.classList.remove(
+      "is-open"
+    );
   }
 );
 

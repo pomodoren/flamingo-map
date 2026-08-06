@@ -49,3 +49,16 @@ export const citySearchElement = document.getElementById("city-search");
 export const citySearchResultsElement = document.getElementById(
   "city-search-results"
 );
+
+export const openSubmitDialogButton = document.getElementById(
+  "open-submit-dialog"
+);
+export const submitProtestDialogElement = document.getElementById(
+  "submit-protest-dialog"
+);
+export const submitFormFrameElement = document.getElementById(
+  "submit-form-frame"
+);
+export const submitFormEmptyElement = document.getElementById(
+  "submit-form-empty"
+);

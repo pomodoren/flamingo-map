@@ -264,7 +264,12 @@ button {
 @media (max-width: 700px) {
   .city-search {
     top: max(10px, env(safe-area-inset-top));
-    width: calc(100vw - 32px);
+    left: 16px;
+
+    /* Leave room on the right for the fixed .ol-zoom control (12px
+       inset + ~42px control), so the pill never sits under it. */
+    width: calc(100vw - 16px - 72px);
+    transform: none;
   }
 }
 
@@ -467,6 +472,47 @@ button {
 
 .panel-footer-text {
   color: var(--muted);
+}
+
+.panel-footer-license {
+  margin-top: 12px;
+  font-size: .78rem;
+}
+
+.submit-cta {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+
+  margin-top: 12px;
+  padding: 11px 16px;
+
+  color: #fff;
+  text-align: center;
+  text-decoration: none;
+
+  background: var(--brand);
+  border: 0;
+  border-radius: 12px;
+
+  font-size: .88rem;
+  font-weight: 700;
+
+  transition:
+    background 140ms ease,
+    transform 140ms ease;
+}
+
+.submit-cta span {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.submit-cta:hover {
+  background: var(--brand-dark);
+  transform: translateY(-1px);
 }
 
 .panel-summary {
@@ -1185,7 +1231,11 @@ button {
 
   .ol-attribution {
     right: 6px;
-    bottom: 6px;
+
+    /* Clear the collapsed upcoming-rail tab (58px) plus its own bottom
+       inset, so expanding the attribution "i" never collides with /
+       sits under the rail's drag handle. */
+    bottom: calc(66px + max(8px, env(safe-area-inset-bottom)));
     max-width: calc(100% - 12px);
     font-size: .68rem;
   }
@@ -1800,4 +1850,89 @@ button {
   .upcoming-card-active .upcoming-card-status::before {
     animation: none;
   }
+}
+
+/* =========================
+   Submit-a-protest dialog
+   ========================= */
+
+.submit-protest-dialog .city-details-dialog-panel {
+  max-height: calc(90dvh - max(12px, env(safe-area-inset-top)));
+}
+
+.submit-dialog-content {
+  display: flex;
+  min-height: 0;
+  flex: 1 1 auto;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.submit-dialog-content h3 {
+  margin: 0 0 6px;
+  font-size: 1.2rem;
+}
+
+.submit-intro {
+  margin: 0 0 14px;
+  color: var(--muted);
+  font-size: .88rem;
+  line-height: 1.5;
+}
+
+.submit-checklist-details {
+  margin-bottom: 14px;
+
+  background: #f8f8f6;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+
+.submit-checklist-details summary {
+  padding: 10px 14px;
+  color: var(--text);
+  cursor: pointer;
+  font-size: .86rem;
+  font-weight: 700;
+}
+
+.submit-checklist {
+  margin: 0;
+  padding: 0 14px 12px 30px;
+  color: var(--text);
+  font-size: .86rem;
+  line-height: 1.55;
+}
+
+.submit-checklist li + li {
+  margin-top: 4px;
+}
+
+.submit-form-frame {
+  display: block;
+  width: 100%;
+  height: 70vh;
+  flex: 1 1 auto;
+
+  border: 0;
+  border-radius: 12px;
+}
+
+.submit-form-empty {
+  padding: 16px;
+
+  color: #612414;
+  background: #fff1ea;
+  border: 1px solid #efb8a7;
+  border-radius: 12px;
+
+  font-size: .86rem;
+  line-height: 1.5;
+}
+
+.submit-form-empty code {
+  padding: 1px 5px;
+  background: rgba(0, 0, 0, 0.08);
+  border-radius: 5px;
+  font-size: .84em;
 }

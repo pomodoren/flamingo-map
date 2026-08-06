@@ -220,25 +220,27 @@
               Informacioni për protestat mirëmbahet nga komunitetet lokale të
               Flamingo Revolution.
             </p>
-
-            <p>
-              Ndihmo të plotësojmë
-              <a
-                class="dataset-link"
-                href="https://docs.google.com/spreadsheets/d/1i07VQru-t1-KmDzw84lkuXW2D0horxup/edit"
-                target="_blank"
-                rel="noopener noreferrer"
-                >të dhënat</a
-              >! Të dhënat licencohen sipas
-              <a
-                href="https://creativecommons.org/licenses/by-nc/4.0/"
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                CC BY-NC 4.0 </a
-              >.
-            </p>
           </div>
+
+          <button
+            type="button"
+            class="submit-cta"
+            id="open-submit-dialog"
+            aria-haspopup="dialog"
+          >
+            <span aria-hidden="true">+</span>
+            Shto një protestë
+          </button>
+
+          <p class="panel-footer-text panel-footer-license">
+            Të dhënat licencohen sipas
+            <a
+              href="https://creativecommons.org/licenses/by-nc/4.0/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >CC BY-NC 4.0</a
+            >.
+          </p>
         </section>
       </aside>
 
@@ -356,6 +358,79 @@
               class="city-details-gallery-frame"
             ></div>
           </section>
+        </section>
+      </dialog>
+
+      <!-- Shto një protestë -->
+      <dialog
+        id="submit-protest-dialog"
+        class="city-details-dialog submit-protest-dialog"
+        aria-labelledby="submit-protest-dialog-title"
+      >
+        <section class="city-details-dialog-panel">
+          <div
+            class="city-details-dialog-handle"
+            aria-hidden="true"
+          ></div>
+
+          <div class="city-details-view-header">
+            <p class="popup-type">Shto një protestë</p>
+
+            <button
+              class="popup-closer city-details-view-close"
+              type="button"
+              aria-label="Mbyll formularin"
+              data-submit-dialog-close
+            >
+              ×
+            </button>
+          </div>
+
+          <div class="submit-dialog-content">
+            <h3 id="submit-protest-dialog-title">Shto një protestë</h3>
+
+            <p class="submit-intro">
+              Çdo dërgim rishikohet nga një administrator përpara se të
+              shfaqet në hartë — nuk shtohet automatikisht.
+            </p>
+
+            <details class="submit-checklist-details">
+              <summary>Çfarë duhet të kesh gati</summary>
+
+              <ul class="submit-checklist">
+                <li>Emrin e qytetit dhe vendin.</li>
+                <li>Titullin dhe datën (ose datat) e protestës.</li>
+                <li>
+                  Statusin e saj — e planifikuar, e konfirmuar, apo e
+                  përfunduar.
+                </li>
+                <li>
+                  Një burim (link lajmi, postim, ose faqe zyrtare), nëse ka.
+                </li>
+                <li>
+                  Kodin e konfirmimit — nëse je organizator/administrator i
+                  një kapitulli lokal dhe nuk e ke, kontakto ekipin e
+                  Flamingo Revolution përpara se të dërgosh.
+                </li>
+              </ul>
+            </details>
+
+            <iframe
+              id="submit-form-frame"
+              class="submit-form-frame"
+              title="Formulari: Shto një protestë"
+              loading="lazy"
+              hidden
+            ></iframe>
+
+            <div id="submit-form-empty" class="submit-form-empty">
+              <p>
+                Formulari ende nuk është konfiguruar. Administratorët duhet
+                të vendosin <code>SUBMIT_PROTEST_FORM_URL</code> te
+                <code>js/config.js</code>.
+              </p>
+            </div>
+          </div>
         </section>
       </dialog>
 
