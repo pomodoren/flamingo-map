@@ -3,6 +3,7 @@ import { escapeHtml, formatDate } from "./text-format.js";
 import { normalizeStatus, isProtestToday } from "./protest-schedule.js";
 import { getStatusLabel } from "./popup.js";
 import { source, map } from "./map-instance.js";
+import { getProtestDayCount } from "./protest-data.js";
 
 /*
  * The "Protestat e ardhshme" rail: every planned/confirmed/active/
@@ -81,8 +82,16 @@ export function renderUpcomingProtests(onOpen) {
     getUpcomingProtests();
 
   if (upcomingCountElement) {
+    // Count days, not entries — a single protest spanning several days
+    // (or with an explicit protestDays override) should add that many,
+    // matching how the sidebar's "Ditë protestash" stat is computed.
+    const upcomingDays = upcoming.reduce(
+      (total, protest) => total + getProtestDayCount(protest),
+      0
+    );
+
     upcomingCountElement.textContent =
-      String(upcoming.length);
+      String(upcomingDays);
   }
 
   if (upcoming.length === 0) {
@@ -111,9 +120,20 @@ export function renderUpcomingProtests(onOpen) {
           protest.country
         );
 
-        const date = formatDate(
+        // Multi-day protests (e.g. "7 gusht 2026 – 31 gusht 2026") were
+        // silently truncated to just the start date here, making a
+        // 25-day protest look like a single day in the rail even though
+        // it was already counted correctly in the badge/stats totals.
+        const startDate = formatDate(
           protest.startDate || protest.date
         );
+
+        const endDate = formatDate(protest.endDate);
+
+        const date =
+          endDate && endDate !== startDate
+            ? `${startDate} – ${endDate}`
+            : startDate;
 
         const status =
           normalizeStatus(

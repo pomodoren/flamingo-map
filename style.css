@@ -79,7 +79,7 @@ button {
 
 .map-panel {
   position: fixed;
-  z-index: 40;
+  z-index: 43;
   inset: 12px auto 12px 12px;
 
   width: min(var(--panel-width), calc(100vw - 56px));
