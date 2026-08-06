@@ -2688,20 +2688,6 @@
         "sourceUrl": ""
       },
       {
-        "id": "184",
-        "title": "Munich Protest #4",
-        "startDate": "2026-07-27",
-        "endDate": null,
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
-      },
-      {
         "id": "237",
         "title": "Munich Protest #8",
         "startDate": "2026-07-25",
@@ -2747,6 +2733,20 @@
         "id": "197",
         "title": "Munich Protest #5",
         "startDate": "2026-07-03",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "184",
+        "title": "Munich Protest #4",
+        "startDate": "2026-06-27",
         "endDate": null,
         "dayCount": 1,
         "status": "completed",
