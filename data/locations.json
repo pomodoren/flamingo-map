@@ -443,6 +443,20 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "276",
+        "title": "Tirana Proteston!",
+        "startDate": "2026-08-07",
+        "endDate": "2026-08-31",
+        "dayCount": 25,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "271",
         "title": "Tirana Proteston!",
         "startDate": "2026-08-06",
@@ -462,7 +476,7 @@
         "startDate": "2026-08-05",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -933,8 +947,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 35,
-    "protestCount": 69,
+    "protestRecordCount": 36,
+    "protestCount": 94,
     "markerStatus": "confirmed"
   },
   {
