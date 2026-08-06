@@ -456,10 +456,12 @@ cityDetailsDialogElement?.addEventListener(
   }
 );
 
-openSubmitDialogButton?.addEventListener(
-  "click",
-  openSubmitDialog
-);
+// The "Shto një protestë" control is a plain link to the spreadsheet for
+// now (see index.html), not a dialog trigger — so it isn't wired to
+// openSubmitDialog. Re-enable this once js/submit-dialog.js's embedded
+// form is ready:
+//
+// openSubmitDialogButton?.addEventListener("click", openSubmitDialog);
 
 submitProtestDialogElement?.addEventListener(
   "click",
