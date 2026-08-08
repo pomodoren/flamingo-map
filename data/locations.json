@@ -1300,7 +1300,7 @@
     "drive_gallery_url": "https://drive.google.com/drive/folders/1_yPmZWSGYdfD_oDT5GZJsAFIxmXU66pF",
     "protests": [
       {
-        "id": "288",
+        "id": "290",
         "title": "Vienna Proteston #15",
         "startDate": "2026-09-13",
         "endDate": null,
@@ -1314,7 +1314,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "286",
+        "id": "288",
         "title": "Vienna Proteston #14",
         "startDate": "2026-09-06",
         "endDate": null,
@@ -1328,7 +1328,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "284",
+        "id": "286",
         "title": "Vienna Proteston #13",
         "startDate": "2026-08-30",
         "endDate": null,
@@ -1342,7 +1342,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "282",
+        "id": "284",
         "title": "Vienna Proteston #12",
         "startDate": "2026-08-23",
         "endDate": null,
@@ -1356,7 +1356,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "280",
+        "id": "282",
         "title": "Vienna Proteston #11",
         "startDate": "2026-08-16",
         "endDate": null,
@@ -1370,7 +1370,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "277",
+        "id": "278",
         "title": "Vienna Proteston #10",
         "startDate": "2026-08-09",
         "endDate": null,
@@ -1656,7 +1656,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "289",
+        "id": "280",
         "title": "Vancouver Proteste #8",
         "startDate": "2026-08-09",
         "endDate": null,
@@ -2060,7 +2060,7 @@
     "drive_gallery_url": "https://drive.google.com/drive/u/0/folders/1THNCtJDvSEVGN_xMSsyvl37JWeQ191P-",
     "protests": [
       {
-        "id": "275",
+        "id": "276",
         "title": "Berlin Protest #10",
         "startDate": "2026-08-09",
         "endDate": null,
@@ -2744,7 +2744,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "287",
+        "id": "289",
         "title": "Munich Protest #15",
         "startDate": "2026-09-11",
         "endDate": null,
@@ -2758,7 +2758,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "285",
+        "id": "287",
         "title": "Munich Protest #14",
         "startDate": "2026-09-04",
         "endDate": null,
@@ -2772,7 +2772,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "283",
+        "id": "285",
         "title": "Munich Protest #13",
         "startDate": "2026-08-28",
         "endDate": null,
@@ -2786,7 +2786,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "281",
+        "id": "283",
         "title": "Munich Protest #12",
         "startDate": "2026-08-21",
         "endDate": null,
@@ -2800,7 +2800,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "279",
+        "id": "281",
         "title": "Munich Protest #11",
         "startDate": "2026-08-14",
         "endDate": null,
@@ -2819,7 +2819,7 @@
         "startDate": "2026-08-07",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "",
@@ -4582,7 +4582,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "276",
+        "id": "277",
         "title": "London Protest #13",
         "startDate": "2026-08-09",
         "endDate": null,
@@ -5116,7 +5116,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "278",
+        "id": "279",
         "title": "Philadelphia Protest #7",
         "startDate": "2026-08-09",
         "endDate": null,
