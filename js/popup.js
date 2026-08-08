@@ -1,6 +1,6 @@
 import { escapeHtml, safeUrl, formatDate } from "./text-format.js";
 import {
-  normalizeStatus,
+  getEffectiveStatus,
   sortProtests,
   countProtestDaysBySchedule,
 } from "./protest-schedule.js";
@@ -179,9 +179,7 @@ export function renderProtestItem(protest) {
       ? `${startDate} – ${endDate}`
       : startDate;
 
-  const status = normalizeStatus(
-    protest.status
-  );
+  const status = getEffectiveStatus(protest);
 
   const safeStatus = escapeHtml(status);
 

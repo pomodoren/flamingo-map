@@ -1,6 +1,6 @@
 import { upcomingListElement, upcomingCountElement } from "./dom-refs.js";
 import { escapeHtml, formatDate } from "./text-format.js";
-import { normalizeStatus, isProtestToday } from "./protest-schedule.js";
+import { getEffectiveStatus, isProtestToday } from "./protest-schedule.js";
 import { getStatusLabel } from "./popup.js";
 import { source, map } from "./map-instance.js";
 import { getProtestDayCount } from "./protest-data.js";
@@ -27,10 +27,11 @@ export function getUpcomingProtests() {
         feature.get("protests") || [];
 
       protests.forEach(protest => {
+        // Effective, not raw: a "planned" protest whose date has already
+        // passed is treated as completed and drops out of this list,
+        // even if the spreadsheet still says "planned".
         const status =
-          normalizeStatus(
-            protest.status
-          );
+          getEffectiveStatus(protest);
 
         if (
           ![
@@ -135,10 +136,9 @@ export function renderUpcomingProtests(onOpen) {
             ? `${startDate} – ${endDate}`
             : startDate;
 
-        const status =
-          normalizeStatus(
-            protest.status
-          );
+        // Already the effective status — computed once in
+        // getUpcomingProtests() above.
+        const status = protest.status;
 
         const statusLabel =
           escapeHtml(

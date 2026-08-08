@@ -117,7 +117,7 @@ export function countProtestDaysBySchedule(protests) {
         getProtestEndDate(protest)
       );
 
-      if (normalizeStatus(protest.status) === "planned") {
+      if (getEffectiveStatus(protest) === "planned") {
         totals.planned += days;
       } else {
         totals.actual += days;
@@ -194,4 +194,33 @@ export function isProtestToday(protest) {
     today >= start &&
     today <= (end || start)
   );
+}
+
+// A protest whose status is still "planned" in the spreadsheet but whose
+// date has already passed reads as "completed" everywhere in the UI —
+// the sheet isn't always updated the day a protest actually happens.
+// Every other status (confirmed/active/tentative/completed/cancelled) is
+// trusted as written.
+export function getEffectiveStatus(protest) {
+  const status = normalizeStatus(protest.status);
+
+  if (status !== "planned") {
+    return status;
+  }
+
+  const end = getProtestDateKey(
+    protest.endDate ||
+    protest.end_date ||
+    protest.startDate ||
+    protest.start_date ||
+    protest.date
+  );
+
+  if (!end) {
+    return status;
+  }
+
+  const today = getDateKeyInTimeZone(new Date());
+
+  return end < today ? "completed" : status;
 }

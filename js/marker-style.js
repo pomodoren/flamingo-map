@@ -1,5 +1,5 @@
 import {
-  normalizeStatus,
+  getEffectiveStatus,
   countProtestDaysBySchedule,
 } from "./protest-schedule.js";
 
@@ -23,7 +23,7 @@ export function getFilteredProtests(feature, selectedStatuses) {
 
   return protests.filter(protest =>
     selectedStatuses.has(
-      normalizeStatus(protest.status)
+      getEffectiveStatus(protest)
     )
   );
 }
@@ -39,18 +39,18 @@ export function getMarkerStatus(feature, selectedStatuses) {
 
   const hasActive = protests.some(
     protest =>
-      normalizeStatus(protest.status) === "active"
+      getEffectiveStatus(protest) === "active"
   );
 
   const hasConfirmed = protests.some(protest =>
     ["confirmed", "planned"].includes(
-      normalizeStatus(protest.status)
+      getEffectiveStatus(protest)
     )
   );
 
   const hasTentative = protests.some(
     protest =>
-      normalizeStatus(protest.status) ===
+      getEffectiveStatus(protest) ===
       "tentative"
   );
 

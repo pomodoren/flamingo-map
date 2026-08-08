@@ -1,9 +1,5 @@
 import { getProtestDayCount } from "./protest-data.js";
-
-function normalizeStatus(value) {
-  const status = String(value || "completed").trim().toLowerCase();
-  return status === "planned" ? "planned" : status;
-}
+import { getEffectiveStatus } from "./protest-schedule.js";
 
 export function calculateProtestStatistics(features) {
   const stats = {
@@ -21,7 +17,7 @@ export function calculateProtestStatistics(features) {
 
     for (const protest of protests) {
       const days = getProtestDayCount(protest);
-      const status = normalizeStatus(protest.status);
+      const status = getEffectiveStatus(protest);
 
       if (status === "planned") {
         stats.plannedDays += days;
