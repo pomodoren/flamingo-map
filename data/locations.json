@@ -5233,6 +5233,20 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "291",
+        "title": "Washington DC Protest",
+        "startDate": "2026-08-08",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Embassy of Albania",
+        "description": "ora 11.00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "260",
         "title": "Washington DC Protest",
         "startDate": "2026-08-01",
@@ -5331,9 +5345,9 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 7,
-    "protestCount": 7,
-    "markerStatus": "completed"
+    "protestRecordCount": 8,
+    "protestCount": 8,
+    "markerStatus": "confirmed"
   },
   {
     "id": "waterbury-united-states",
