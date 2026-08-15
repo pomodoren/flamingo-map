@@ -106,27 +106,57 @@ export function countInclusiveDaysBetweenDates(startDate, endDate) {
 }
 
 // Splits protest days into "actual" (already confirmed/active/tentative/
-// completed) and "planned" (status: planned) so that planned protests don't
-// inflate the main count shown on the map — they're surfaced separately
-// instead, since counting them together can be misleading.
+// completed, or already-elapsed days of an in-progress planned range) and
+// "planned" (still-upcoming days) so that only what's genuinely still
+// ahead inflates the "planned" count — see splitProtestDays() below.
 export function countProtestDaysBySchedule(protests) {
   return protests.reduce(
     (totals, protest) => {
-      const days = countInclusiveDaysBetweenDates(
-        getProtestStartDate(protest),
-        getProtestEndDate(protest)
-      );
+      const { actual, planned } = splitProtestDays(protest);
 
-      if (getEffectiveStatus(protest) === "planned") {
-        totals.planned += days;
-      } else {
-        totals.actual += days;
-      }
+      totals.actual += actual;
+      totals.planned += planned;
 
       return totals;
     },
     { actual: 0, planned: 0 }
   );
+}
+
+// Splits a single protest's day range into "actual" and "planned" days.
+// A protest that's still (effectively) "planned" but already under way —
+// e.g. a "7 Aug – 31 Aug" range when today is the 9th — had every one of
+// its days counted as "planned" even though the 7th and 8th already
+// happened. Days up to and including today now count as "actual"; only
+// the remaining days ahead count as "planned".
+export function splitProtestDays(protest) {
+  const start = getProtestStartDate(protest);
+  const end = getProtestEndDate(protest);
+  const totalDays = countInclusiveDaysBetweenDates(start, end);
+
+  if (getEffectiveStatus(protest) !== "planned") {
+    return { actual: totalDays, planned: 0 };
+  }
+
+  const todayKey = getDateKeyInTimeZone(new Date());
+  const startKey = start ? getDateKeyInTimeZone(start) : "";
+
+  // Hasn't started yet — nothing has happened, every day is still ahead.
+  if (!startKey || startKey > todayKey) {
+    return { actual: 0, planned: totalDays };
+  }
+
+  const elapsedDays = countInclusiveDaysBetweenDates(
+    start,
+    parseProtestDate(todayKey)
+  );
+
+  const actual = Math.min(elapsedDays, totalDays);
+
+  return {
+    actual,
+    planned: totalDays - actual,
+  };
 }
 
 const CENTRAL_EUROPE_TIMEZONE = "Europe/Berlin";

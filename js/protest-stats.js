@@ -1,5 +1,5 @@
 import { getProtestDayCount } from "./protest-data.js";
-import { getEffectiveStatus } from "./protest-schedule.js";
+import { splitProtestDays } from "./protest-schedule.js";
 
 export function calculateProtestStatistics(features) {
   const stats = {
@@ -16,17 +16,16 @@ export function calculateProtestStatistics(features) {
     const protests = feature.get("protests") || [];
 
     for (const protest of protests) {
-      const days = getProtestDayCount(protest);
-      const status = getEffectiveStatus(protest);
+      // Days that already happened count as actual even for an
+      // in-progress "planned" range — only the days still ahead count
+      // as planned. See splitProtestDays() for why.
+      const { actual, planned } = splitProtestDays(protest);
 
-      if (status === "planned") {
-        stats.plannedDays += days;
-      } else {
-        stats.actualDays += days;
-      }
+      stats.actualDays += actual;
+      stats.plannedDays += planned;
 
       if (protest.importance === "major" || protest.major === true) {
-        stats.majorDays += days;
+        stats.majorDays += getProtestDayCount(protest);
       }
     }
   }
