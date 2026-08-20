@@ -4733,6 +4733,20 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "292",
+        "title": "Basel Protest #4",
+        "startDate": "2026-08-29",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Theodorskirche",
+        "description": "Ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "231",
         "title": "Basel Protest #3",
         "startDate": "2026-07-25",
@@ -4775,9 +4789,9 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 3,
-    "protestCount": 3,
-    "markerStatus": "completed"
+    "protestRecordCount": 4,
+    "protestCount": 4,
+    "markerStatus": "confirmed"
   },
   {
     "id": "zurich-switzerland",
