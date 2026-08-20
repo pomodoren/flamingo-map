@@ -952,6 +952,20 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "293",
+        "title": "Vlora Proteston",
+        "startDate": "2026-08-21",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Sheshi i Flamurit",
+        "description": "Ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "18",
         "title": "Vlorë solidarity protest",
         "startDate": "2026-06-04",
@@ -1008,9 +1022,9 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 4,
-    "protestCount": 4,
-    "markerStatus": "major"
+    "protestRecordCount": 5,
+    "protestCount": 5,
+    "markerStatus": "confirmed"
   },
   {
     "id": "fushe kruje-albania",
