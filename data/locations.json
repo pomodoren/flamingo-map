@@ -80,6 +80,34 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "305",
+        "title": "Revolta Qytetare nuk ndalet!",
+        "startDate": "2026-06-17",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Sheshi Para Kalase se Elbasanit",
+        "description": "Ora 19:00",
+        "source": "zeri_i_elbasanit",
+        "sourceUrl": "https://www.instagram.com/p/DZnNjWTtwWK/"
+      },
+      {
+        "id": "304",
+        "title": "Elbasani Zgjohet!",
+        "startDate": "2026-06-05",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Sheshi Kryesor",
+        "description": "Ora 18:00",
+        "source": "zeri_i_elbasanit",
+        "sourceUrl": "https://www.instagram.com/p/DZMuabqN2Cr/"
+      },
+      {
         "id": "9",
         "title": "Elbasan solidarity protests",
         "startDate": "2026-06-04",
@@ -94,8 +122,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
+    "protestRecordCount": 3,
+    "protestCount": 3,
     "markerStatus": "completed"
   },
   {
