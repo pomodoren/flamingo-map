@@ -47,6 +47,34 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "307",
+        "title": "Proteste",
+        "startDate": "2026-06-10",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Sheshi Liria",
+        "description": "Ora 18:00",
+        "source": "",
+        "sourceUrl": "https://www.instagram.com/p/DZa2NEjF6oO/"
+      },
+      {
+        "id": "308",
+        "title": "Proteste per zvernecin",
+        "startDate": "2026-06-05",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Sheshi Liria",
+        "description": "Ora 18:00",
+        "source": "",
+        "sourceUrl": "https://www.instagram.com/p/DZNn5FBN254/"
+      },
+      {
         "id": "8",
         "title": "Durrës solidarity protest",
         "startDate": "2026-06-04",
@@ -55,14 +83,28 @@
         "status": "completed",
         "importance": "normal",
         "participants": null,
-        "location": "",
-        "description": "",
+        "location": "Sheshi Liria",
+        "description": "Ora 18:00",
         "source": "",
-        "sourceUrl": ""
+        "sourceUrl": "https://www.instagram.com/p/DZLBZyoqTjR/"
+      },
+      {
+        "id": "306",
+        "title": "Kunder resortit ne Zvernec",
+        "startDate": "2026-06-03",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Sheshi Liria",
+        "description": "Ora 18:00",
+        "source": "",
+        "sourceUrl": "https://www.instagram.com/p/DZIKel5jVkt/"
       }
     ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
+    "protestRecordCount": 4,
+    "protestCount": 4,
     "markerStatus": "completed"
   },
   {
