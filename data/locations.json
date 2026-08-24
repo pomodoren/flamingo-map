@@ -1022,12 +1022,26 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "309",
+        "title": "Vlora Proteston",
+        "startDate": "2026-08-29",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Sheshi i Flamurit",
+        "description": "Ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "293",
         "title": "Vlora Proteston",
         "startDate": "2026-08-21",
         "endDate": null,
         "dayCount": 1,
-        "status": "planned",
+        "status": "completed",
         "importance": "normal",
         "participants": null,
         "location": "Sheshi i Flamurit",
@@ -1232,8 +1246,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 15,
-    "protestCount": 15,
+    "protestRecordCount": 16,
+    "protestCount": 16,
     "markerStatus": "confirmed"
   },
   {
