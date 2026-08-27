@@ -3699,6 +3699,34 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "311",
+        "title": "Genoa Protest #9",
+        "startDate": "2026-08-30",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Piazza \"Matteotti\", Genova",
+        "description": "ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "310",
+        "title": "Genoa Protest #8",
+        "startDate": "2026-08-23",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Piazza \"Matteotti\", Genova",
+        "description": "ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "233",
         "title": "Genoa Protest #7",
         "startDate": "2026-07-19",
@@ -3708,7 +3736,7 @@
         "importance": "normal",
         "participants": "60",
         "location": "Piazza \"Matteotti\", Genova",
-        "description": "stopped due to hot weather, protest to restart on September 6th",
+        "description": "",
         "source": "",
         "sourceUrl": ""
       },
@@ -3797,9 +3825,9 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 7,
-    "protestCount": 7,
-    "markerStatus": "major"
+    "protestRecordCount": 9,
+    "protestCount": 9,
+    "markerStatus": "confirmed"
   },
   {
     "id": "milan-italy",
