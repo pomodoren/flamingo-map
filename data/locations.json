@@ -2039,6 +2039,34 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "315",
+        "title": "Te presim nen kuqezi.",
+        "startDate": "2026-08-29",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Sheshi Nene Tereza, Metro Monk",
+        "description": "ora 12:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "314",
+        "title": "Zeri Shqiptar refuzon te heshte",
+        "startDate": "2026-08-22",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Sheshi Nene Tereza, Metro Monk",
+        "description": "ora 12:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "245",
         "title": "Jemi nje",
         "startDate": "2026-07-25",
@@ -2053,8 +2081,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 1,
-    "protestCount": 1,
+    "protestRecordCount": 3,
+    "protestCount": 3,
     "markerStatus": "completed"
   },
   {
