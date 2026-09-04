@@ -2340,6 +2340,48 @@
     "drive_gallery_url": "https://drive.google.com/drive/u/0/folders/1THNCtJDvSEVGN_xMSsyvl37JWeQ191P-",
     "protests": [
       {
+        "id": "318",
+        "title": "Berlin Protest #14",
+        "startDate": "2026-09-07",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Ambasada Shqiptare",
+        "description": "ora 17:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "317",
+        "title": "Berlin Protest #13",
+        "startDate": "2026-08-30",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Rotes Rathaus",
+        "description": "ora 18:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "316",
+        "title": "Berlin Protest #12",
+        "startDate": "2026-08-23",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Rotes Rathaus",
+        "description": "ora 18:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "297",
         "title": "Berlin Protest #11",
         "startDate": "2026-08-16",
@@ -2494,9 +2536,9 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 11,
-    "protestCount": 11,
-    "markerStatus": "major"
+    "protestRecordCount": 14,
+    "protestCount": 14,
+    "markerStatus": "confirmed"
   },
   {
     "id": "bremen-germany",
