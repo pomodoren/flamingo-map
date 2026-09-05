@@ -1880,6 +1880,20 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "319",
+        "title": "Vancouver Proteste #11",
+        "startDate": "2026-09-12",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Vancouver Public Library",
+        "description": "Ora 18:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "304",
         "title": "Vancouver Proteste #10",
         "startDate": "2026-08-29",
@@ -2020,8 +2034,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 10,
-    "protestCount": 10,
+    "protestRecordCount": 11,
+    "protestCount": 11,
     "markerStatus": "confirmed"
   },
   {
