@@ -3066,9 +3066,23 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "320",
+        "title": "Munich Protest #16",
+        "startDate": "2026-09-11",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "308",
         "title": "Munich Protest #15",
-        "startDate": "2026-09-11",
+        "startDate": "2026-09-07",
         "endDate": null,
         "dayCount": 1,
         "status": "planned",
@@ -3276,8 +3290,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 15,
-    "protestCount": 15,
+    "protestRecordCount": 16,
+    "protestCount": 16,
     "markerStatus": "confirmed"
   },
   {
