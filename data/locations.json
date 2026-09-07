@@ -2053,6 +2053,20 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "321",
+        "title": "Montreali Proteston",
+        "startDate": "2026-09-06",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Sheshi Nene Tereza, Metro Monk",
+        "description": "ora 12:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "315",
         "title": "Te presim nen kuqezi.",
         "startDate": "2026-08-29",
@@ -2095,8 +2109,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 3,
-    "protestCount": 3,
+    "protestRecordCount": 4,
+    "protestCount": 4,
     "markerStatus": "completed"
   },
   {
