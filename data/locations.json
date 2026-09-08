@@ -2194,6 +2194,20 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "324",
+        "title": "Flamingo Revolution Paris",
+        "startDate": "2026-09-06",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "Place du Trocadero e du 11 novembre",
+        "description": "Ora 16:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "219",
         "title": "Paris Protest #3",
         "startDate": "2026-07-12",
@@ -2236,8 +2250,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 3,
-    "protestCount": 3,
+    "protestRecordCount": 4,
+    "protestCount": 4,
     "markerStatus": "completed"
   },
   {
@@ -5490,6 +5504,20 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "323",
+        "title": "Boston Stands with Albania",
+        "startDate": "2026-09-13",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Boston Common",
+        "description": "ora 17:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "251",
         "title": "Boston Protest #3",
         "startDate": "2026-07-26",
@@ -5532,9 +5560,9 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 3,
-    "protestCount": 3,
-    "markerStatus": "completed"
+    "protestRecordCount": 4,
+    "protestCount": 4,
+    "markerStatus": "confirmed"
   },
   {
     "id": "chicago-usa",
