@@ -3109,6 +3109,34 @@
     "protests": [
       {
         "id": "320",
+        "title": "Munich Protest #18",
+        "startDate": "2026-09-25",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Odeonsplatz",
+        "description": "Ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "320",
+        "title": "Munich Protest #17",
+        "startDate": "2026-09-18",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Karlsplatz",
+        "description": "Ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "320",
         "title": "Munich Protest #16",
         "startDate": "2026-09-11",
         "endDate": null,
@@ -3116,8 +3144,8 @@
         "status": "planned",
         "importance": "normal",
         "participants": null,
-        "location": "",
-        "description": "",
+        "location": "Rindermarkt",
+        "description": "Ora 19:00",
         "source": "",
         "sourceUrl": ""
       },
@@ -3332,8 +3360,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 16,
-    "protestCount": 16,
+    "protestRecordCount": 18,
+    "protestCount": 18,
     "markerStatus": "confirmed"
   },
   {
