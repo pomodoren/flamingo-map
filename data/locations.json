@@ -4122,10 +4122,24 @@
         "description": "",
         "source": "",
         "sourceUrl": ""
+      },
+      {
+        "id": "325",
+        "title": "Milan Protest #17",
+        "startDate": "2026-06-06",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "completed",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "",
+        "source": "",
+        "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 8,
-    "protestCount": 8,
+    "protestRecordCount": 9,
+    "protestCount": 9,
     "markerStatus": "completed"
   },
   {
