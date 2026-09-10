@@ -3109,6 +3109,76 @@
     "protests": [
       {
         "id": "320",
+        "title": "Munich Protest #23",
+        "startDate": "2026-10-30",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Odeonsplatz",
+        "description": "Ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "320",
+        "title": "Munich Protest #22",
+        "startDate": "2026-10-23",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Karlsplatz",
+        "description": "Ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "320",
+        "title": "Munich Protest #21",
+        "startDate": "2026-10-16",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Marienplatz",
+        "description": "Ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "320",
+        "title": "Munich Protest #20",
+        "startDate": "2026-10-09",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Odeonsplatz",
+        "description": "Ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "320",
+        "title": "Munich Protest #19",
+        "startDate": "2026-10-02",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Odeonsplatz",
+        "description": "Ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "320",
         "title": "Munich Protest #18",
         "startDate": "2026-09-25",
         "endDate": null,
@@ -3360,8 +3430,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 18,
-    "protestCount": 18,
+    "protestRecordCount": 23,
+    "protestCount": 23,
     "markerStatus": "confirmed"
   },
   {
