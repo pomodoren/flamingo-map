@@ -1022,6 +1022,20 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "327",
+        "title": "Vlora Proteston",
+        "startDate": "2026-09-11",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "",
+        "description": "Ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "303",
         "title": "Vlora Proteston",
         "startDate": "2026-08-29",
@@ -1246,8 +1260,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 16,
-    "protestCount": 16,
+    "protestRecordCount": 17,
+    "protestCount": 17,
     "markerStatus": "confirmed"
   },
   {
@@ -4012,6 +4026,34 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "326",
+        "title": "Marshim per Shqiperine",
+        "startDate": "2026-09-20",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Piazza Cordusio",
+        "description": "Ora 10:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "325",
+        "title": "Milan Protest #17",
+        "startDate": "2026-09-13",
+        "endDate": null,
+        "dayCount": 1,
+        "status": "planned",
+        "importance": "normal",
+        "participants": null,
+        "location": "Piazza Mercati, Milano",
+        "description": "Ora 18:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "253",
         "title": "Milan Protest #8",
         "startDate": "2026-07-26",
@@ -4122,25 +4164,11 @@
         "description": "",
         "source": "",
         "sourceUrl": ""
-      },
-      {
-        "id": "325",
-        "title": "Milan Protest #17",
-        "startDate": "2026-06-06",
-        "endDate": null,
-        "dayCount": 1,
-        "status": "completed",
-        "importance": "normal",
-        "participants": null,
-        "location": "",
-        "description": "",
-        "source": "",
-        "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 9,
-    "protestCount": 9,
-    "markerStatus": "completed"
+    "protestRecordCount": 10,
+    "protestCount": 10,
+    "markerStatus": "confirmed"
   },
   {
     "id": "pistoia-italy",
