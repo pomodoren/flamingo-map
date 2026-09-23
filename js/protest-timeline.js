@@ -1,8 +1,9 @@
 /*
- * Weekly timeline chart in the sidebar: how many protests were happening
- * in each week (Monday–Sunday). A multi-day protest counts once in every
- * week it overlaps. Bars are stacked into "actual" (already happened) and
- * "planned" (still ahead), by date — the same split as the stats above it.
+ * Weekly timeline chart in the sidebar: how many protest days fell in
+ * each week (Monday–Sunday). Like the "Ditë protestash" stat, every day a
+ * protest spans counts — a month-long daily protest adds 7 to each full
+ * week. Bars are stacked into "actual" (up to and including today) and
+ * "planned" (still ahead), the same split as the stats above it.
  */
 
 import {
@@ -49,18 +50,14 @@ export function calculateWeeklyProtests(features) {
       const end = rawEnd < start ? start : rawEnd;
 
       for (
-        let week = startOfWeek(start);
-        week <= end;
-        week = new Date(week.getTime() + WEEK_MS)
+        let day = start;
+        day <= end;
+        day = new Date(day.getTime() + DAY_MS)
       ) {
-        const key = week.getTime();
+        const key = startOfWeek(day).getTime();
         const bucket = weeks.get(key) ?? { actual: 0, planned: 0 };
 
-        // First day of this protest that falls inside the week.
-        const firstDayInWeek = start > week ? start : week;
-        const isPlanned = firstDayInWeek > today;
-
-        bucket[isPlanned ? "planned" : "actual"] += 1;
+        bucket[day > today ? "planned" : "actual"] += 1;
         weeks.set(key, bucket);
       }
     }
@@ -197,7 +194,7 @@ export function renderProtestTimeline(container, features) {
     </div>
 
     <table class="visually-hidden">
-      <caption>Protesta në javë</caption>
+      <caption>Ditë protestash në javë</caption>
       <thead>
         <tr><th scope="col">Java</th><th scope="col">Të ndodhura</th><th scope="col">Të planifikuara</th></tr>
       </thead>
