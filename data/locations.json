@@ -482,7 +482,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "360",
+        "id": "363",
         "title": "Tirana Proteston!",
         "startDate": "2026-10-01",
         "endDate": "2026-10-31",
@@ -981,7 +981,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "341",
+        "id": "342",
         "title": "Vlora Proteston",
         "startDate": "2026-09-11",
         "endDate": null,
@@ -1463,7 +1463,7 @@
     "drive_gallery_url": "https://drive.google.com/drive/folders/1byqNcmaf99zfc7GyofPZZDkLlTsUEIPd",
     "protests": [
       {
-        "id": "344",
+        "id": "345",
         "title": "Vienna Proteston #15",
         "startDate": "2026-09-13",
         "endDate": null,
@@ -1676,7 +1676,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "362",
+        "id": "365",
         "title": "Brussels Protest",
         "startDate": "2026-10-03",
         "endDate": null,
@@ -1689,7 +1689,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "343",
+        "id": "344",
         "title": "Brussels Protest",
         "startDate": "2026-09-12",
         "endDate": null,
@@ -1821,7 +1821,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "342",
+        "id": "343",
         "title": "Vancouver Proteste #11",
         "startDate": "2026-09-12",
         "endDate": null,
@@ -2114,7 +2114,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "351",
+        "id": "352",
         "title": "Paris Protest",
         "startDate": "2026-09-20",
         "endDate": null,
@@ -2316,7 +2316,7 @@
     "drive_gallery_url": "https://drive.google.com/drive/u/0/folders/1THNCtJDvSEVGN_xMSsyvl37JWeQ191P-",
     "protests": [
       {
-        "id": "359",
+        "id": "362",
         "title": "Berlin Bike",
         "startDate": "2026-09-27",
         "endDate": null,
@@ -2329,7 +2329,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "354",
+        "id": "355",
         "title": "Berlin Documentary Screening",
         "startDate": "2026-09-24",
         "endDate": null,
@@ -2342,7 +2342,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "352",
+        "id": "353",
         "title": "Berlin Protest #16",
         "startDate": "2026-09-20",
         "endDate": null,
@@ -2355,7 +2355,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "348",
+        "id": "349",
         "title": "Berlin Protest #15",
         "startDate": "2026-09-13",
         "endDate": null,
@@ -2368,7 +2368,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "339",
+        "id": "340",
         "title": "Berlin Protest #14",
         "startDate": "2026-09-07",
         "endDate": null,
@@ -3084,7 +3084,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "366",
+        "id": "369",
         "title": "Munich Protest #23",
         "startDate": "2026-10-30",
         "endDate": null,
@@ -3097,7 +3097,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "365",
+        "id": "368",
         "title": "Munich Protest #22",
         "startDate": "2026-10-23",
         "endDate": null,
@@ -3110,7 +3110,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "364",
+        "id": "367",
         "title": "Munich Protest #21",
         "startDate": "2026-10-16",
         "endDate": null,
@@ -3123,7 +3123,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "363",
+        "id": "366",
         "title": "Munich Protest #20",
         "startDate": "2026-10-09",
         "endDate": null,
@@ -3136,7 +3136,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "361",
+        "id": "364",
         "title": "Munich Protest #19",
         "startDate": "2026-10-02",
         "endDate": null,
@@ -3149,7 +3149,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "355",
+        "id": "356",
         "title": "Munich Protest #18",
         "startDate": "2026-09-25",
         "endDate": null,
@@ -3162,7 +3162,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "349",
+        "id": "350",
         "title": "Munich Protest #17",
         "startDate": "2026-09-18",
         "endDate": null,
@@ -3175,7 +3175,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "340",
+        "id": "341",
         "title": "Munich Protest #16",
         "startDate": "2026-09-11",
         "endDate": null,
@@ -3188,7 +3188,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "338",
+        "id": "339",
         "title": "Munich Protest #15",
         "startDate": "2026-09-07",
         "endDate": null,
@@ -3553,6 +3553,37 @@
     "protestCount": 8
   },
   {
+    "id": "bonn-germany",
+    "title": "Bonn",
+    "city": "Bonn",
+    "country": "Germany",
+    "latitude": 50.7374,
+    "longitude": 7.0982,
+    "type": "protest-city",
+    "chapterActive": false,
+    "cityUrl": "",
+    "instagramUrl": "",
+    "facebookUrl": "",
+    "drive_gallery_url": "",
+    "protests": [
+      {
+        "id": "335",
+        "title": "Bonn Protest",
+        "startDate": "2026-09-06",
+        "endDate": null,
+        "dayCount": 1,
+        "importance": "normal",
+        "participants": null,
+        "location": "Münsterplatz",
+        "description": "Ora 17:30",
+        "source": "",
+        "sourceUrl": ""
+      }
+    ],
+    "protestRecordCount": 1,
+    "protestCount": 1
+  },
+  {
     "id": "athens-greece",
     "title": "Athens",
     "city": "Athens",
@@ -3839,7 +3870,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "356",
+        "id": "359",
         "title": "Florence Protest",
         "startDate": "2026-09-27",
         "endDate": null,
@@ -4057,7 +4088,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "358",
+        "id": "361",
         "title": "Milan Protest",
         "startDate": "2026-09-27",
         "endDate": null,
@@ -4070,7 +4101,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "350",
+        "id": "351",
         "title": "Marshim per Shqiperine",
         "startDate": "2026-09-20",
         "endDate": null,
@@ -4083,7 +4114,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "346",
+        "id": "347",
         "title": "Milan Protest #17",
         "startDate": "2026-09-13",
         "endDate": null,
@@ -5394,7 +5425,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "357",
+        "id": "360",
         "title": "London Protest",
         "startDate": "2026-09-27",
         "endDate": null,
@@ -5407,7 +5438,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "353",
+        "id": "354",
         "title": "London Protest #19",
         "startDate": "2026-09-20",
         "endDate": null,
@@ -5420,7 +5451,7 @@
         "sourceUrl": ""
       },
       {
-        "id": "347",
+        "id": "348",
         "title": "London Protest",
         "startDate": "2026-09-13",
         "endDate": null,
@@ -5672,7 +5703,7 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "345",
+        "id": "346",
         "title": "Boston Stands with Albania",
         "startDate": "2026-09-13",
         "endDate": null,
@@ -5887,6 +5918,32 @@
     "drive_gallery_url": "",
     "protests": [
       {
+        "id": "358",
+        "title": "Anti-Rama Demonstration",
+        "startDate": "2026-09-26",
+        "endDate": null,
+        "dayCount": 1,
+        "importance": "normal",
+        "participants": null,
+        "location": "Hilton Hotel, NJ",
+        "description": "ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
+        "id": "357",
+        "title": "Anti-Rama Demonstration",
+        "startDate": "2026-09-25",
+        "endDate": null,
+        "dayCount": 1,
+        "importance": "normal",
+        "participants": null,
+        "location": "OKB Offices",
+        "description": "Ora 19:00",
+        "source": "",
+        "sourceUrl": ""
+      },
+      {
         "id": "273",
         "title": "New York Protest #8",
         "startDate": "2026-08-02",
@@ -5991,8 +6048,8 @@
         "sourceUrl": ""
       }
     ],
-    "protestRecordCount": 8,
-    "protestCount": 8
+    "protestRecordCount": 10,
+    "protestCount": 10
   },
   {
     "id": "philadelphia-usa",
@@ -6257,12 +6314,12 @@
     "protestCount": 1
   },
   {
-    "id": "bonn-germany",
-    "title": "Bonn",
-    "city": "Bonn",
-    "country": "Germany",
-    "latitude": 50.7374,
-    "longitude": 7.0982,
+    "id": "new-jersey-usa",
+    "title": "New Jersey",
+    "city": "New Jersey",
+    "country": "United States",
+    "latitude": 40.0583,
+    "longitude": -74.4057,
     "type": "protest-city",
     "chapterActive": false,
     "cityUrl": "",
@@ -6271,15 +6328,15 @@
     "drive_gallery_url": "",
     "protests": [
       {
-        "id": "335",
-        "title": "Bonn Protest",
+        "id": "338",
+        "title": "New Jersey anti-Berisha Demonstration",
         "startDate": "2026-09-06",
         "endDate": null,
         "dayCount": 1,
         "importance": "normal",
         "participants": null,
-        "location": "Münsterplatz",
-        "description": "Ora 17:30",
+        "location": "",
+        "description": "",
         "source": "",
         "sourceUrl": ""
       }
