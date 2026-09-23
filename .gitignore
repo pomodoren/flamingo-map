@@ -1,0 +1,17 @@
+# Local secrets
+.env
+.env.*
+
+# Dependencies (none are needed, but in case someone runs npm install)
+node_modules/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Editor / OS files
+.vscode/
+.idea/
+*.swp
+.DS_Store
+Thumbs.db

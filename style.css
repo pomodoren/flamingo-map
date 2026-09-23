@@ -1936,3 +1936,134 @@ button {
   border-radius: 5px;
   font-size: .84em;
 }
+
+/* =========================
+   Weekly protest timeline
+   ========================= */
+
+.timeline-chart {
+  position: relative;
+  padding-top: 14px;
+}
+
+.timeline-svg {
+  display: block;
+  overflow: visible;
+}
+
+.timeline-grid {
+  stroke: #ececea;
+  stroke-width: 1;
+}
+
+.timeline-baseline {
+  stroke: #d4d4d0;
+  stroke-width: 1;
+}
+
+.timeline-axis {
+  fill: var(--muted);
+  font-size: 10.5px;
+}
+
+.timeline-hit {
+  fill: transparent;
+}
+
+.timeline-actual {
+  fill: var(--status-completed);
+}
+
+.timeline-planned {
+  fill: var(--status-confirmed);
+}
+
+.timeline-bar.is-active .timeline-hit {
+  fill: rgba(20, 20, 20, 0.05);
+}
+
+.timeline-max,
+.timeline-mid {
+  position: absolute;
+  right: 0;
+  color: var(--muted);
+  font-size: 10.5px;
+  line-height: 1;
+  pointer-events: none;
+}
+
+.timeline-max {
+  top: 0;
+}
+
+.timeline-mid {
+  top: calc(14px + 48px - 12px);
+}
+
+.timeline-tooltip {
+  position: absolute;
+  top: 0;
+  z-index: 1;
+  display: grid;
+  gap: 3px;
+
+  min-width: 150px;
+  padding: 8px 10px;
+
+  color: var(--text);
+  font-size: .78rem;
+  white-space: nowrap;
+  pointer-events: none;
+
+  background: var(--surface-solid);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.timeline-tooltip[hidden] {
+  display: none;
+}
+
+.timeline-tooltip span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: #555;
+}
+
+.timeline-tooltip b {
+  margin-left: auto;
+  padding-left: 10px;
+  color: var(--text);
+}
+
+.timeline-legend {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+  margin-top: 10px;
+  color: #666;
+  font-size: .8rem;
+}
+
+.timeline-legend > span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.timeline-empty {
+  margin: 0;
+  color: var(--muted);
+  font-size: .82rem;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}

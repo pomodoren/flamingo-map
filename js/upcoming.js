@@ -1,13 +1,16 @@
 import { upcomingListElement, upcomingCountElement } from "./dom-refs.js";
 import { escapeHtml, formatDate } from "./text-format.js";
-import { getEffectiveStatus, isProtestToday } from "./protest-schedule.js";
+import {
+  getEffectiveStatus,
+  isProtestToday,
+  splitProtestDays,
+} from "./protest-schedule.js";
 import { getStatusLabel } from "./popup.js";
 import { source, map } from "./map-instance.js";
-import { getProtestDayCount } from "./protest-data.js";
 
 /*
  * The "Protestat e ardhshme" rail: every planned/confirmed/active/
- * tentative protest across all cities, newest-first, independent of the
+ * tentative protest across all cities, soonest-first, independent of the
  * map's status filter.
  */
 
@@ -84,10 +87,13 @@ export function renderUpcomingProtests(onOpen) {
 
   if (upcomingCountElement) {
     // Count days, not entries — a single protest spanning several days
-    // (or with an explicit protestDays override) should add that many,
-    // matching how the sidebar's "Ditë protestash" stat is computed.
+    // should add that many. For one already under way ("active"), only
+    // today and the days still ahead count, not the ones already elapsed.
     const upcomingDays = upcoming.reduce(
-      (total, protest) => total + getProtestDayCount(protest),
+      (total, protest) =>
+        total +
+        splitProtestDays(protest).planned +
+        (protest.status === "active" ? 1 : 0),
       0
     );
 

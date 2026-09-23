@@ -1,6 +1,6 @@
 import fs from "node:fs/promises";
 
-const SHEET_ID = "1i07VQru-t1-KmDzw84lkuXW2D0horxup";
+const SHEET_ID = "1heUY-f0dq52AXP2zQl7WQjNXWURlpwB_";
 
 const citiesUrl =
   `https://docs.google.com/spreadsheets/d/${SHEET_ID}/export?format=csv&gid=774046949`;
@@ -40,7 +40,6 @@ validateHeaders(
     "title",
     "start_date",
     "end_date",
-    "status",
     "importance",
     "participants",
     "location",
@@ -81,7 +80,6 @@ for (let index = 0; index < protestRows.items.length; index += 1) {
     startDate: protest.startDate,
     endDate: protest.endDate,
     dayCount: protest.dayCount,
-    status: protest.status,
     importance: protest.importance,
     participants: protest.participants,
     location: protest.location,
@@ -104,8 +102,6 @@ for (const city of cities) {
     (total, protest) => total + protest.dayCount,
     0
   );
-
-  city.markerStatus = computeMarkerStatus(city.protests);
 }
 
 const output = cities.filter(city => city.protests.length > 0);
@@ -194,7 +190,6 @@ function normalizeCity(row, spreadsheetRow) {
     protests: [],
     protestRecordCount: 0,
     protestCount: 0,
-    markerStatus: "completed",
   };
 }
 
@@ -266,12 +261,6 @@ function normalizeProtest(row, spreadsheetRow) {
     startDate,
     endDate,
     dayCount,
-
-    status: normalizeStatus(
-      row.status,
-      startDate,
-      endDate
-    ),
 
     importance: normalizeImportance(
       row.importance
@@ -367,88 +356,6 @@ function isoDateToUtcTimestamp(value) {
     .map(Number);
 
   return Date.UTC(year, month - 1, day);
-}
-
-function computeMarkerStatus(protests) {
-  if (
-    protests.some(protest => protest.status === "active")
-  ) {
-    return "active";
-  }
-
-  if (
-    protests.some(protest =>
-      ["confirmed", "planned"].includes(protest.status)
-    )
-  ) {
-    return "confirmed";
-  }
-
-  if (
-    protests.some(protest => protest.status === "tentative")
-  ) {
-    return "tentative";
-  }
-
-  if (
-    protests.some(
-      protest => protest.importance === "major"
-    )
-  ) {
-    return "major";
-  }
-
-  return "completed";
-}
-
-function hasDatePassed(dateValue) {
-  const dateTimestamp =
-    isoDateToUtcTimestamp(dateValue);
-
-  if (dateTimestamp === null) {
-    return false;
-  }
-
-  const now = new Date();
-
-  const todayTimestamp = Date.UTC(
-    now.getUTCFullYear(),
-    now.getUTCMonth(),
-    now.getUTCDate()
-  );
-
-  return dateTimestamp < todayTimestamp;
-}
-
-function normalizeStatus(
-  value,
-  startDate,
-  endDate
-) {
-  const status = String(value || "")
-    .trim()
-    .toLowerCase();
-
-  const allowed = new Set([
-    "active",
-    "confirmed",
-    "planned",
-    "tentative",
-    "completed",
-    "cancelled",
-  ]);
-
-  // Manual status takes priority
-  if (allowed.has(status)) {
-    return status;
-  }
-
-  // Otherwise infer from dates...
-  const comparisonDate = endDate || startDate;
-
-  return hasDatePassed(comparisonDate)
-    ? "completed"
-    : "planned";
 }
 
 function normalizeImportance(value) {

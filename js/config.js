@@ -16,7 +16,7 @@ export const UPCOMING_STATUSES = new Set([
  *      NOT the "protests" tab that update-data.mjs reads from, since
  *      submissions need review before they count as real data.
  *   2. Add the fields listed in the dialog's checklist (city, title,
- *      dates, status, source, etc.) plus a short-answer "Kodi i
+ *      dates, source, etc.) plus a short-answer "Kodi i
  *      konfirmimit" (confirmation code) field. The code itself is just
  *      an honor-system filter checked by whoever reviews the
  *      "Submissions" tab — Google Forms can't enforce it programmatically.

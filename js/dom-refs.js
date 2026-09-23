@@ -31,6 +31,9 @@ export const visibleCountElement = document.getElementById("visible-count");
 export const protestCountElement = document.getElementById("protest-count");
 export const plannedCountElement = document.getElementById("planned-count");
 export const majorCountElement = document.getElementById("major-count");
+export const protestTimelineElement = document.getElementById(
+  "protest-timeline"
+);
 
 export const panelElement = document.getElementById("map-panel");
 export const sidebarHandleElement = document.getElementById("sidebar-handle");

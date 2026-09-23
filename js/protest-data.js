@@ -1,4 +1,5 @@
 import { UPCOMING_STATUSES } from "./config.js";
+import { getEffectiveStatus } from "./protest-schedule.js";
 
 export function parseIsoDate(value) {
   const match = String(value || "").trim().match(/^(\d{4})-(\d{2})-(\d{2})$/);
@@ -63,7 +64,6 @@ export function normalizeProtest(row, index = 0, fallbackCityId = "") {
     title,
     startDate,
     endDate,
-    status: String(row.status || "completed").trim().toLowerCase(),
     importance: String(row.importance || "normal").trim().toLowerCase(),
     description: String(row.description || "").trim(),
     location: String(row.location || "").trim(),
@@ -120,7 +120,8 @@ export function normalizeLocation(location) {
     protestGroupCount: protests.length,
     // Always derive this from the date ranges. This avoids stale precomputed values.
     protestCount: calculatedDayCount,
-    markerStatus: String(location.markerStatus || location.marker_status || ""),
-    hasUpcoming: protests.some(protest => UPCOMING_STATUSES.has(protest.status)),
+    hasUpcoming: protests.some(protest =>
+      UPCOMING_STATUSES.has(getEffectiveStatus(protest))
+    ),
   };
 }

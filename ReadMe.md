@@ -27,8 +27,12 @@ front end fetches at load.
 - `cities` columns: `city_id, city, country, latitude, longitude,
   chapter_active, city_url, instagram_url, facebook_url, drive_gallery_url`
 - `protests` columns: `protest_id, city_id, title, start_date, end_date,
-  status, importance, participants, location, description, source,
+  importance, participants, location, description, source,
   source_url`
+
+Protest status is not stored in the spreadsheet or generated JSON. The map
+derives it from the dates whenever it renders: future protests are planned,
+currently running protests are active, and past protests are completed.
 
 Run it manually with:
 

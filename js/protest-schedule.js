@@ -10,15 +10,6 @@
  * behavior; worth consolidating later if that fallback turns out unused.
  */
 
-export function normalizeStatus(value) {
-  const normalized = String(value ?? "")
-    .trim()
-    .toLowerCase();
-
-  // An empty status means the protest is completed.
-  return normalized || "completed";
-}
-
 export function parseProtestDate(value) {
   if (!value) return null;
 
@@ -105,9 +96,8 @@ export function countInclusiveDaysBetweenDates(startDate, endDate) {
   );
 }
 
-// Splits protest days into "actual" (already confirmed/active/tentative/
-// completed, or already-elapsed days of an in-progress planned range) and
-// "planned" (still-upcoming days) so that only what's genuinely still
+// Splits protest days into "actual" (days up to and including today) and
+// "planned" (days still ahead) so that only what's genuinely still
 // ahead inflates the "planned" count — see splitProtestDays() below.
 export function countProtestDaysBySchedule(protests) {
   return protests.reduce(
@@ -123,26 +113,25 @@ export function countProtestDaysBySchedule(protests) {
   );
 }
 
-// Splits a single protest's day range into "actual" and "planned" days.
-// A protest that's still (effectively) "planned" but already under way —
-// e.g. a "7 Aug – 31 Aug" range when today is the 9th — had every one of
-// its days counted as "planned" even though the 7th and 8th already
-// happened. Days up to and including today now count as "actual"; only
-// the remaining days ahead count as "planned".
+// Splits a single protest's day range into "actual" and "planned" days,
+// purely by date: days up to and including today count as "actual", the
+// remaining days ahead as "planned". This matters for an in-progress
+// ("active") range like "7 Aug – 31 Aug" viewed on the 9th — the 7th–9th
+// already happened, the rest haven't yet.
 export function splitProtestDays(protest) {
   const start = getProtestStartDate(protest);
   const end = getProtestEndDate(protest);
   const totalDays = countInclusiveDaysBetweenDates(start, end);
 
-  if (getEffectiveStatus(protest) !== "planned") {
+  if (!start) {
     return { actual: totalDays, planned: 0 };
   }
 
   const todayKey = getDateKeyInTimeZone(new Date());
-  const startKey = start ? getDateKeyInTimeZone(start) : "";
+  const startKey = getDateKeyInTimeZone(start);
 
   // Hasn't started yet — nothing has happened, every day is still ahead.
-  if (!startKey || startKey > todayKey) {
+  if (startKey > todayKey) {
     return { actual: 0, planned: totalDays };
   }
 
@@ -226,18 +215,14 @@ export function isProtestToday(protest) {
   );
 }
 
-// A protest whose status is still "planned" in the spreadsheet but whose
-// date has already passed reads as "completed" everywhere in the UI —
-// the sheet isn't always updated the day a protest actually happens.
-// Every other status (confirmed/active/tentative/completed/cancelled) is
-// trusted as written.
+// Status is deliberately derived at render time, so it stays current without
+// a spreadsheet status column or a fresh data import at midnight.
 export function getEffectiveStatus(protest) {
-  const status = normalizeStatus(protest.status);
-
-  if (status !== "planned") {
-    return status;
-  }
-
+  const start = getProtestDateKey(
+    protest.startDate ||
+    protest.start_date ||
+    protest.date
+  );
   const end = getProtestDateKey(
     protest.endDate ||
     protest.end_date ||
@@ -246,11 +231,11 @@ export function getEffectiveStatus(protest) {
     protest.date
   );
 
-  if (!end) {
-    return status;
-  }
+  if (!start) return "completed";
 
   const today = getDateKeyInTimeZone(new Date());
 
-  return end < today ? "completed" : status;
+  if ((end || start) < today) return "completed";
+  if (start > today) return "planned";
+  return "active";
 }

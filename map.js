@@ -10,6 +10,7 @@ import {
   protestCountElement,
   plannedCountElement,
   majorCountElement,
+  protestTimelineElement,
   panelElement,
   sidebarHandleElement,
   closePanelElement,
@@ -26,6 +27,7 @@ import { getFilteredProtests, clearMarkerStyleCache } from "./js/marker-style.js
 import { buildPopupHtml } from "./js/popup.js";
 import { openMediaGallery, closeMediaGallery } from "./js/media-gallery.js";
 import { renderUpcomingProtests } from "./js/upcoming.js";
+import { renderProtestTimeline } from "./js/protest-timeline.js";
 import { openSubmitDialog, closeSubmitDialog } from "./js/submit-dialog.js";
 import {
   MAX_CITY_SEARCH_RESULTS,
@@ -207,6 +209,8 @@ function updateStatistics(features) {
   if (majorCountElement) {
     majorCountElement.textContent = String(stats.majorDays ?? 0);
   }
+
+  renderProtestTimeline(protestTimelineElement, features);
 }
 
 /* =========================================================
@@ -677,6 +681,10 @@ window.addEventListener(
   "resize",
   () => {
     map.updateSize();
+
+    // The chart is drawn at the sidebar's pixel width, which changes
+    // with the viewport on small screens.
+    renderProtestTimeline(protestTimelineElement, source.getFeatures());
   }
 );
 

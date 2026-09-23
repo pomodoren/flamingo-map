@@ -21,11 +21,21 @@ export function getFilteredProtests(feature, selectedStatuses) {
     return protests;
   }
 
-  return protests.filter(protest =>
-    selectedStatuses.has(
-      getEffectiveStatus(protest)
-    )
-  );
+  return protests.filter(protest => {
+    const status = getEffectiveStatus(protest);
+
+    // Status is derived from dates, so a protest happening today is
+    // "active" — it has both elapsed and upcoming days, and there's no
+    // "active" checkbox, so it matches either filter.
+    if (status === "active") {
+      return (
+        selectedStatuses.has("planned") ||
+        selectedStatuses.has("completed")
+      );
+    }
+
+    return selectedStatuses.has(status);
+  });
 }
 
 export function getMarkerStatus(feature, selectedStatuses) {
@@ -96,9 +106,9 @@ export function getMarkerStyle(feature, selectedStatuses) {
   const { actual, planned } =
     countProtestDaysBySchedule(protests);
   const count = Math.max(1, actual + planned);
-  const markerStatus =
-    feature.get("markerStatus") ||
-    getMarkerStatus(feature, selectedStatuses);
+  // Always derived from the protests' dates — never from a precomputed
+  // value in the data file, which goes stale once planned dates pass.
+  const markerStatus = getMarkerStatus(feature, selectedStatuses);
 
   const radius = Math.min(
     28,
