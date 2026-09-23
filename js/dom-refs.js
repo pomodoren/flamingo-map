@@ -25,6 +25,18 @@ export const cityDetailsGalleryExternalElement = document.getElementById(
   "city-details-gallery-external"
 );
 
+export const photoViewerElement = document.getElementById("photo-viewer");
+export const photoGalleryElement = document.getElementById("photo-gallery");
+export const photoGalleryListElement = document.getElementById(
+  "photo-gallery-list"
+);
+export const photoGalleryFiltersElement = document.getElementById(
+  "photo-gallery-filters"
+);
+export const photoGalleryToggleElement = document.getElementById(
+  "photo-gallery-toggle"
+);
+
 export const messageElement = document.getElementById("map-message");
 
 export const visibleCountElement = document.getElementById("visible-count");

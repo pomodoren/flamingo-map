@@ -5,6 +5,7 @@ import {
   countProtestDaysBySchedule,
 } from "./protest-schedule.js";
 import { getDriveGalleryUrl } from "./media-gallery.js";
+import { photoOpenAttributes } from "./photo-gallery.js";
 
 /*
  * HTML string builders for the city detail dialog (the popup that opens
@@ -167,7 +168,7 @@ export function getStatusLabel(status) {
   return labels[status] || status;
 }
 
-export function renderProtestItem(protest) {
+export function renderProtestItem(protest, cityName = "") {
   const title = escapeHtml(
     protest.title || "Protestë pa titull"
   );
@@ -210,6 +211,10 @@ export function renderProtestItem(protest) {
   );
 
   const source = escapeHtml(protest.source);
+
+  const media = Array.isArray(protest.media)
+    ? protest.media
+    : [];
 
   const isUpcoming = [
     "confirmed",
@@ -280,6 +285,20 @@ export function renderProtestItem(protest) {
             ? `<p class="protest-source">Burimi: ${source}</p>`
             : ""
       }
+
+      ${
+        media.length
+          ? `
+            <button
+              class="protest-photos-open"
+              type="button"
+              ${photoOpenAttributes(protest, cityName)}
+            >
+              Shiko fotot (${media.length})
+            </button>
+          `
+          : ""
+      }
     </article>
   `;
 }
@@ -306,7 +325,7 @@ export function buildPopupHtml(feature) {
 
   const protestItems =
     sortedProtests
-      .map(renderProtestItem)
+      .map(protest => renderProtestItem(protest, feature.get("city")))
       .join("");
 
   const cityLinks =

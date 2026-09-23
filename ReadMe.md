@@ -44,6 +44,47 @@ A GitHub Actions workflow (`.github/workflows/update-data.yml`) runs this
 every 6 hours and commits `data/locations.json` if it changed. It can also
 be triggered manually from the Actions tab.
 
+## Protest photos
+
+Photos and videos for a protest go in a folder named after its
+`protest_id`, and are shown in file-name order:
+
+```
+media/protests/250/01.jpg
+media/protests/250/02.jpg
+media/protests/250/03.mp4
+```
+
+Photos from Instagram posts can be downloaded automatically. For every
+protest whose `source_url` is an Instagram post, this saves the post's
+photos and videos into its folder (`01.jpg`, `02.mp4`, …) and rebuilds
+`data/media.json`. Instagram only shows posts to logged-in visitors, so it
+uses the Instagram login of a browser on your computer; be logged in to
+Instagram in Firefox (or pass `--browser=chrome`). It needs
+[gallery-dl](https://github.com/mikf/gallery-dl) installed.
+
+```sh
+node scripts/download-instagram-media.mjs            # all posts
+node scripts/download-instagram-media.mjs 250 22     # only these protest ids
+node scripts/download-instagram-media.mjs --force    # re-download existing folders
+```
+
+Folders that already have files are skipped, so it is safe to re-run after
+adding new protests. Check the downloads before committing.
+
+After adding or removing files by hand, run:
+
+```sh
+node scripts/update-media.mjs
+```
+
+This rewrites `data/media.json`, which the map reads to fill the "Fotot"
+drawer (top right, all protest photos with a city filter) and to show a
+"Shiko fotot" button on each protest that has photos. Commit the photos together with
+`data/media.json`. The scheduled workflow also runs the script, so a
+forgotten `data/media.json` fixes itself on the next run. Keep photos
+around 1600px on the long side (JPEG or WebP) so the gallery loads fast.
+
 Day counts (shown in the sidebar stats, the upcoming rail, marker labels,
 and popups) are always derived from each protest's `start_date`/`end_date`
 range rather than trusted from a stale precomputed value, so a multi-day

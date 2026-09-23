@@ -62,6 +62,62 @@
         ></ul>
       </div>
 
+      <!-- Fotot e protestave -->
+      <button
+        id="photo-gallery-toggle"
+        class="photo-gallery-toggle"
+        type="button"
+        aria-controls="photo-gallery"
+        aria-expanded="false"
+        hidden
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <rect x="3" y="5" width="18" height="15" rx="2"></rect>
+          <circle cx="8.5" cy="10" r="1.5"></circle>
+          <path d="m5 18 4-4 3 3 2-2 5 4"></path>
+        </svg>
+        <span class="photo-gallery-toggle-label">Fotot</span>
+        <span
+          class="photo-gallery-toggle-count"
+          data-photo-gallery-count
+        >0</span>
+      </button>
+
+      <aside
+        id="photo-gallery"
+        class="photo-gallery"
+        aria-labelledby="photo-gallery-title"
+        hidden
+      >
+        <header class="photo-gallery-header">
+          <div>
+            <p class="upcoming-eyebrow">Galeria</p>
+            <h2 id="photo-gallery-title">Fotot e protestave</h2>
+          </div>
+
+          <button
+            class="popup-closer photo-gallery-close"
+            type="button"
+            aria-label="Mbyll fotot"
+            data-photo-gallery-close
+          >
+            ×
+          </button>
+        </header>
+
+        <div
+          id="photo-gallery-filters"
+          class="photo-gallery-filters"
+          aria-label="Filtro sipas qytetit"
+          hidden
+        ></div>
+
+        <div
+          id="photo-gallery-list"
+          class="photo-gallery-list"
+        ></div>
+      </aside>
+
       <!-- Paneli anësor -->
       <aside
         id="map-panel"
@@ -370,6 +426,77 @@
             ></div>
           </section>
         </section>
+      </dialog>
+
+      <!-- Shikuesi i fotove -->
+      <dialog
+        id="photo-viewer"
+        class="photo-viewer"
+        aria-labelledby="photo-viewer-title"
+      >
+        <header class="photo-viewer-header">
+          <div class="photo-viewer-heading">
+            <strong
+              id="photo-viewer-title"
+              data-photo-viewer-title
+            ></strong>
+            <span data-photo-viewer-subtitle></span>
+          </div>
+
+          <a
+            class="photo-viewer-external"
+            target="_blank"
+            rel="noopener noreferrer"
+            data-photo-viewer-external
+          >
+            Postimi
+            <span aria-hidden="true">↗</span>
+          </a>
+
+          <button
+            class="photo-viewer-close"
+            type="button"
+            aria-label="Mbyll fotot"
+            data-photo-viewer-close
+          >
+            ×
+          </button>
+        </header>
+
+        <div class="photo-viewer-stage">
+          <button
+            class="photo-viewer-arrow is-prev"
+            type="button"
+            aria-label="Foto e mëparshme"
+            data-photo-viewer-prev
+          >‹</button>
+
+          <div
+            class="photo-viewer-media-wrap"
+            data-photo-viewer-media
+          ></div>
+
+          <button
+            class="photo-viewer-arrow is-next"
+            type="button"
+            aria-label="Foto tjetër"
+            data-photo-viewer-next
+          >›</button>
+        </div>
+
+        <footer class="photo-viewer-footer">
+          <span
+            class="photo-viewer-counter"
+            aria-live="polite"
+            data-photo-viewer-counter
+          ></span>
+
+          <div
+            class="photo-viewer-thumbs"
+            data-photo-viewer-thumbs
+            hidden
+          ></div>
+        </footer>
       </dialog>
 
       <!-- Shto një protestë -->

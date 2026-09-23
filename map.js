@@ -1,4 +1,4 @@
-import { DATA_URL } from "./js/config.js";
+import { DATA_URL, MEDIA_URL } from "./js/config.js";
 import { normalizeLocation } from "./js/protest-data.js";
 import { calculateProtestStatistics } from "./js/protest-stats.js";
 import { selectedValues } from "./js/dom-helpers.js";
@@ -26,6 +26,8 @@ import { source, locationLayer, map } from "./js/map-instance.js";
 import { getFilteredProtests, clearMarkerStyleCache } from "./js/marker-style.js";
 import { buildPopupHtml } from "./js/popup.js";
 import { openMediaGallery, closeMediaGallery } from "./js/media-gallery.js";
+import "./js/photo-viewer.js";
+import { renderPhotoGallery } from "./js/photo-gallery.js";
 import { renderUpcomingProtests } from "./js/upcoming.js";
 import { renderProtestTimeline } from "./js/protest-timeline.js";
 import { openSubmitDialog, closeSubmitDialog } from "./js/submit-dialog.js";
@@ -236,8 +238,30 @@ function hideMessage() {
   messageElement.hidden = true;
 }
 
+/*
+ * Protest photo lists, keyed by protest id. The file is optional, so a
+ * missing or broken one just means no photo buttons.
+ */
+async function loadProtestMedia() {
+  try {
+    const response = await fetch(MEDIA_URL, { cache: "no-store" });
+
+    if (!response.ok) {
+      return {};
+    }
+
+    const media = await response.json();
+
+    return media && typeof media === "object" ? media : {};
+  } catch {
+    return {};
+  }
+}
+
 async function loadLocations() {
   hideMessage();
+
+  const mediaPromise = loadProtestMedia();
 
   const response = await fetch(
     DATA_URL,
@@ -260,6 +284,8 @@ async function loadLocations() {
       "The data file must contain a JSON array."
     );
   }
+
+  const protestMedia = await mediaPromise;
 
   const locations = data
     .map(rawLocation => {
@@ -299,6 +325,7 @@ async function loadLocations() {
             rawProtest.source_url ??
             protest.sourceUrl ??
             "",
+          media: protestMedia[String(protest?.id ?? "")] || [],
         };
       });
 
@@ -336,6 +363,7 @@ async function loadLocations() {
   applyFilters();
   fitToVisibleFeatures();
   renderUpcomingProtests(openPopup);
+  renderPhotoGallery(openPopup);
 }
 
 /* =========================================================

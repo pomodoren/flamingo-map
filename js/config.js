@@ -1,4 +1,5 @@
 export const DATA_URL = "./data/locations.json";
+export const MEDIA_URL = "./data/media.json";
 export const UPCOMING_STATUSES = new Set([
   "planned",
   "confirmed",
